@@ -1,0 +1,81 @@
+﻿@model onlinept.Models.Entity.myquestions
+
+@{
+    ViewBag.Title = "Ders Değerlendirmesi";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.link = "myquestions";
+    ViewBag.menuactive = "Ayarlar2";
+}
+
+@if (TempData["myquestionsHata"] != null)
+{
+
+    <script>
+        Swal.fire('Hata', 'İşlem gerçekleştirilemedi', 'error');
+
+/**/</script>
+}
+
+<div class="content-wrapper">
+    <div class="card-header">
+        <h3 class="card-title">Uzaktan Eğitim Ders Değerlendirmesi</h3>
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body">
+        @using (Html.BeginForm("qsguncelle", "Home", FormMethod.Post, new { @enctype = "multipart/from-data" }))
+        {
+        <table id="example1" class="table table-bordered table-striped">
+            <tr>
+                <td>
+                    <p>E-Mail</p>
+                    @Html.TextBoxFor(m => m.youremail, new { @class = "form-control", id = "email", type = "email", @required = "required", placeholder = "Lütfen Kullanıcıya Ait Mail Adresini Doğru Girin." })
+                </td>
+            <td>
+                <p>Tarih</p>
+                @Html.EditorFor(m => m.date, new { htmlAttributes = new { @class = "form-control", id = "tarih1", placeholder = "Lütfen Başlangıç Tarihi Giriniz.", @required = "required" } })
+            </td>
+            </tr>
+            <tr>
+                <td>
+                    <p> Ders Başlığı </p>
+                    @Html.TextBoxFor(m => m.subject, new { @class = "form-control", oninput = "customtext(this.id);", @required = "required" })
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    <p>Ders Hakkında</p>
+                    @Html.TextAreaFor(m => m.message, new { @class = "form-control", oninput = "customtext(this.id);", @required = "required" })
+                    @Html.HiddenFor(m => m.myquestionsid, new { oninput = "Number(this.id);", maxlength = "9", @class = "form-control", @readonly = "false" })
+
+                </td>
+                <td>
+                    <p>Ders Yapılma Durumu!</p>
+                    @Html.HiddenFor(m => m.color, new { @class = "form-control", @Value = "", id = "colordbs", @required = "required" })
+                <select id="colordb" class="form-control">
+                    <option value=""></option>
+                    <option value="fas fa-check text-primary">Ders Yapıldı!</option>
+                    <option value="fas fa-times text-error">Ders Yapılmadı!</option>
+                </select>
+                </td>
+            </tr>
+            <tr>
+                <td><button type="submit" class="fa fa-floppy-o btn btn-success" /> Kaydet</td>
+            </tr>
+        </table>
+
+        }
+    </div>
+    <!-- /.card-body -->
+</div>
+<!-- /.card -->
+<script src="~/Content/Admin/plugins/custom/jquery-ui.js"></script>
+<script src="~/Content/Admin/plugins/custom/oasiscustom.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        oasisdatepicker();
+
+    });
+</script>

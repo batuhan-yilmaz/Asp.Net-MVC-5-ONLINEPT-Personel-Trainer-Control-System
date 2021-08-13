@@ -1,0 +1,314 @@
+
+.Erkek-neck {
+    height: 25px;
+    width: 50px;
+    position: relative;
+    top: 40px;
+    left: 360px;
+}
+
+.Erkek-shoulder {
+    height: 25px;
+    width: 50px;
+    position: relative;
+    top: 40px;
+    left: 365px;
+}
+
+.Erkek-chest {
+    height: 25px;
+    width: 50px;
+    position: relative;
+    top: -10px;
+    left: 15px;
+}
+
+.Erkek-larm {
+    height: 25px;
+    width: 50px;
+    position: relative;
+    top: 80px;
+    left: 20px;
+}
+
+.Erkek-lfarm {
+    height: 25px;
+    width: 50px;
+    position: relative;
+    top: 160px;
+    left: 20px;
+}
+
+.Erkek-rarm {
+    height: 25px;
+    width: 50px;
+    position: relative;
+    top: 30px;
+    left: 360px;
+}
+
+.Erkek-rfarm {
+    height: 25px;
+    width: 50px;
+    position: relative;
+    top: 115px;
+    left: 360px;
+}
+
+.Erkek-waist {
+    height: 25px;
+    width: 50px;
+    position: relative;
+    top: 200px;
+    left: 20px;
+}
+
+.Erkek-hip {
+    height: 25px;
+    width: 50px;
+    position: relative;
+    top: 175px;
+    left: 360px;
+}
+
+.Erkek-lleg {
+    height: 25px;
+    width: 50px;
+    position: relative;
+    top: 260px;
+    left: 25px;
+}
+
+.Erkek-lcalves {
+    height: 25px;
+    width: 50px;
+    position: relative;
+    top: 345px;
+    left: 25px;
+}
+
+.Erkek-rleg {
+    height: 25px;
+    width: 50px;
+    position: relative;
+    top: 210px;
+    left: 360px;
+}
+
+.Erkek-rcalves {
+    height: 25px;
+    width: 50px;
+    position: relative;
+    top: 290px;
+    left: 360px;
+}
+
+
+
+.Erkek-fatneck {
+    height: 25px;
+    width: 50px;
+    position: relative;
+    top: 90px;
+    left: 340px;
+}
+
+.Erkek-fatlarm {
+    height: 25px;
+    width: 50px;
+    position: relative;
+    top: 135px;
+    left: 10px;
+}
+
+
+.Erkek-fatrarm {
+    height: 25px;
+    width: 50px;
+    position: relative;
+    top: 102px;
+    left: 377px;
+}
+
+.Erkek-fatbody {
+    height: 25px;
+    width: 50px;
+    position: relative;
+    top: 180px;
+    left: 375px;
+}
+
+.Erkek-fatlleg {
+    height: 25px;
+    width: 50px;
+    position: relative;
+    top: 355px;
+    left: 40px;
+}
+
+.Erkek-fatrleg {
+    height: 25px;
+    width: 50px;
+    position: relative;
+    top: 325px;
+    left: 350px;
+}
+
+
+
+
+.Kadin-neck {
+    height: 25px;
+    width: 50px;
+    position: relative;
+    top: 25px;
+    left: 340px;
+}
+
+.Kadin-shoulder {
+    height: 25px;
+    width: 50px;
+    position: relative;
+    top: 20px;
+    left: 360px;
+}
+
+.Kadin-chest {
+    height: 25px;
+    width: 50px;
+    position: relative;
+    top: -20px;
+    left: 35px;
+}
+
+.Kadin-larm {
+    height: 25px;
+    width: 50px;
+    position: relative;
+    top: 60px;
+    left: 25px;
+}
+
+.Kadin-lfarm {
+    height: 25px;
+    width: 50px;
+    position: relative;
+    top: 142px;
+    left: 25px;
+}
+
+.Kadin-rarm {
+    height: 25px;
+    width: 50px;
+    position: relative;
+    top: 10px;
+    left: 355px;
+}
+
+.Kadin-rfarm {
+    height: 25px;
+    width: 50px;
+    position: relative;
+    top: 90px;
+    left: 360px;
+}
+
+.Kadin-waist {
+    height: 25px;
+    width: 50px;
+    position: relative;
+    top: 175px;
+    left: 10px;
+}
+
+.Kadin-hip {
+    height: 25px;
+    width: 50px;
+    position: relative;
+    top: 155px;
+    left: 375px;
+}
+
+.Kadin-lleg {
+    height: 25px;
+    width: 50px;
+    position: relative;
+    top: 240px;
+    left: 20px;
+}
+
+.Kadin-lcalves {
+    height: 25px;
+    width: 50px;
+    position: relative;
+    top: 315px;
+    left: 20px;
+}
+
+.Kadin-rleg {
+    height: 25px;
+    width: 50px;
+    position: relative;
+    top: 190px;
+    left: 365px;
+}
+
+.Kadin-rcalves {
+    height: 25px;
+    width: 50px;
+    position: relative;
+    top: 270px;
+    left: 365px;
+}
+
+.Kadin-fatneck {
+    height: 25px;
+    width: 50px;
+    position: relative;
+    top: 90px;
+    left: 340px;
+}
+
+.Kadin-fatbody {
+    height: 25px;
+    width: 50px;
+    position: relative;
+    top: 150px;
+    left: 365px;
+}
+
+.Kadin-fatlarm {
+    height: 25px;
+    width: 50px;
+    position: relative;
+    top: 100px;
+    left: 10px;
+}
+
+
+
+.Kadin-fatrarm {
+    height: 25px;
+    width: 50px;
+    position: relative;
+    top: 75px;
+    left: 360px;
+}
+
+
+
+.Kadin-fatlleg {
+    height: 25px;
+    width: 50px;
+    position: relative;
+    top: 360px;
+    left: 20px;
+}
+
+.Kadin-fatrleg {
+    height: 25px;
+    width: 50px;
+    position: relative;
+    top: 335px;
+    left: 355px;
+}

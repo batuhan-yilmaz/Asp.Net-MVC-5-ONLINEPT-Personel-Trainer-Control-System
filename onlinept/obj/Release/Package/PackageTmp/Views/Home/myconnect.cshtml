@@ -1,0 +1,142 @@
+﻿@model List<onlinept.Models.Entity.myconnect>
+@{
+    ViewBag.Title = "Mesajlarım";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.link = "";
+    ViewBag.menuactive = "";
+}
+
+@if (TempData["MessageSend"] != null)
+{
+
+    <script>
+        Swal.fire('Başarılı', 'Mesajınız Başayırla Gönderildi', 'success');
+
+    </script>
+}
+
+@if (TempData["MessageGuncelle"] != null)
+{
+
+    <script>
+        Swal.fire('Başarılı', 'Mesajınız Başayırla Gönderildi', 'success');
+
+
+    </script>
+}
+@if (TempData["MessageSil"] != null)
+{
+
+    <script>
+        Swal.fire('Başarılı', 'Mesajınız Başayırla Gönderildi', 'success');
+
+
+
+    </script>
+}
+
+<div class="content-wrapper">
+    <section class="content">
+        <h4> Soru-İletişim Talepleri</h4>
+        <!-- /.card-header -->
+        <div class="card">
+            <div class="card-body">
+                <div class="card-header">
+                    <p style="float:right; color:#007bff"><i class="fas fa-info-circle text-danger"></i> İncelemede Olanlar <span class="badge bg-danger" id="messagedanger">0</span></p>
+                    <p style="float:right; color:#007bff"><i class="fas fa-paper-plane text-primary"></i> Gelen Mesajlar <span class="badge bg-primary" id="messagewarning">1</span> &nbsp; | &nbsp; </p>
+                    <p style="float:right; color:#007bff"><i class="fas fa-envelope text-warning"></i> Gönderilen Mesajlar <span class="badge bg-warning" id="messagechecked">1</span> &nbsp; | &nbsp; </p>
+                </div>
+                <br />
+                <table id="example" class="table table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Sil</th>
+                            <th>Durum</th>
+                            <th>Adres</th>
+                            <th>Telefon</th>
+                            <th>Mail Adresi</th>
+                            <th>Gönderen</th>
+                            <th>Konu</th>
+                            <th>İçerik</th>
+                            <th>Tarih</th>
+                            <th>Cevapla</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+
+                        @foreach (var myconnect in Model)
+                        {
+                        <tr>
+                            <td>
+                                <button type="button" class="fa fa-trash btn btn-warning" data-toggle="modal" data-target="#oku_@myconnect.myconnectid">  Sil</button>
+                                <div class="modal fade" id="oku_@myconnect.myconnectid">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h4 class="modal-title"><font color="orangered"><b>Yorumu Sil!</b></font></h4>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>
+                                                    <b> <font color="orangered">"@myconnect.subject" </font> İlgili Mesajı Silmek İstiyormusunuz?</b>
+                                                </p>
+                                            </div>
+                                            <div class="modal-footer justify-content-between">
+                                                <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Vazgeç</button>
+                                                @Html.ActionLink(" Sil ", "myconnectsil", new { myconnect.myconnectid }, new { @class = "fa fa-trash btn btn-warning" })
+                                            </div>
+                                        </div>
+                                        <!-- /.modal-content -->
+                                    </div>
+                                    <!-- /.modal-dialog -->
+                                </div>
+                            </td>
+                            <td class="mailbox-star"><a href="#"><i class="@myconnect.color"></i></a></td>
+                            <td class="mailbox-name">@myconnect.adres</td>
+                            <td class="mailbox-name"><b><font color="orangered"> @myconnect.tel</font></b></td>
+                            <td class="mailbox-name"><b><font color="#007bff"> @myconnect.youremail</font></b></td>
+                            <td class="mailbox-name"><b><font color="orangered"> @myconnect.namesurname</font></b></td>
+                            <td class="mailbox-subject"><b>@myconnect.subject</b></td>
+                            <td>
+                                <button type="button" class="fa fa-envelope-open btn btn-outline-primary" data-toggle="modal" data-target="#okumsg_@myconnect.myconnectid">  Mesaj İçeriğini Göster</button>
+                                <div class="modal fade" id="okumsg_@myconnect.myconnectid">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h4 class="modal-title"><font color="orangered"><b>Konu:</b></font> @myconnect.subject</h4>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>
+                                                    <font color="orangered"><b>İçerik:</b></font>
+                                                    <br />
+                                                    @myconnect.descriptions
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <!-- /.modal-content -->
+                                    </div>
+                                    <!-- /.modal-dialog -->
+                                </div>
+                            </td>
+
+                            <td class="mailbox-date">@Html.DisplayFor(m => myconnect.date)</td>
+                            <td>@Html.ActionLink("Cevapla", "myconnectCevapla", new { myconnect.myconnectid }, new { @class = "fa fa-reply btn btn-outline-success" })</td>
+                        </tr>
+                        }
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+    </section>
+</div>
+

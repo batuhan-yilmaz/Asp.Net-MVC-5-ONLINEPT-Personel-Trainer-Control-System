@@ -1,0 +1,155 @@
+﻿@using onlinept.Models.Entity
+@model List<myquestions>
+
+@{
+    ViewBag.Title = "Ders Değerlendirmeleri";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.link = "myquestions2";
+}
+}
+
+@if (TempData["kullaniciguncelle"] != null)
+{
+    <script>
+        Swal.fire('Başarılı', 'İşlem gerçekleşti', 'success');
+    </script>
+}
+
+
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h1>Ders Bilgileri</h1>
+                </div>
+
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content d-flex">
+        <div class="row">
+            <div class="row">
+                <!-- /.card -->
+                <div class="card">
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                        <table id="example" class="table table-striped table-bordered" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>Ders Yapılma Durumu</th>
+                                    <th>İsim Soyisim</th>
+                                    <th><b>Tarih</b></th>
+                                    <th>E-Mail</th>
+                                    <th>Ders Başlığı</th>
+                                    <th>Ders Hakkında</th>
+                                    <th>Güncelle</th>
+                                    <th>Sil</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+
+
+                                @foreach (var myquestions in Model)
+                                {
+                                <tr>
+                                    <td><font color="red"><b><i class="@myquestions.color"></i></b></font></td>
+                                    <td><font color="#007bff"><b>@myquestions.namesurname</b></font></td>
+                                    <td><font color="red"><b> @Html.DisplayFor(m => myquestions.date)</b></font></td>
+                                    <td>@myquestions.youremail</td>
+                                    <td>@myquestions.subject</td>
+                                    <td>
+                                        <button type="button" class="fa fa-trash btn btn-outline-success" data-toggle="modal" data-target="#detay_@myquestions.myquestionsid">Detay</button>
+                                        <div class="modal fade" id="detay_@myquestions.myquestionsid">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">Ders Hakkında Eğitmenin Notları</h4>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p>@myquestions.message</p>
+                                                    </div>
+                                                </div>
+                                                <!-- /.modal-content -->
+                                            </div>
+                                            <!-- /.modal-dialog -->
+                                        </div>
+                                        <!-- /.modal -->
+                                    </td>
+                                    <td>
+                                        <button type="button" class="fa fa-pencil-square-o btn btn-outline-primary" data-toggle="modal" data-target="#guncelle_@myquestions.myquestionsid">Güncelle</button>
+                                        <div class="modal fade" id="guncelle_@myquestions.myquestionsid">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">Dersi Güncelle</h4>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p>Dersi Güncellemek İstiyormusunuz?</p>
+                                                    </div>
+                                                    <div class="modal-footer justify-content-between">
+                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Vazgeç</button>
+                                                        @Html.ActionLink("Güncelle", "questionsguncelle", new { myquestions.myquestionsid }, new { @class = "fa fa-pencil-square-o btn btn-outline-primary" })
+                                                    </div>
+                                                </div>
+                                                <!-- /.modal-content -->
+                                            </div>
+                                            <!-- /.modal-dialog -->
+                                        </div>
+                                        <!-- /.modal -->
+                                    </td>
+                                    <td>
+                                        <button type="button" class="fa fa-trash btn btn-outline-danger" data-toggle="modal" data-target="#sil_@myquestions.myquestionsid">Sil</button>
+                                        <div class="modal fade" id="sil_@myquestions.myquestionsid">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">Dersi Sil</h4>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p>Dersi Silmek İstiyormusunuz?</p>
+                                                    </div>
+                                                    <div class="modal-footer justify-content-between">
+                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Vazgeç</button>
+                                                        @Html.ActionLink("Sil", "questionssil", new { myquestions.myquestionsid }, new { @class = "fa fa-trash btn btn-outline-danger" })
+                                                    </div>
+                                                </div>
+                                                <!-- /.modal-content -->
+                                            </div>
+                                            <!-- /.modal-dialog -->
+                                        </div>
+                                        <!-- /.modal -->
+                                    </td>
+                                </tr>
+                                }
+                            </tbody>
+                            <tfoot>
+                            </tfoot>
+                        </table>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </section>
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->

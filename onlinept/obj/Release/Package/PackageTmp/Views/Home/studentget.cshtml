@@ -1,0 +1,66 @@
+﻿@model  onlinept.Models.Entity.student
+
+@{
+    ViewBag.Title = "Öğrenci Analiz Detayları";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.link = "mystudent";
+}
+
+<!-- ADMİN Wrapper. Contains page content -->
+
+
+<style>
+    .@Model.gender-body {
+        width: 700px;
+        height: 750px;
+        background-image: url("/Content/Admin/plugins/custom/4nlytc/@Model.gender-mus.jpg");
+    }
+
+    .@Model.gender-fat {
+        width:700px;
+        height: 750px;
+        background-image: url("/Content/Admin/plugins/custom/4nlytc/@Model.gender-fat.jpg");
+    }
+</style>
+
+<link href="~/Content/Admin/plugins/custom/4nlytc/4nlytc.css" rel="stylesheet" />
+
+<div class="content-wrapper">
+
+
+                <div class="card-header">
+                <h4>3D Öğrenci Modeli  Boy: @Model.height - Kilo: @Model.weight - Bel: @Model.waist - Kalça: @Model.hip - İç Bacak Boyu: @Model.inseam</h4>
+                </div>
+                <!-- /.card-header -->
+                <div class="card-body">
+                    <script src="~/Content/Admin/plugins/custom/4nlytc/three.min.js"></script>
+                    <style>
+
+                        #bodylabsWidget {
+                            height: 100%;
+                            width: 100%;
+                        }
+                    </style>
+
+                    <div id="bodylabsWidget">
+                    </div>
+                    <script src="~/Content/Admin/plugins/custom/4nlytc/body-from-measurements-ui.js"></script>
+                    <script>
+            var attrs = {
+            genderOptions: ['Kadin', 'Erkek'],
+            defaultGender: '@Model.gender',
+            hiddenMeasurements: ['shirt_sleeve_length', 'mid_neck_girth'],
+            optionalMeasurements:[],
+            // Fill below with your accessKey for tracking and whitelist your website hostname to protect your stats. (http://developer.bodylabs.com/)
+            accessKey: 'AK5699f615fffc2003d59375c7ab62c130',
+            // enableSocial: true,
+        };
+
+        BodyKit.bootstrapWidget(document.getElementById('bodylabsWidget'), attrs);</script>
+                </div>
+
+</div>
+
+
+
+

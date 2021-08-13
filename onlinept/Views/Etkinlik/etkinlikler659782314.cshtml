@@ -1,0 +1,405 @@
+﻿@using onlinept.Models.Entity
+@model List<events>
+
+@{
+    ViewBag.Title = "etkinlikler659782314";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+
+
+
+        <div class="card card-warning">
+            <div class="card-header">
+
+                <h3 class="card-title"><i class="fa fa-calendar" aria-hidden="true"></i>   Etkinlikler</h3>
+
+                <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                        <i class="fas fa-minus"></i>
+                    </button>
+                    <button type="button" class="btn btn-tool" data-card-widget="remove"><i class="fas fa-times"></i></button>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="chart">
+                    <br />
+
+                    <!-- Content Header (Page header) -->
+                    <section class="content-header">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <input type="hidden" id="hdmylist1" />
+                                    &nbsp;
+                                    <button class="fa fa-search btn btn-primary" id="goster"> Güncel Takvimimi Göster</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.container-fluid -->
+                    </section>
+
+                    <div id="calender" class="fc fc-ltr fc-bootstrap" style="">
+
+                        <div id="clndrModal" class="modal fade" role="dialog">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title"><span id="eventTitle"></span></h4>
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    </div>
+                                    @if (User.IsInRole("Admin"))
+                                    {
+                                        <div class="modal-body">
+                                            <button id="btnDelete" class="btn btn-default btn-sm pull-right">
+                                                <span class="glyphicon glyphicon-remove"></span> Sil
+                                            </button>
+                                            <button id="btnEdit" class="btn btn-default btn-sm pull-right" style="margin-right:5px;">
+                                                <span class="glyphicon glyphicon-pencil"></span> Düzenle
+                                            </button>
+                                            <p id="pDetails"></p>
+                                        </div>
+                                    }
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Kapat</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        @if (User.IsInRole("Admin"))
+                        {
+
+                            <!--GÜNCELLEME FORMU -->
+                            <div id="clndrModalSave" class="modal fade" role="dialog">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">Etkinlik Düzenle</h4>
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form class="col-md-12 form-horizontal">
+                                                <input type="hidden" id="hdEventID" class="form-control" />
+                                                <input type="hidden" id="hdmylist1" class="form-control" />
+                                                <div class="form-group">
+                                                    <label>Başlık</label>
+                                                    <input type="text" id="txtSubject" class="form-control" />
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label>Öğrenci Seç</label>
+                                                    <input type="hidden" id="hdusersgetid1" />
+                                                    <select id="hdusersgetid1s" class="form-control">
+                                                        <option value=""></option>
+                                                        <option value="1">Ali</option>
+                                                    </select>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label>Başlangıç</label>
+                                                    <div class="input-group date" id="dtp1">
+                                                        <input type="text" id="txtStart" class="form-control" required />
+                                                        <span class="input-group-addon">
+                                                            <span class="glyphicon glyphicon-calendar"></span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="checkbox">
+                                                        <label><input type="checkbox" id="chkIsFullDay" checked="checked" />  Tam Gün</label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group" id="divEndDate" style="display:none">
+                                                    <label>Bitiş</label>
+                                                    <div class="input-group date" id="dtp2">
+                                                        <input type="text" id="txtEnd" class="form-control" required />
+                                                        <span class="input-group-addon">
+                                                            <span class="glyphicon glyphicon-calendar"></span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Açıklama</label>
+                                                    <textarea id="txtDescription" rows="3" class="form-control"></textarea>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Öncelik Derecesi</label>
+                                                    <select id="ddThemeColor" class="form-control">
+                                                        <option value="red">Çok Yüksek Öncelikli</option>
+                                                        <option value="#007bff">Yüksek Öncelikli</option>
+                                                        <option value="#28a745">Normal Öncelikli</option>
+                                                        <option value="#f39c12">Düşük Öncelikli</option>
+                                                    </select>
+                                                </div>
+                                                <button type="button" id="btnSave" class="btn btn-success">Kaydet</button>
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">Kapat</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        }
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+<link href="~/Content/Admin/plugins/custom/fullcalendarcustomjs/fullcalendar.min.css" rel="stylesheet" />
+<link href="~/Content/Admin/plugins/custom/fullcalendarcustomjs/fullcalendar.print.css" rel="stylesheet" media="print" />
+<link href="~/Content/Admin/plugins/custom/fullcalendarcustomjs/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+
+<script src="~/Content/Admin/plugins/custom/fullcalendarcustomjs/modernizr-2.6.2.js"></script>
+<script src="~/Content/Admin/plugins/custom/fullcalendarcustomjs/jquery-1.10.2.min.js"></script>
+
+<script src="~/Content/Admin/plugins/custom/fullcalendarcustomjs/moment.js"></script>
+<script src="~/Content/Admin/plugins/custom/fullcalendarcustomjs/fullcalendar.min.js"></script>
+<script src="~/Content/Admin/plugins/custom/fullcalendarcustomjs/bootstrap-datetimepicker.min.js"></script>
+
+<script src="~/Content/Admin/plugins/custom/jquery-ui.js"></script>
+<script src="~/Content/Admin/plugins/custom/oasiscustom.js"></script>
+<script type="text/javascript">
+    $("#hdusersgetid1s").change(function () {
+        $("#hdusersgetid1").val($(this).val());
+    }).change(); // trigger once if needed
+</script>
+
+
+
+<script>
+    $(document).ready(function () { //Tüm Dom ağacı yüklendikten sonra çalışmaya başlanacak olan kodlar
+        var events = [];//planlarımı ekleyeceğim bir array oluşturuyorum
+        var selectedEvent = null;// tıkladığım planı tutacak olan değişken
+       //Devamlı bir yenilemeye ihtiyaç duyulacağı için fonksiyon yazıldı
+
+        $("#goster").click(function as() {
+        var mylistget = $("#hdmylist1").val();
+        PlanGetirYukleCalendar();
+        function PlanGetirYukleCalendar() {
+            events = []; //yine planları tutacak bir arrayimiz var         
+            $.ajax({ //planlarımız server taradından geleceği için ajax'tan yardım alıyoruz'
+                url: '/Etkinlik/GetEvents/' + mylistget,//controller/method
+                type: "GET",  //çağtılan methodumuzun ne iş yaptığı
+                dataType: "JSON", 
+                success: function (data) {//server çağrısı başarılı olursa
+                    $.each(data, function (i, v) {
+                        events.push({//arrayime sırasıyla çektiğim verileri atıyorum niteliklerine uygun olarak
+                            eventID: v.EventID,
+                            usersGet: v.usersget,
+                            mylistGet: v.mylistget,
+                            title: v.Subject,
+                            description: v.Description,
+                            start: moment(v.Start),
+                            end: v.End != null ? moment(v.End) : null,
+                            color: v.ThemeColor,
+                            allDay: v.IsFullDay,
+                            borderColor: "#000000",
+                            textColor: "#FFFFFF"
+                        });
+                    })
+
+                    TakvimOlustur(events);//Tüm planların çekimini yaptıktan sorna takvimi oluşturmak için fonksiyonumu çağırıyorum
+                },
+                error: function (error) {//server cevabı hatalı olursa alert verdiriyorum.
+                    alert('Hata');
+                }
+            })
+                
+        }
+
+ })
+        function TakvimOlustur(events) {
+            $('#calender').fullCalendar('destroy'); //var olan takbimi önce bir yok ediyorum
+            $('#calender').fullCalendar({
+                themeSystem: 'bootstrap4',
+                contentHeight: 400,//takvim için yükseklik veriyorum
+                defaultDate: new Date(),//varsayılan olarak bugünü göster diyorum
+                timeFormat: 'h(:mm)a',//format belirliyoruz
+                plugins: ['bootstrap', 'interaction', 'dayGrid', 'timeGrid'],
+                header: {//başlık kısmında bvulunması istediğim butonlar ve yerleri
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'month,basicWeek,basicDay,agenda'
+                },
+                'themeSystem': 'bootstrap',
+                weekNumbers: true,
+                eventLimit: true,
+                eventColor: '#',
+                events: events,
+                eventClick: function (calEvent, jsEvent, view) { //plana tıklanınca olacak olaylar
+                    selectedEvent = calEvent;//tıklanan planı tutuyorum
+                    $('#clndrModal #eventTitle').text(calEvent.title); //ve ilk bilgilendirme modal'ımı çağırıyorum'
+                    var $description = $('<div/>');
+                    $description.append($('<p/>').html('<b>Başlangıç:</b></br>' + calEvent.start.format("DD-MMM-YYYY HH:mm a")));
+                    if (calEvent.end != null) {
+                        $description.append($('<p/>').html('<b>Bitim:</b></br>' + calEvent.end.format("DD-MMM-YYYY HH:mm a")));
+                    }
+                    $description.append($('<p/>').html('<b>Açıklama:</b></br>' + calEvent.description));
+                    $('#clndrModal #pDetails').empty().html($description); //Modal üzerine, planımın niteliklerini yerleştiriyorum
+
+                    $('#clndrModal').modal(); //modalıma açıl diyorum
+                },
+                selectable: true,
+                select: function (start, end) {
+                    selectedEvent = { //seçilen plana dair varsayılan değerleri set'liyorum'
+                        eventID: 0,
+                        title: '',
+                        description: '',
+                        start: start,
+                        end: end,
+                        allDay: true,
+                        color: ''
+
+                    };
+                    openAddEditForm();//düzenleme formunu aç diyorum
+                    $('#calendar').fullCalendar('unselect'); //seçilmiş durumdaki takvimi seçilmemiş hale getriiyorum
+                },
+                editable: true,//Planın duzenlenebilirliğini true yapıyorum
+                eventDrop: function (event) { //Planın silinmesi durumundaçalışacak olan method
+                    var data = {
+                        EventID: event.eventID,
+                        usersget: event.usersGet,
+                        mylistget: event.mylistGet,
+                        Subject: event.title,
+                        Start: event.start.format('DD/MM/YYYY HH:mm A'),
+                        End: event.end != null ? event.end.format('DD/MM/YYYY HH:mm A') : null,
+                        Description: event.description,
+                        ThemeColor: event.color,
+                        IsFullDay: event.allDay
+                    };
+                    SaveEvent(data);
+                }
+            })
+        }
+
+        $('#btnEdit').click(function () {
+            //Düzenleme olayı için gereken modal açılır
+            openAddEditForm();
+        })
+        $('#btnDelete').click(function () {//sil butonuna tıklanınca confirm alert çıkarıyoruz
+            if (selectedEvent != null && confirm('Emin Misin?')) {
+                $.ajax({
+                    type: "POST", //ajax ile silinecek olan planın id değerini method'a parametre veriyoruz'
+                    url: '/Etkinlik/DeleteEvent',//controller/method
+                    data: { 'eventID': selectedEvent.eventID },//seçilen planın id değerini parametre verrim
+                    success: function (data) {
+                        if (data.status) { //controllerdan bize status Verisinin geldiğini hatırlayın
+                            PlanGetirYukleCalendar();
+                            $('#clndrModal').modal('hide');//Silme durumunun ardından bu modalı kapatıyoruz
+                        }
+                    },
+
+                    error: function () {//status verisi false gelirse
+                        alert('Hata');
+                    }
+                })
+            }
+        })
+
+        $('#dtp1,#dtp2').datetimepicker({//Plan oluşumunda kullanılacak olan bootstrap'ın datetimepickerları
+            format: 'DD/MM/YYYY HH:mm A'
+        });
+
+
+        $('#chkIsFullDay').change(function () {//tam gün planı ise bitiş zamanına dair bootstrap datetimepicker saklanır
+            if ($(this).is(':checked')) {
+                $('#divEndDate').hide();
+            }
+            else {
+                $('#divEndDate').show();
+            }
+        });
+
+
+        //düzenleme işlemi için form açıldığında
+        //açılan formun düzenlenecek olan planın değerleriyle dolu olarak gelmesi için
+        //Jquery val ile niteliğin değeri alındı ve set edildi form inputlarına
+        function openAddEditForm() {
+            if (selectedEvent != null) {
+                $('#hdEventID').val(selectedEvent.eventID);
+                $('#hdusersgetid1').val(selectedEvent.usersGet);
+                $('#txtSubject').val(selectedEvent.title);
+                $('#txtStart').val(selectedEvent.start.format('DD/MM/YYYY HH:mm A'));
+                $('#chkIsFullDay').prop("checked", selectedEvent.allDay || false);
+                $('#chkIsFullDay').change();
+                $('#txtEnd').val(selectedEvent.end != null ? selectedEvent.end.format('DD/MM/YYYY HH:mm A') : '');
+                $('#txtDescription').val(selectedEvent.description);
+                $('#ddThemeColor').val(selectedEvent.color);
+            }
+            $('#clndrModal').modal('hide');
+            $('#clndrModalSave').modal();
+        }
+
+        //Kaydet butonuna basıldığında Form inputlarını kontrol ederim oncelıkle
+        $('#btnSave').click(function () {
+            //Doğrulama
+            if ($('#txtSubject').val().trim() == "") {
+                alert('Konu Boş Bırakılamaz.');
+                return;
+            }
+            if ($('#txtStart').val().trim() == "") {
+                alert('Başlangıç Zamanı Boş Bırakılamaz');
+                return;
+            }
+            if ($('#chkIsFullDay').is(':checked') == false && $('#txtEnd').val().trim() == "") {
+                alert('Bitim Zamanı Boş Bırakılamaz');
+                return;
+            }
+            else {
+                var startDate = moment($('#txtStart').val(), "DD/MM/YYYY HH:mm A").toDate();
+                var endDate = moment($('#txtEnd').val(), "DD/MM/YYYY HH:mm A").toDate();
+                if (startDate > endDate) {
+                    alert('Bitim Zamanı Başlangıç Zamanından Önce Olamaz.');
+                    return;
+                }
+            }
+
+            //Controller kısmına pass edilecek veri Json formatta toparlanır
+            var data = {
+                EventID: $('#hdEventID').val(),
+                usersget: $('#hdusersgetid1').val(),
+                mylistget: $('#hdmylist1').val(),
+                Subject: $('#txtSubject').val().trim(),
+                Start: $('#txtStart').val().trim(),
+                End: $('#chkIsFullDay').is(':checked') ? null : $('#txtEnd').val().trim(),
+                Description: $('#txtDescription').val(),
+                ThemeColor: $('#ddThemeColor').val(),
+                IsFullDay: $('#chkIsFullDay').is(':checked')
+            }
+            // Server kısmına data'yı pass etmek için fonksıyonumu çağırırım'
+            SaveEvent(data);
+
+        })
+
+        function SaveEvent(data) {
+            $.ajax({
+                type: "POST",//ajax ile silinecek olan planın id değerini method'a parametre veriyoruz'
+                url: '/Etkinlik/SaveEvent',////controller/method
+                data: data,//post edilecek data
+                success: function (data) {
+                    if (data.status) { //controllerdan bize status Verisinin geldiğini hatırlayın
+                        //Takvimi yenile
+                        PlanGetirYukleCalendar();
+                        $('#clndrModalSave').modal('hide');//Katdet modalımızı kapatıyoru<.
+                    }
+                },
+                error: function () {
+                    alert('Hata');
+                }
+            })
+        }
+    })
+
+</script>

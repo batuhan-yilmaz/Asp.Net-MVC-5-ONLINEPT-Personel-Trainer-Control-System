@@ -1,0 +1,75 @@
+﻿@using onlinept.Models.Entity
+@model List<events>
+
+@{
+    ViewBag.Title = "etkinlikler152035424";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+
+    <div class="card card-warning">
+        <div class="card-header">
+            <h3 class="card-title"><i class="fa fa-calendar" aria-hidden="true"></i>   Etkinlikler</h3>
+
+            <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                    <i class="fas fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-tool" data-card-widget="remove"><i class="fas fa-times"></i></button>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="chart">
+                <br />
+
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <h1>Etkinlik Takvimi</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.container-fluid -->
+                </section>
+
+                <div id="calender" class="fc fc-ltr fc-bootstrap" style="">
+
+                    <div id="clndrModal" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title"><span id="eventTitle"></span></h4>
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Kapat</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+<link href="~/Content/Admin/plugins/custom/fullcalendarcustomjs/fullcalendar.min.css" rel="stylesheet" />
+<link href="~/Content/Admin/plugins/custom/fullcalendarcustomjs/fullcalendar.print.css" rel="stylesheet" media="print" />
+<link href="~/Content/Admin/plugins/custom/fullcalendarcustomjs/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+
+<script src="~/Content/Admin/plugins/custom/fullcalendarcustomjs/modernizr-2.6.2.js"></script>
+<script src="~/Content/Admin/plugins/custom/fullcalendarcustomjs/jquery-1.10.2.min.js"></script>
+
+<script src="~/Content/Admin/plugins/custom/fullcalendarcustomjs/moment.js"></script>
+<script src="~/Content/Admin/plugins/custom/fullcalendarcustomjs/fullcalendar.min.js"></script>
+<script src="~/Content/Admin/plugins/custom/fullcalendarcustomjs/bootstrap-datetimepicker.min.js"></script>
+
+

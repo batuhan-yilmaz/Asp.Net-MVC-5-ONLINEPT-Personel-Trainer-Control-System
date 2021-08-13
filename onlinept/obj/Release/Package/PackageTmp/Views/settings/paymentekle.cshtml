@@ -1,0 +1,139 @@
+﻿@model onlinept.Models.Entity.payment
+
+@{
+    ViewBag.Title = "Ödeme Planı Ekle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.link = "paymentekle";
+    ViewBag.menuactive = "Ayarlar2";
+}
+
+@if (TempData["paymentHata"] != null)
+{
+
+    <script>
+        Swal.fire('Hata', 'İşlem gerçekleştirilemedi', 'error');
+    </script>
+}
+
+<div class="content-wrapper">
+    <div class="card-header">
+        <h3 class="card-title">Ödeme Planı Ekle</h3>
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body">
+        @using (Html.BeginForm("paymentekle", "Settings", FormMethod.Post, new { @enctype = "multipart/from-data" }))
+        {
+            <table id="example1" class="table table-bordered table-striped">
+                <tr>
+
+                    <td>
+                        <p>Öğrenci Seç</p>
+                        @Html.TextBoxFor(m => m.mylistget, new { @class = "form-control", @Value = "", id = "mylist2" })
+                        @Html.TextBoxFor(m => m.usersget, new { id = "colordbs", @Value = "", @class = "form-control", @required = "required" })
+                    <select id="colordb" class="form-control">
+                        <option value=""></option>
+                        @foreach (var user in ViewBag.UserList)
+                        {
+                            <option value="@user.userid">@user.name</option>
+                        }
+                    </select>
+
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Tarih</p>
+                        @Html.EditorFor(m => m.date, new { htmlAttributes = new { @class = "form-control", id = "tarih1", placeholder = "Lütfen Başlangıç Tarihi Giriniz.", @required = "required" } })
+                    </td>
+                    <td>
+                        <p>Toplam</p>
+                        @Html.TextBoxFor(m => m.total, new { @class = "form-control", maxlength = "4", oninput = "Number(this.id);", @required = "required" })
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>1.Ödeme</p>
+                        @Html.TextBoxFor(m => m.pay1, new { @class = "form-control", maxlength = "4", oninput = "Number(this.id);", @required = "required" })
+                    </td>
+                    <td>
+                        <p>2.Ödeme</p>
+                        @Html.TextBoxFor(m => m.pay2, new { @class = "form-control", maxlength = "4", oninput = "Number(this.id);", @required = "required" })
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>3.Ödeme</p>
+                        @Html.TextBoxFor(m => m.pay3, new { @class = "form-control", maxlength = "4", oninput = "Number(this.id);", @required = "required" })
+                    </td>
+                    <td>
+                        <p>4.Ödeme</p>
+                        @Html.TextBoxFor(m => m.pay4, new { @class = "form-control", maxlength = "4", oninput = "Number(this.id);", @required = "required" })
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>5.Ödeme</p>
+                        @Html.TextBoxFor(m => m.pay5, new { @class = "form-control", maxlength = "4", oninput = "Number(this.id);", @required = "required" })
+                    </td>
+                    <td>
+                        <p>6.Ödeme</p>
+                        @Html.TextBoxFor(m => m.pay6, new { @class = "form-control", maxlength = "4", oninput = "Number(this.id);", @required = "required" })
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>7.Ödeme</p>
+                        @Html.TextBoxFor(m => m.pay7, new { @class = "form-control", maxlength = "4", oninput = "Number(this.id);", @required = "required" })
+                    </td>
+                    <td>
+                        <p>8.Ödeme</p>
+                        @Html.TextBoxFor(m => m.pay8, new { @class = "form-control", maxlength = "4", oninput = "Number(this.id);", @required = "required" })
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>9.Ödeme</p>
+                        @Html.TextBoxFor(m => m.pay9, new { @class = "form-control", maxlength = "4", oninput = "Number(this.id);", @required = "required" })
+                    </td>
+                    <td>
+                        <p>10.Ödeme</p>
+                        @Html.TextBoxFor(m => m.pay10, new { @class = "form-control", maxlength = "4", oninput = "Number(this.id);", @required = "required" })
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>11.Ödeme</p>
+                        @Html.TextBoxFor(m => m.pay11, new { @class = "form-control", maxlength = "4", oninput = "Number(this.id);", @required = "required" })
+                    </td>
+                    <td>
+                        <p>12.Ödeme</p>
+                        @Html.TextBoxFor(m => m.pay12, new { @class = "form-control", maxlength = "4", oninput = "Number(this.id);", @required = "required" })
+                        @Html.TextBoxFor(m => m.paymentid, new { oninput = "Number(this.id);", maxlength = "9", @id = "viewkey1", @class = "form-control", @Value = "", @readonly = "false" })
+                    </td>
+                </tr>
+                <tr>
+                    <td><button type="submit" class="fa fa-floppy-o btn btn-success" /> Kaydet</td>
+                </tr>
+            </table>
+
+        }
+    </div>
+    <!-- /.card-body -->
+</div>
+<!-- /.card -->
+<script src="~/Content/Admin/plugins/custom/jquery-ui.js"></script>
+<script src="~/Content/Admin/plugins/custom/oasiscustom.js"></script>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        oasisdatepicker();
+
+    });
+    document.getElementById("viewkey1").value = viewkey();
+</script>
+
+
+

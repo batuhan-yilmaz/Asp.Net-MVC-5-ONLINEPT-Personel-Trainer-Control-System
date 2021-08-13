@@ -1,0 +1,2271 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\Users\OSX\Desktop\onlineptpubnlish</_PublishTargetUrl>
+    <History>True|2021-08-11T21:36:32.7884874Z;False|2021-08-12T00:35:38.6975801+03:00;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>09/11/2013 12:10:04</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>09/11/2013 12:10:04</publishTime>
+    </File>
+    <File Include="bin/Google.Authenticator.dll">
+      <publishTime>12/07/2016 16:16:00</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>07/25/2012 11:48:56</publishTime>
+    </File>
+    <File Include="bin/MySql.Data.dll">
+      <publishTime>04/27/2018 02:48:14</publishTime>
+    </File>
+    <File Include="bin/MySql.Data.Entity.EF6.dll">
+      <publishTime>04/27/2018 02:48:16</publishTime>
+    </File>
+    <File Include="bin/onlinept.dll">
+      <publishTime>08/12/2021 00:36:27</publishTime>
+    </File>
+    <File Include="bin/onlinept.pdb">
+      <publishTime>08/12/2021 00:36:27</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe.config">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.rsp">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.exe">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.rsp">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.Scripting.dll">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.Scripting.dll">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.amd64.dll">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.x86.dll">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.AppContext.dll">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Diagnostics.StackTrace.dll">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.dll">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.Primitives.dll">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe.config">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.rsp">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/System.Data.SqlClient.dll">
+      <publishTime>07/21/2020 00:22:32</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>11/28/2018 13:04:24</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>11/28/2018 12:59:46</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>11/28/2018 13:00:12</publishTime>
+    </File>
+    <File Include="bin/System.Web.Webpages.Deployment.dll">
+      <publishTime>11/28/2018 13:04:24</publishTime>
+    </File>
+    <File Include="bin/System.Web.Webpages.dll">
+      <publishTime>11/28/2018 13:04:24</publishTime>
+    </File>
+    <File Include="bin/System.Web.Webpages.Razor.dll">
+      <publishTime>11/28/2018 13:04:24</publishTime>
+    </File>
+    <File Include="Content/Admin/data/admin/aimg/default.jpg">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/data/belge/adasdas-12312-123_-12-3.pdf">
+      <publishTime>08/28/2020 13:15:15</publishTime>
+    </File>
+    <File Include="Content/Admin/data/belge/lao_-12-234-sdfh8y.pdf">
+      <publishTime>08/27/2020 18:23:11</publishTime>
+    </File>
+    <File Include="Content/Admin/data/belge/zombi-_-12-234-sdfh8y.pdf">
+      <publishTime>08/27/2020 18:22:54</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/00031301-air-bike-m_waist_FIX_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:38</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/00041301-Air-Twisting-Crunch_waist_360.gif">
+      <publishTime>09/25/2020 02:29:38</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/00081301-Alternate-Lying-Floor-Leg-Raise_waist_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:38</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/00171301-Assisted-Pull-up_Back_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:38</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/00241301-Barbell-Bench-Front-Squat_thighs_360.gif">
+      <publishTime>09/25/2020 02:29:38</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/00331301-Barbell-Decline-Bench-Press_Chest_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:38</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/00411301-Barbell-Front-Raise_Shoulders_360-1-360x200.gif">
+      <publishTime>09/25/2020 02:29:38</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/00411301-Barbell-Front-Raise_Shoulders_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:38</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/00451301-Barbell-Guillotine-Bench-Press_Chest_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:38</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/00471301-Barbell-Incline-Bench-Press_Chest_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:38</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/00541301-Barbell-Lunge_Thighs_360.gif">
+      <publishTime>09/25/2020 02:29:38</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/00611301-Barbell-Lying-Triceps-Extension_Upper-Arms_360.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/00911301-Barbell-Seated-Overhead-Press_Shoulders_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/00911301-Barbell-Seated-Overhead-Press_Shoulders_360.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/00951301-Barbell-Shrug_Back_360.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/00951301-Barbell-Shrug_Back_720-410x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/01001301-Barbell-Skier_Shoulders_360.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/01041301-Barbell-Standing-Back-Wrist-Curl_Forearms_360.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/01091301-Barbell-Standing-Overhead-Triceps-Extension_Upper-Arms_360.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/01101301-Barbell-Standing-Reverse-Grip-Curl_Forearms_360.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/01181301-Barbell-Reverse-Grip-Bent-over-Row_Back-FIX_180.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/01201301-Barbell-Upright-Row_shoulder_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/01231301-Barbell-Wide-Grip-Upright-Row_Shoulders_360.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/01251301-Barbell-Wrist-Curl-II_Forearms_360.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/01271301-Barbell-Zercher-Squat_Hips_360.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/01611301-Cable-Forward-Raise_Shoulders_360.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/01621301-Cable-Front-Raise_Shoulders_360.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/01641301-Cable-Front-Shoulder-Raise_Shoulders_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/01771301-Cable-Lateral-Pulldown-with-rope-attachment_Back_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/02001301-Cable-Pushdown-with-rope-attachment_Upper-Arms_360.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/02201301-Cable-Shrug_Back_360.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/02311301-Cable-Standing-One-Arm-Triceps-Extension_Upper-Arms_360.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/02331301-Cable-Standing-Rear-Delt-Row-with-rope_shoulder_360-1.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/02331301-Cable-Standing-Rear-Delt-Row-with-rope_shoulder_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/02331301-Cable-Standing-Rear-Delt-Row-with-rope_shoulder_360.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/02411301-Cable-Triceps-Pushdown-V-bar-attachment_Upper-Arms_360.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/02591301-Close-Grip-Push-up_Upper-Arms_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/02661301-Crunch-arms-straight_waist_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/02671301-Crunch-hands-overhead_waist_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/02681301-Crunch-leg-raise_waist_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/02731301-Crunch-straight-leg-up_waist_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/02751301-Crunch-Floor-w_waist_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/02761301-Dead-Bug_waist_360.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/02781301-Decline-Push-up-on-stability-ball_Chest_360.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/02811301-Decline-Sit-up-arms-straight_waist_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/02921301-Dumbbell-Bent-over-Row_back_Back_360.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/02931301-Dumbbell-Bent-Over-Row_Back-FIX_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/03001301-Dumbbell-Deadlift_Back_360.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/03011301-Dumbbell-Decline-Bench-Press_Chest_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/03021301-Dumbbell-Decline-Fly_Chest_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/03081301-Dumbbell-Fly_Chest-FIX_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/03191301-Dumbbell-Incline-Fly_Chest-FIX_360-1-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/03331301-Dumbbell-Kickback_Upper-Arms_360.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/03451301-Dumbbell-Lying-One-Arm-Rear-Lateral-Raise_shoulder_360.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/03481301-Dumbbell-Lying-Rear-Lateral-Raise_shoulder_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/03551301-Dumbbell-One-Arm-Lateral-Raise_shoulder_360.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/03701301-Dumbbell-Peacher-Hammer-Curl_Forearms_360.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/03801301-Dumbbell-Rear-Lateral-Raise_Shoulders_360.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/03871301-Dumbbell-Seated-Alternate-Front-Raise_Shoulders_360.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/03941301-Dumbbell-Seated-Kickback_Upper-Arms_360.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/04031301-Dumbbell-Seated-Revers-grip-Concentration-Curl_Forearms_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/04061301-Dumbbell-Shrug_Back-FIX_360.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/04141301-Dumbbell-Standing-Alternate-Overhead-Press_Shoulders_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/04261301-Dumbbell-Standing-Overhead-Press_shoulder_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/04381301-Dumbbell-W-press_Shoulders_360.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/04461301-EZ-Barbell-Close-grip-Curl_Upper-Arms_360.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/04491301-EZ-Barbell-Incline-Triceps-Extension_Upper-Arms_360.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/04511301-EZ-Barbell-Reverse-Grip-Curl_Forearms_360-1.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/04721301-Hanging-Leg-Raise_Hips_360.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/04801301-High-Knee-Twist_Cardio_360.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/04821301-Hip-Crunch-knees-bent_waist_360-1-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/05001301-Isometric-Wipers_Chest_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/05031301-Jack-knife-on-Ball_waist_360.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/05071301-Jackknife-Sit-Up_waist_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/05491301-Kettlebell-Swing_Kettlebell_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/05731301-Lever-Back-Extension_Waist_360-1.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/05841301-Lever-Lateral-Raise_shoulder_360-1-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/05971301-Lever-Seated-Hip-Abduction_Hips-FIX_360-1-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/05981301-Lever-Seated-Hip-Adduction_Thighs_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/06291301-Mountain-Climber-Lunge_Cardio_360.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/06351301-Oblique-Crunches-Floor_waist_360.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/06531301-Push-up-bosu-ball_Chest_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/06551301-Push-up-on-stability-ball_Chest_360.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/06621301-Push-up-m_Chest-FIX_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/06671301-Raise-Single-Leg-Push-up_Chest_360.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/07101301-Side-Hip-Abduction_Hips_360.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/07111301-Side-Lunge-Stretch_Thighs_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/07151301-Side-Plank-m_Waist_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/07291301-Single-Leg-Hip-Bridge-straight-leg_hips_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/07351301-Sit-Up-II_waist_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/07671301-Smith-Shrug_Back_360.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/07911301-Standing-Hip-Abduction_Hips_360.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/08041301-Superman_Waist_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/08111301-Trap-Bar-Deadlift_Thighs_360.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/08341301-Weighted-Front-Raise_Shoulders_360-1.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/08501301-Weighted-Side-Bend-on-stability-ball_Waist_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/08601301-Cable-kickback_Upper-arms_360.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/08641301-Dumbbell-Upright-Shoulder-External-Rotation_Back_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/08681301-Cable-Curl-m_Upper-Arms_360.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/08791301-Cable-hip-abduction-version-2_Hips_360.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/08931301-Band-bent_Shoulders-over-rear-lateral-raise_Shoulders_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/08981301-Band-high-fly_Chest_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/09211301-Band-standing-external-shoulder-rotation_Back_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/09311301-Band-twist-down-up_Waist_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/09321301-Band-twist-up-down_Waist_360-1-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/09351301-Band-Upright-Shoulder-External-Rotation_Back_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/09801301-Band-bent-over-hip-extension_Hips_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/09831301-Band-kneeling-one-arm-pulldown_Back_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/10601301-Barbell-Hip-Thrust_Hips_360.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/10611301-Barbell-one-leg-hip-thrust_Hips_360.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/10631301-Barbell-sumo-squat_Thighs_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/11701301-45-degree-one-leg-hyperextension-arms-in-front-of-chest_Hips_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/11711301-45-degree-twisting-hyperextension_Hips_360-1.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/11721301-Assisted-Weighted-Push-up_Chest_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/11751301-Dumbbell-forward-leaning-lunge_Thighs_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/11821301-Push-up-on-knees_Chest_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/11951301-Lever-Incline-Hammer-Chest-Press_Chest_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/12261301-EZ-Bar-Standing-Overhead-Press_Shoulders_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/12411301-Bird-Dog-male_Back_360-1.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/13171301-Barbell-Reverse-Grip-Incline-Bench-Row_Back_360.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/13991301-Bench-dip-on-floor_Upper-Arms_360.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/14101301-Barbell-Lateral-Lunge_Hips_360-1.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/14141301-Dumbbell-One-Arm-Reverse-Preacher-Curl_Forearms_360.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/14391301-Lever-Gripless-Shrug-VERSION-2_Back_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/14411301-Dumbbell-Over-Bench-One-Arm-Reverse-Wrist-Curl_Forearms_360.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/14621301-Barbell-Full-Squat-Side-POV_Thighs_360.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/15031301-Band-Pull-Apart_Shoulders_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/15621301-Exercise-Ball-Wall-Squat_Thighs_360.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/15931301-Sit-Squat_Thighs_360.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/16061301-Cable-Reverse-Grip-Triceps-Pushdown-SZ-bar_Upper-arms_360-1.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/16241301-Dumbbell-Reverse-Bench-Press_Chest_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/16541301-Dumbbell-Biceps-Curl-Reverse_Upper-Arms_360.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/16841301-Dumbbell-Step-Up-Single-Leg-Balance-with-Bicep-Curl_Upper-Arms_360.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/17341301-Dumbbell-Kickbacks-on-Exercise-Ball_Upper-Arms_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/17381301-Dumbbell-Seated-Reverse-Grip-One-Arm-Overhead-Tricep-Extension_Upper-Arms_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/17461301-Exercise-Ball-Supine-Triceps-Extension_Upper-Arms_360.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/17691301-Bodyweight-Side-Lying-Biceps-Curl_Upper-Arms_360.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/18661301-Wide-Grip-Pull-Up-on-Dip-Cage_Back_720.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/21371301-Dumbbell-Arnold-Press_Shoulders_360.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/21881301-Dumbbell-Seated-Triceps-Extension_Upper-Arms_360.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/22141301-Barbell-Deadlift-female_Hips_720-410x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/22161301-Barbell-Hip-Thrust-female_Hips_360.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/22171301-Dumbbell-Bench-Squat-female_Thighs_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/22181301-Dumbbell-Lunge-female_Thighs_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/22191301-Dumbbell-Rear-Lunge-female_Thighs_360-1-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/22271301-Barbell-Single-Leg-Split-Squat-female_Thighs_360.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/22331301-Dumbbell-Front-Raise-female_Shoulders_360-2-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/22331301-Dumbbell-Front-Raise-female_Shoulders_360-4.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/22341301-Dumbbell-Standing-Lateral-Raise-female_Shoulders_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/22351301-Dumbbell-Seated-Front-Raise-female_Shoulders_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/22371301-Dumbbell-Seated-Shoulder-Press-female_Shoulders_360.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/22371301-Dumbbell-Seated-Shoulder-Press-female_Shoulders_720.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/22381301-EZ-Barbell-Curl-female_Upper-Arms_360.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/22551301-Lever-Seated-Fly-female_Chest_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/22901301-Dumbbell-Bulgarian-Split-Squat-female_Thighs_360.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/22911301-Cable-Wide-Grip-Lat-Pulldown-female_Back_720-410x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/22951301-Stability-Ball-Rollout-on-Knees-female_Hips-FIX_360.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/23171301-Dumbbell-Seated-Bent-Arm-Lateral-raise_Shoulders_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/23211301-Dumbbell-Standing-Inner-Biceps-Curl-version-2_Upper-Arms_360.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/23261301-Dumbbell-Pronated-Grip-Row-_female_Back_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/23681301-Split-Squats_Thighs_360.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/23691301-Cable-Kneeling-Crunch-female_Waist_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/23871301-Cable-Standing-Up-Straight-Crossovers-female_Chest_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/23971301-Dumbbell-Scott-Press_Shoulders_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/24081301-Weighted-Lying-Neck-Extension-with-head-harness_Neck_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/24091301-Weighted-Lying-Neck-Flexion-with-head-harness_Neck_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/24291301-Frog-Crunch_Waist_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/24611301-Side-Lying-Clam_Hips_360.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/24671301-Barbell-Reverse-Grip-Bent-Over-Row-female_Back_360.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/24691301-Exercise-Ball-Frog-Crunch-female_Waist_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/26661301-Lever-Seated-Calf-Raise-plate-loaded-VERSION-2_Calves_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/27281301-StrongMan-Front-Chest-Squat_Weightlifting_360.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/27611301-Ankle-Dorsal-Flexion_Calves_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/28161301-V-Up-Down-with-Stability-ball-female_Waist_360.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/28971301-Front-Plank-with-Arm-and-Leg-Lift-push-up-position-female_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/29271301-Kettlebell-Kneeling-One-Arm-Bottoms-Up-Press_Shoulders_360.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/29511301-Lever-Horizontal-Leg-Press_Thighs_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/29851301-Pistol-Squat-to-Box-female_Thighs_360-2.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/30141301-Low-Glute-Bridge-on-floor-female_Hips_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/30971301-Lever-Bent-over-Row-plate-loaded-female_Back_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/31151301-Triceps-Dip-female_Upper-Arms_360.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/31411301-Bird-Dog-female_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/31521301-Assisted-Chin-Tuck-female_Neck_360-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/Adductor_Rockers.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/cablerow-990x548-410x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/Cat-cow_1024x1024.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/Crab_hold_Side.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/Elbow_CARs.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/Front-Plank-990x438-410x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/hyperextension-hyperextensions_geraet_ohne_gewicht-360x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/Lever-Donkey-Calf-Raise-Calves.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/Lever-Standing-Calf-Raise-Calf.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/lying-leg-curl-990x452-410x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/seated-leg-curl-990x557-410x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/Sit_back_thoracic_cat-cow.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/Sled-45¯-Calf-Press-Calf.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/Smith-Calf-Raise-version-2-Calves.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/Sphinx_pose_Side.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/exercise/gifs/Vertical-leg-crunch-990x665-410x200.gif">
+      <publishTime>09/25/2020 02:29:39</publishTime>
+    </File>
+    <File Include="Content/Admin/data/home/himg/1.jpg">
+      <publishTime>09/20/2020 02:28:23</publishTime>
+    </File>
+    <File Include="Content/Admin/data/home/himg/2.jpg">
+      <publishTime>09/20/2020 02:28:23</publishTime>
+    </File>
+    <File Include="Content/Admin/data/home/himg/3.jpg">
+      <publishTime>09/20/2020 02:28:24</publishTime>
+    </File>
+    <File Include="Content/Admin/data/home/himg/4.jpg">
+      <publishTime>09/20/2020 02:28:24</publishTime>
+    </File>
+    <File Include="Content/Admin/data/home/himg/5.jpg">
+      <publishTime>09/20/2020 02:28:23</publishTime>
+    </File>
+    <File Include="Content/Admin/data/home/himg/6.jpg">
+      <publishTime>09/20/2020 02:28:23</publishTime>
+    </File>
+    <File Include="Content/Admin/data/student/simg/1.jpg">
+      <publishTime>09/20/2020 00:52:16</publishTime>
+    </File>
+    <File Include="Content/Admin/data/student/simg/2.jpg">
+      <publishTime>09/20/2020 00:52:06</publishTime>
+    </File>
+    <File Include="Content/Admin/data/student/simg/3.jpg">
+      <publishTime>09/20/2020 00:52:17</publishTime>
+    </File>
+    <File Include="Content/Admin/data/student/simg/Erkek-arka.png">
+      <publishTime>09/01/2020 16:03:51</publishTime>
+    </File>
+    <File Include="Content/Admin/data/student/simg/Erkek-on.png">
+      <publishTime>09/01/2020 16:03:51</publishTime>
+    </File>
+    <File Include="Content/Admin/data/student/simg/Erkek-yan.png">
+      <publishTime>09/01/2020 16:03:51</publishTime>
+    </File>
+    <File Include="Content/Admin/data/student/simg/Kadin-arka.png">
+      <publishTime>09/01/2020 16:03:51</publishTime>
+    </File>
+    <File Include="Content/Admin/data/student/simg/Kadin-on.png">
+      <publishTime>09/01/2020 16:03:51</publishTime>
+    </File>
+    <File Include="Content/Admin/data/student/simg/Kadin-yan.png">
+      <publishTime>09/01/2020 16:03:51</publishTime>
+    </File>
+    <File Include="Content/Admin/data/user/uimg/11-11.jpg">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/data/user/uimg/11.jpg">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/data/user/uimg/av-dsdfefsd-__-atar.png">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/data/user/uimg/avatar.png">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/data/user/uimg/avatar04.png">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/data/user/uimg/avatar2.png">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/data/user/uimg/avatar3.png">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/data/user/uimg/avatar5.png">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/data/user/uimg/default.jpg">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/data/user/uimg/GUSIOC-_0.jpg">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/data/user/uimg/use-12312-__-r3-128x128.jpg">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/data/user/uimg/user2-160x160.jpg">
+      <publishTime>08/28/2020 14:26:33</publishTime>
+    </File>
+    <File Include="Content/Admin/dist/css/adminlte.css">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/dist/css/adminlte.css.map">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/dist/css/adminlte.min.css">
+      <publishTime>09/13/2020 15:47:33</publishTime>
+    </File>
+    <File Include="Content/Admin/dist/css/adminlte.min.css.map">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/dist/css/alt/adminlte.components.css">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/dist/css/alt/adminlte.components.css.map">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/dist/css/alt/adminlte.components.min.css">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/dist/css/alt/adminlte.components.min.css.map">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/dist/css/alt/adminlte.core.css">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/dist/css/alt/adminlte.core.css.map">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/dist/css/alt/adminlte.core.min.css">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/dist/css/alt/adminlte.core.min.css.map">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/dist/css/alt/adminlte.extra-components.css">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/dist/css/alt/adminlte.extra-components.css.map">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/dist/css/alt/adminlte.extra-components.min.css">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/dist/css/alt/adminlte.extra-components.min.css.map">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/dist/css/alt/adminlte.pages.css">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/dist/css/alt/adminlte.pages.css.map">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/dist/css/alt/adminlte.pages.min.css">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/dist/css/alt/adminlte.pages.min.css.map">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/dist/css/alt/adminlte.plugins.css">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/dist/css/alt/adminlte.plugins.css.map">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/dist/css/alt/adminlte.plugins.min.css">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/dist/css/alt/adminlte.plugins.min.css.map">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/dist/img/avatar.png">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/dist/img/avatar04.png">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/dist/img/avatar2.png">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/dist/img/avatar3.png">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/dist/img/avatar5.png">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/dist/img/boxed-bg.jpg">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/dist/img/boxed-bg.png">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/dist/img/credit/american-express.png">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/dist/img/credit/cirrus.png">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/dist/img/credit/Kart.png">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/dist/img/credit/mastercard.png">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/dist/img/credit/mestro.png">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/dist/img/credit/Nakit.png">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/dist/img/credit/paypal.png">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/dist/img/credit/paypal2.png">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/dist/img/default-150x150.png">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/dist/img/favicon.png">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/dist/img/icons.png">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/dist/img/oasis-touch-icon.png">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/dist/img/oasisLogo.png">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/dist/img/photo1.png">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/dist/img/photo2.png">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/dist/img/photo3.jpg">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/dist/img/photo4.jpg">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/dist/img/prod-1.jpg">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/dist/img/prod-2.jpg">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/dist/img/prod-3.jpg">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/dist/img/prod-4.jpg">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/dist/img/prod-5.jpg">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/dist/img/user1-128x128.jpg">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/dist/img/user2-160x160.jpg">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/dist/img/user3-128x128.jpg">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/dist/img/user4-128x128.jpg">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/dist/img/user5-128x128.jpg">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/dist/img/user6-128x128.jpg">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/dist/img/user7-128x128.jpg">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/dist/img/user8-128x128.jpg">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/dist/js/adminlte.js">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/dist/js/adminlte.js.map">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/dist/js/adminlte.min.js">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/dist/js/adminlte.min.js.map">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/dist/js/demo.js">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/dist/js/pages/dashboard.js">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/dist/js/pages/dashboard2.js">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/dist/js/pages/dashboard3.js">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/dist/personel/pcv/2.pdf">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/dist/personel/pimg/galaxy.png">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/dist/personel/pimg/GUSIOC-_0.jpg">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/dist/personel/pimg/intro.jpg">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/dist/yonetim/ycv/1.pdf">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/dist/yonetim/yimg/p1.jpg">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/bootstrap-switch/css/bootstrap2/bootstrap-switch.css">
+      <publishTime>09/08/2020 11:38:56</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/bootstrap-switch/css/bootstrap2/bootstrap-switch.min.css">
+      <publishTime>09/08/2020 11:38:56</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/bootstrap-switch/css/bootstrap3/bootstrap-switch.css">
+      <publishTime>09/08/2020 11:38:56</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/bootstrap-switch/css/bootstrap3/bootstrap-switch.min.css">
+      <publishTime>09/08/2020 11:38:56</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/bootstrap-switch/js/bootstrap-switch.js">
+      <publishTime>09/08/2020 11:38:56</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/bootstrap-switch/js/bootstrap-switch.min.js">
+      <publishTime>09/08/2020 11:38:56</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/bootstrap/js/bootstrap.bundle.js">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/bootstrap/js/bootstrap.bundle.js.map">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/bootstrap/js/bootstrap.bundle.min.js">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/bootstrap/js/bootstrap.bundle.min.js.map">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/bootstrap/js/bootstrap.js">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/bootstrap/js/bootstrap.js.map">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/bootstrap/js/bootstrap.min.js">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/bootstrap/js/bootstrap.min.js.map">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/custom/3.gz.css">
+      <publishTime>09/13/2020 17:50:04</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/custom/4nlytc/4nlytc.css">
+      <publishTime>09/16/2020 18:42:10</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/custom/4nlytc/body-from-measurements-ui.js">
+      <publishTime>09/16/2020 17:33:58</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/custom/4nlytc/Erkek-fat.png">
+      <publishTime>09/16/2020 16:51:34</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/custom/4nlytc/Erkek-mus.png">
+      <publishTime>09/16/2020 17:18:40</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/custom/4nlytc/fat.png">
+      <publishTime>09/14/2020 01:33:16</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/custom/4nlytc/height.png">
+      <publishTime>09/14/2020 01:33:16</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/custom/4nlytc/Kadin-fat.png">
+      <publishTime>09/16/2020 16:51:34</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/custom/4nlytc/Kadin-mus.png">
+      <publishTime>09/16/2020 18:33:08</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/custom/4nlytc/measure.png">
+      <publishTime>09/14/2020 01:33:16</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/custom/4nlytc/mus.jpg">
+      <publishTime>09/14/2020 01:33:16</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/custom/4nlytc/muscle.png">
+      <publishTime>09/14/2020 01:33:16</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/custom/4nlytc/three.min.js">
+      <publishTime>09/16/2020 17:33:58</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/custom/4nlytc/weight.png">
+      <publishTime>09/14/2020 01:33:16</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/custom/bf/bf.css">
+      <publishTime>08/31/2020 16:33:41</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/custom/bf/calc.js">
+      <publishTime>08/31/2020 16:10:28</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/custom/bs4/css/bootstrap.css">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/custom/bs4/css/buttons.bootstrap4.min.css">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/custom/bs4/css/dataTables.bootstrap4.min.css">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/custom/bs4/js/buttons.bootstrap4.min.js">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/custom/bs4/js/buttons.colVis.min.js">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/custom/bs4/js/buttons.html5.min.js">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/custom/bs4/js/buttons.print.min.js">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/custom/bs4/js/dataTables.bootstrap4.min.js">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/custom/bs4/js/dataTables.buttons.min.js">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/custom/bs4/js/jquery-3.5.1.js">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/custom/bs4/js/jquery.dataTables.min.js">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/custom/bs4/js/jszip.min.js">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/custom/bs4/js/pdfmake.min.js">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/custom/bs4/js/vfs_fonts.js">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/custom/chart.min.js">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/custom/ffmi/build.min.js">
+      <publishTime>08/29/2020 19:25:33</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/custom/ffmi/style.min.css">
+      <publishTime>08/31/2020 13:50:23</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/custom/fullcalendarcustomjs/bootstrap-datetimepicker.min.css">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/custom/fullcalendarcustomjs/bootstrap-datetimepicker.min.js">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/custom/fullcalendarcustomjs/fullcalendar.min.css">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/custom/fullcalendarcustomjs/fullcalendar.min.js">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/custom/fullcalendarcustomjs/fullcalendar.print.css">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/custom/fullcalendarcustomjs/jquery-1.10.2.min.js">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/custom/fullcalendarcustomjs/modernizr-2.6.2.js">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/custom/fullcalendarcustomjs/moment.js">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/custom/intlInputPhone.css">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/custom/intlInputPhone.js">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/custom/jotform/form.css">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/custom/jotform/nova.css">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/custom/jquery-3.3.1.min.js">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/custom/jquery-3.5.1.min.js">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/custom/jquery-ui-1.12.1.min.js">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/custom/jquery-ui.js">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/custom/jquery-ui.min.css">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/custom/jquery.inputmask.bundle.js">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/custom/layoutjs.js">
+      <publishTime>09/23/2020 12:56:45</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/custom/oasiscustom.js">
+      <publishTime>09/25/2020 14:09:16</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/custom/qrcode.min.js">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/custom/utils.js">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/datatables-bs4/css/dataTables.bootstrap4.css">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/datatables-bs4/js/dataTables.bootstrap4.js">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/datatables-responsive/css/responsive.bootstrap4.css">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/datatables-responsive/js/dataTables.responsive.js">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/datatables-responsive/js/dataTables.responsive.min.js">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/datatables-responsive/js/responsive.bootstrap4.js">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/datatables-responsive/js/responsive.bootstrap4.min.js">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/datatables/jquery.dataTables.js">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/datatables/jquery.dataTables.min.js">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/ekko-lightbox/ekko-lightbox.css">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/ekko-lightbox/ekko-lightbox.js">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/ekko-lightbox/ekko-lightbox.js.map">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/ekko-lightbox/ekko-lightbox.min.js">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/ekko-lightbox/ekko-lightbox.min.js.map">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/fontawesome-free/css/all.css">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/fontawesome-free/css/all.min.css">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/fontawesome-free/css/brands.css">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/fontawesome-free/css/brands.min.css">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/fontawesome-free/css/font-awesome.min.css">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/fontawesome-free/css/fontawesome.css">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/fontawesome-free/css/fontawesome.min.css">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/fontawesome-free/css/regular.css">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/fontawesome-free/css/regular.min.css">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/fontawesome-free/css/solid.css">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/fontawesome-free/css/solid.min.css">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/fontawesome-free/css/svg-with-js.css">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/fontawesome-free/css/svg-with-js.min.css">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/fontawesome-free/css/v4-shims.css">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/fontawesome-free/css/v4-shims.min.css">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/fontawesome-free/webfonts/fa-brands-400.eot">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/fontawesome-free/webfonts/fa-brands-400.svg">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/fontawesome-free/webfonts/fa-brands-400.ttf">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/fontawesome-free/webfonts/fa-brands-400.woff">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/fontawesome-free/webfonts/fa-brands-400.woff2">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/fontawesome-free/webfonts/fa-regular-400.eot">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/fontawesome-free/webfonts/fa-regular-400.svg">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/fontawesome-free/webfonts/fa-regular-400.ttf">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/fontawesome-free/webfonts/fa-regular-400.woff">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/fontawesome-free/webfonts/fa-regular-400.woff2">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/fontawesome-free/webfonts/fa-solid-900.eot">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/fontawesome-free/webfonts/fa-solid-900.svg">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/fontawesome-free/webfonts/fa-solid-900.ttf">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/fontawesome-free/webfonts/fa-solid-900.woff">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/fontawesome-free/webfonts/fa-solid-900.woff2">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/icheck-bootstrap/icheck-bootstrap.css">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/icheck-bootstrap/LICENSE">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/jquery/core.js">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/jquery/jquery-1.12.4.min.js">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/jquery/jquery.js">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/jquery/jquery.min.js">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/jquery/jquery.min.map">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/jquery/jquery.slim.js">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/jquery/jquery.slim.min.js">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/jquery/jquery.slim.min.map">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/af.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/ar-dz.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/ar-kw.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/ar-ly.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/ar-ma.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/ar-sa.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/ar-tn.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/ar.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/az.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/be.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/bg.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/bm.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/bn.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/bo.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/br.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/bs.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/ca.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/cs.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/cv.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/cy.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/da.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/de-at.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/de-ch.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/de.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/dv.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/el.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/en-au.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/en-ca.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/en-gb.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/en-ie.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/en-il.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/en-nz.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/en-SG.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/eo.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/es-do.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/es-us.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/es.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/et.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/eu.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/fa.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/fi.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/fo.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/fr-ca.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/fr-ch.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/fr.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/fy.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/ga.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/gd.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/gl.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/gom-latn.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/gu.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/he.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/hi.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/hr.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/hu.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/hy-am.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/id.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/is.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/it-ch.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/it.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/ja.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/jv.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/ka.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/kk.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/km.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/kn.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/ko.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/ku.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/ky.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/lb.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/lo.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/lt.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/lv.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/me.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/mi.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/mk.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/ml.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/mn.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/mr.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/ms-my.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/ms.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/mt.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/my.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/nb.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/ne.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/nl-be.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/nl.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/nn.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/pa-in.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/pl.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/pt-br.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/pt.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/ro.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/ru.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/sd.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/se.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/si.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/sk.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/sl.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/sq.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/sr-cyrl.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/sr.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/ss.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/sv.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/sw.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/ta.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/te.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/tet.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/tg.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/th.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/tl-ph.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/tlh.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/tr.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/tzl.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/tzm-latn.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/tzm.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/ug-cn.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/uk.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/ur.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/uz-latn.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/uz.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/vi.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/x-pseudo.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/yo.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/zh-cn.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/zh-hk.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locale/zh-tw.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locales.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/locales.min.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/moment-with-locales.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/moment-with-locales.min.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/moment/moment.min.js">
+      <publishTime>09/22/2020 15:02:05</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.css">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.scss">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/sweetalert2/sweetalert2.all.js">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/sweetalert2/sweetalert2.all.min.js">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/sweetalert2/sweetalert2.css">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/sweetalert2/sweetalert2.js">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/sweetalert2/sweetalert2.min.css">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Admin/plugins/sweetalert2/sweetalert2.min.js">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.css">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.min.css">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/home/animate/animate.css">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/home/animate/animate.min.css">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/home/bootstrap/css/bootstrap.css">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/home/bootstrap/css/bootstrap.min.css">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/home/bootstrap/js/bootstrap.bundle.min.js">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/home/bootstrap/js/bootstrap.min.js">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/home/counterup/counterup.min.js">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/home/css/style.css">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/home/easing/easing.js">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/home/easing/easing.min.js">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/home/errorcss/style.css">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/home/font-awesome/css/font-awesome.css">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/home/font-awesome/css/font-awesome.min.css">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/home/font-awesome/fonts/fontawesome-webfont.eot">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/home/font-awesome/fonts/fontawesome-webfont.svg">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/home/font-awesome/fonts/fontawesome-webfont.ttf">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/home/font-awesome/fonts/fontawesome-webfont.woff">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/home/font-awesome/fonts/fontawesome-webfont.woff2">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/home/font-awesome/fonts/FontAwesome.otf">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/home/ionicons/css/ionicons.css">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/home/ionicons/css/ionicons.min.css">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/home/ionicons/fonts/ionicons.eot">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/home/ionicons/fonts/ionicons.svg">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/home/ionicons/fonts/ionicons.ttf">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/home/ionicons/fonts/ionicons.woff">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/home/isotope/isotope.pkgd.js">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/home/isotope/isotope.pkgd.min.js">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/home/jquery/jquery-migrate.min.js">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/home/jquery/jquery.min.js">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/home/js/contactform.js">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/home/js/main.js">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/home/lightbox/css/lightbox.css">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/home/lightbox/css/lightbox.min.css">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/home/lightbox/images/close.png">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/home/lightbox/images/loading.gif">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/home/lightbox/images/next.png">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/home/lightbox/images/prev.png">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/home/lightbox/js/lightbox.js">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/home/lightbox/js/lightbox.min.js">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/home/mobile-nav/mobile-nav.js">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/home/owlcarousel/assets/ajax-loader.gif">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/home/owlcarousel/assets/owl.carousel.css">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/home/owlcarousel/assets/owl.carousel.min.css">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/home/owlcarousel/assets/owl.theme.default.css">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/home/owlcarousel/assets/owl.theme.default.min.css">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/home/owlcarousel/assets/owl.theme.green.css">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/home/owlcarousel/assets/owl.theme.green.min.css">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/home/owlcarousel/assets/owl.video.play.png">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/home/owlcarousel/LICENSE">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/home/owlcarousel/owl.carousel.js">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/home/owlcarousel/owl.carousel.min.js">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/home/waypoints/waypoints.min.js">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/home/wow/wow.js">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/home/wow/wow.min.js">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Content/Site.css">
+      <publishTime>08/26/2020 18:59:21</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>08/26/2020 18:25:40</publishTime>
+    </File>
+    <File Include="Models/Entity/Model1.edmx.diagram">
+      <publishTime>09/23/2020 13:45:30</publishTime>
+    </File>
+    <File Include="Views/error/notfound.cshtml">
+      <publishTime>08/26/2020 19:13:39</publishTime>
+    </File>
+    <File Include="Views/Etkinlik/calender.cshtml">
+      <publishTime>09/22/2020 15:15:26</publishTime>
+    </File>
+    <File Include="Views/Etkinlik/etkinlikekle.cshtml">
+      <publishTime>09/08/2020 15:28:21</publishTime>
+    </File>
+    <File Include="Views/Etkinlik/etkinlikguncelle.cshtml">
+      <publishTime>09/08/2020 15:28:23</publishTime>
+    </File>
+    <File Include="Views/Etkinlik/etkinlikler.cshtml">
+      <publishTime>09/23/2020 13:50:55</publishTime>
+    </File>
+    <File Include="Views/Etkinlik/etkinlikler152035424.cshtml">
+      <publishTime>09/21/2020 16:15:54</publishTime>
+    </File>
+    <File Include="Views/Etkinlik/etkinlikler659782314.cshtml">
+      <publishTime>09/25/2020 17:21:24</publishTime>
+    </File>
+    <File Include="Views/Home/belgeekle.cshtml">
+      <publishTime>08/27/2020 14:41:57</publishTime>
+    </File>
+    <File Include="Views/Home/belgeguncelle.cshtml">
+      <publishTime>08/27/2020 14:41:58</publishTime>
+    </File>
+    <File Include="Views/Home/durumraporu.cshtml">
+      <publishTime>08/28/2020 00:53:54</publishTime>
+    </File>
+    <File Include="Views/Home/emgmuscleactivation.cshtml">
+      <publishTime>09/14/2020 02:25:53</publishTime>
+    </File>
+    <File Include="Views/Home/exerciseekle.cshtml">
+      <publishTime>09/25/2020 14:09:35</publishTime>
+    </File>
+    <File Include="Views/Home/exerciseguncelle.cshtml">
+      <publishTime>08/29/2020 01:32:12</publishTime>
+    </File>
+    <File Include="Views/Home/home.cshtml">
+      <publishTime>09/12/2020 02:03:12</publishTime>
+    </File>
+    <File Include="Views/Home/homeekle.cshtml">
+      <publishTime>09/20/2020 18:14:46</publishTime>
+    </File>
+    <File Include="Views/Home/homeekleadmin.cshtml">
+      <publishTime>09/20/2020 01:52:39</publishTime>
+    </File>
+    <File Include="Views/Home/homeekleyonetim.cshtml">
+      <publishTime>09/20/2020 02:23:54</publishTime>
+    </File>
+    <File Include="Views/Home/homeget.cshtml">
+      <publishTime>09/12/2020 01:53:21</publishTime>
+    </File>
+    <File Include="Views/Home/homeguncelle.cshtml">
+      <publishTime>09/12/2020 12:11:28</publishTime>
+    </File>
+    <File Include="Views/Home/homeworkekle.cshtml">
+      <publishTime>09/20/2020 02:19:51</publishTime>
+    </File>
+    <File Include="Views/Home/homeworkguncelle.cshtml">
+      <publishTime>08/29/2020 12:56:12</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>09/20/2020 01:37:32</publishTime>
+    </File>
+    <File Include="Views/Home/MessageBox.cshtml">
+      <publishTime>09/19/2020 17:56:28</publishTime>
+    </File>
+    <File Include="Views/Home/MessageBoxguncelle.cshtml">
+      <publishTime>09/12/2020 13:37:02</publishTime>
+    </File>
+    <File Include="Views/Home/MessageCevapla.cshtml">
+      <publishTime>09/12/2020 13:37:04</publishTime>
+    </File>
+    <File Include="Views/Home/MessageSend.cshtml">
+      <publishTime>09/12/2020 13:37:05</publishTime>
+    </File>
+    <File Include="Views/Home/mycoachMessageSend.cshtml">
+      <publishTime>09/20/2020 17:07:05</publishTime>
+    </File>
+    <File Include="Views/Home/myconnect.cshtml">
+      <publishTime>09/20/2020 18:03:13</publishTime>
+    </File>
+    <File Include="Views/Home/myconnectCevapla.cshtml">
+      <publishTime>09/20/2020 18:03:15</publishTime>
+    </File>
+    <File Include="Views/Home/mymessagebox.cshtml">
+      <publishTime>09/19/2020 17:58:10</publishTime>
+    </File>
+    <File Include="Views/Home/myMessageCevapla.cshtml">
+      <publishTime>09/20/2020 19:16:45</publishTime>
+    </File>
+    <File Include="Views/Home/mymessagelist.cshtml">
+      <publishTime>09/20/2020 18:39:57</publishTime>
+    </File>
+    <File Include="Views/Home/myquestions.cshtml">
+      <publishTime>09/15/2020 12:00:37</publishTime>
+    </File>
+    <File Include="Views/Home/mystudent.cshtml">
+      <publishTime>09/20/2020 01:10:12</publishTime>
+    </File>
+    <File Include="Views/Home/nutritionekle.cshtml">
+      <publishTime>09/20/2020 01:00:52</publishTime>
+    </File>
+    <File Include="Views/Home/nutritionguncelle.cshtml">
+      <publishTime>08/29/2020 13:07:36</publishTime>
+    </File>
+    <File Include="Views/Home/paketteklifi.cshtml">
+      <publishTime>08/31/2020 13:50:24</publishTime>
+    </File>
+    <File Include="Views/Home/questionsekle.cshtml">
+      <publishTime>09/19/2020 14:02:12</publishTime>
+    </File>
+    <File Include="Views/Home/questionsguncelle.cshtml">
+      <publishTime>09/13/2020 00:57:56</publishTime>
+    </File>
+    <File Include="Views/Home/sendusersanalysis.cshtml">
+      <publishTime>09/19/2020 14:58:08</publishTime>
+    </File>
+    <File Include="Views/Home/studentekle.cshtml">
+      <publishTime>09/20/2020 17:44:28</publishTime>
+    </File>
+    <File Include="Views/Home/studentget.cshtml">
+      <publishTime>09/16/2020 21:02:36</publishTime>
+    </File>
+    <File Include="Views/Home/studentguncelle.cshtml">
+      <publishTime>09/17/2020 13:14:24</publishTime>
+    </File>
+    <File Include="Views/Home/userexerciseget.cshtml">
+      <publishTime>09/25/2020 13:49:24</publishTime>
+    </File>
+    <File Include="Views/Home/userhomeworkget.cshtml">
+      <publishTime>09/20/2020 00:56:43</publishTime>
+    </File>
+    <File Include="Views/Home/usernutritionget.cshtml">
+      <publishTime>09/12/2020 00:34:18</publishTime>
+    </File>
+    <File Include="Views/Home/yuklenenbelgeler.cshtml">
+      <publishTime>08/29/2020 01:32:15</publishTime>
+    </File>
+    <File Include="Views/Login/ForgotPassword.cshtml">
+      <publishTime>09/20/2020 14:15:30</publishTime>
+    </File>
+    <File Include="Views/Login/Index.cshtml">
+      <publishTime>09/27/2020 16:03:35</publishTime>
+    </File>
+    <File Include="Views/Login/ResetPassword.cshtml">
+      <publishTime>09/20/2020 14:15:26</publishTime>
+    </File>
+    <File Include="Views/settings/bodyindexcalculator.cshtml">
+      <publishTime>09/13/2020 17:50:05</publishTime>
+    </File>
+    <File Include="Views/settings/exercise.cshtml">
+      <publishTime>09/12/2020 13:30:45</publishTime>
+    </File>
+    <File Include="Views/settings/exerciseekleadmin.cshtml">
+      <publishTime>09/12/2020 14:28:03</publishTime>
+    </File>
+    <File Include="Views/settings/ffmicalculator.cshtml">
+      <publishTime>08/31/2020 14:04:56</publishTime>
+    </File>
+    <File Include="Views/settings/homework.cshtml">
+      <publishTime>09/12/2020 13:31:06</publishTime>
+    </File>
+    <File Include="Views/settings/homeworkekleadmin.cshtml">
+      <publishTime>09/12/2020 14:28:09</publishTime>
+    </File>
+    <File Include="Views/settings/kullaniciguncelle.cshtml">
+      <publishTime>09/08/2020 13:42:24</publishTime>
+    </File>
+    <File Include="Views/settings/kullanicikayit190932014.cshtml">
+      <publishTime>09/17/2020 13:37:09</publishTime>
+    </File>
+    <File Include="Views/settings/kullanicikayit438153762.cshtml">
+      <publishTime>09/20/2020 01:59:29</publishTime>
+    </File>
+    <File Include="Views/settings/kullanicikayit479269081.cshtml">
+      <publishTime>09/17/2020 14:00:29</publishTime>
+    </File>
+    <File Include="Views/settings/kullanicilar.cshtml">
+      <publishTime>09/08/2020 13:17:00</publishTime>
+    </File>
+    <File Include="Views/settings/mykullanici.cshtml">
+      <publishTime>09/10/2020 15:09:45</publishTime>
+    </File>
+    <File Include="Views/settings/mypayment.cshtml">
+      <publishTime>09/12/2020 00:34:25</publishTime>
+    </File>
+    <File Include="Views/settings/nutrition.cshtml">
+      <publishTime>09/12/2020 13:30:38</publishTime>
+    </File>
+    <File Include="Views/settings/nutritionekleadmin.cshtml">
+      <publishTime>09/12/2020 14:17:23</publishTime>
+    </File>
+    <File Include="Views/settings/payment.cshtml">
+      <publishTime>09/12/2020 14:27:59</publishTime>
+    </File>
+    <File Include="Views/settings/paymentekle.cshtml">
+      <publishTime>09/20/2020 02:47:48</publishTime>
+    </File>
+    <File Include="Views/settings/paymentekleadmin.cshtml">
+      <publishTime>09/12/2020 14:28:02</publishTime>
+    </File>
+    <File Include="Views/settings/paymentguncelle.cshtml">
+      <publishTime>08/28/2020 18:14:26</publishTime>
+    </File>
+    <File Include="Views/settings/student.cshtml">
+      <publishTime>09/14/2020 02:25:52</publishTime>
+    </File>
+    <File Include="Views/settings/studentekleadmin.cshtml">
+      <publishTime>09/17/2020 13:15:09</publishTime>
+    </File>
+    <File Include="Views/settings/viewkey152035424.cshtml">
+      <publishTime>09/08/2020 14:14:17</publishTime>
+    </File>
+    <File Include="Views/settings/viewkey659782314.cshtml">
+      <publishTime>09/08/2020 13:27:33</publishTime>
+    </File>
+    <File Include="Views/settings/viewkey832982058.cshtml">
+      <publishTime>09/08/2020 13:28:46</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>08/11/2021 23:53:05</publishTime>
+    </File>
+    <File Include="Views/web.config">
+      <publishTime>08/26/2020 18:25:40</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>08/12/2021 00:31:25</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

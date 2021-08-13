@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="4b1ffe00739a42da811cea390dfaf55b" Name="Diagram1">
+        <EntityTypeShape EntityType="onlineptModel.allexerciselist" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="onlineptModel.events" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="onlineptModel.exercise" Width="1.5" PointX="12" PointY="29.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="onlineptModel.home" Width="1.5" PointX="3" PointY="47.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="onlineptModel.homework" Width="1.5" PointX="6" PointY="48.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="onlineptModel.messagebox" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="onlineptModel.myconnect" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="onlineptModel.mylist" Width="1.5" PointX="3.75" PointY="37.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="onlineptModel.mymessage" Width="1.5" PointX="3" PointY="43.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="onlineptModel.mynotification" Width="1.5" PointX="6" PointY="44.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="onlineptModel.myquestions" Width="1.5" PointX="3" PointY="53.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="onlineptModel.nutrition" Width="1.5" PointX="6" PointY="52.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="onlineptModel.onlinecourse" Width="1.5" PointX="9" PointY="48.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="onlineptModel.payment" Width="1.5" PointX="9" PointY="42.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="onlineptModel.sendusersanalysis" Width="1.5" PointX="9" PointY="52.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="onlineptModel.student" Width="1.5" PointX="6" PointY="34.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="onlineptModel.users" Width="1.5" PointX="0.75" PointY="46.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="onlineptModel.yuklenenbelgeler" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
+        <AssociationConnector Association="onlineptModel.FK_exercise_mylist" ManuallyRouted="false" />
+        <AssociationConnector Association="onlineptModel.FK_exercise_users" ManuallyRouted="false" />
+        <AssociationConnector Association="onlineptModel.FK_home_mylist" ManuallyRouted="false" />
+        <AssociationConnector Association="onlineptModel.FK_home_users" ManuallyRouted="false" />
+        <AssociationConnector Association="onlineptModel.FK_homework_mylist" ManuallyRouted="false" />
+        <AssociationConnector Association="onlineptModel.FK_homework_users" ManuallyRouted="false" />
+        <AssociationConnector Association="onlineptModel.FK_mymessage_mylist" ManuallyRouted="false" />
+        <AssociationConnector Association="onlineptModel.FK_mynotification_mylist" ManuallyRouted="false" />
+        <AssociationConnector Association="onlineptModel.FK_myquestions_mylist" ManuallyRouted="false" />
+        <AssociationConnector Association="onlineptModel.FK_nutrition_mylist" ManuallyRouted="false" />
+        <AssociationConnector Association="onlineptModel.FK_onlinecourse_mylist" ManuallyRouted="false" />
+        <AssociationConnector Association="onlineptModel.FK_payment_mylist" ManuallyRouted="false" />
+        <AssociationConnector Association="onlineptModel.FK_sendusersanalysis_mylist" ManuallyRouted="false" />
+        <AssociationConnector Association="onlineptModel.FK_student_mylist" ManuallyRouted="false" />
+        <AssociationConnector Association="onlineptModel.FK_mymessage_users" ManuallyRouted="false" />
+        <AssociationConnector Association="onlineptModel.FK_mynotification_users" ManuallyRouted="false" />
+        <AssociationConnector Association="onlineptModel.FK_myquestions_users" ManuallyRouted="false" />
+        <AssociationConnector Association="onlineptModel.FK_nutrition_users" ManuallyRouted="false" />
+        <AssociationConnector Association="onlineptModel.FK_onlinecourse_users" ManuallyRouted="false" />
+        <AssociationConnector Association="onlineptModel.FK_payment_users" ManuallyRouted="false" />
+        <AssociationConnector Association="onlineptModel.FK_sendusersanalysis_users" ManuallyRouted="false" />
+        <AssociationConnector Association="onlineptModel.FK_student_users" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

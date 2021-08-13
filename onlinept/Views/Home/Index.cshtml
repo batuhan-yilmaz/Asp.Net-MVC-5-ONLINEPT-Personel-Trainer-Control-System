@@ -1,0 +1,797 @@
+﻿@model onlinept.Models.Entity.users
+
+
+@{
+    ViewBag.Title = "Profilim";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@if (TempData["homeGuncelle"] != null)
+{
+
+    <script>
+        Swal.fire('Başarılı', 'İşlem gerçekleşti', 'success');
+    </script>
+}
+
+@if (TempData["kullaniciguncelle"] != null)
+{
+
+    <script>
+        Swal.fire('Başarılı', 'İşlem gerçekleşti', 'success');
+    </script>
+}
+@if (TempData["kullaniciGuncelleHata"] != null)
+{
+
+    <script>
+        Swal.fire('Güncelleme Başarısız', 'İşlem gerçekleştirilemedi', 'error');
+    </script>
+}
+
+
+@if (TempData["login"] != null)
+{
+
+    <script>
+
+
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 6000
+        });
+
+            Toast.fire({
+                icon: 'success',
+                title: 'Merhaba @HttpContext.Current.User.Identity.Name Oturumu açma işleminiz başarıyla gerçekleşti.ONLINE PT Yönetim Sistemine Hoşgeldiniz.'
+            })
+
+    </script>
+}
+
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3">
+                    <div style="float:left">
+                        <!-- Profile Image -->
+                        <div class="card card-primary card-outline">
+                            <div class="card-body box-profile">
+                                <div class="text-center">
+                                    <img src="~/Content/Admin/data/user/uimg/default.jpg" class="profile-user-img img-fluid img-circle" alt="User profile picture" id="foto1">
+                                </div>
+
+                                <h3 class="profile-username text-center" id="dbusername">@HttpContext.Current.User.Identity.Name</h3>
+
+                                <ul class="list-group list-group-unbordered mb-3">
+                                    <li class="list-group-item">
+                                        <i class="fa fa-id-card"> <b>İsim Soyisim:</b></i> <font style="color:#007bff;"><b><a class="float-right" id="name1"></a></b></font>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <i class="fa fa-id-card"> <b>Tc:</b></i> <font style="color:#007bff;"><b><a class="float-right" id="tc1"></a></b></font>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <i class="fa fa-envelope"> <b>Email:</b></i> <font style="color:#007bff;"><b><a class="float-right" id="email1"></a></b></font>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <i class="fa fa-phone"> <b>Telefon:</b></i> <font style="color:#007bff;"><b><a class="float-right" id="tel"></a></b></font>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <i class="fa fa-venus-mars"> <b>Cinsiyet:</b></i> <font style="color:#007bff;"><b><a class="float-right" id="gender1"></a></b></font>
+                                    </li>
+                                </ul>
+
+                                <!-- /USER GÜNCELLEME BAŞLAR POP UP! -->
+                                <button type="button" class="btn btn-outline-primary btn-block" data-toggle="modal" data-target="#Güncelle" onclick="scode()"><b>Profilimi Güncelle</b></button>
+                                <div class="modal fade" id="Güncelle">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h4 class="modal-title"><font style="color:#007bff;">Kullanıcı Bilgilerini Güncelle</font></h4>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                @using (Html.BeginForm("profilguncelle", "Home", FormMethod.Post, new { @enctype = "multipart/from-data" }))
+                                                {
+                                                    <table id="example1" class="table table-bordered table-striped">
+                                                        <tr>
+                                                            <td>
+                                                                <p>Profil Fotoğrafı</p>
+                                                                <div class="btn btn-primary">
+                                                                    @Html.TextBoxFor(m => m.profilephoto, new { type = "file", id = "imageBrowes", onchange = "ValidateSingleInput(this);", @required = "required" })
+                                                                </div>
+                                                                <hr />
+                                                                <b><font color="orangered"><span id="errorfile"></span></font></b>
+                                                                <b><font color="orangered"><span id="errortype"></span></font></b>
+                                                                <div id="imgPreview" class="thumbnail" style="display:none;">
+                                                                    <img class="img-responsive" id="targetImg" style="width:100px; height:100px;" />
+                                                                    <div class="caption">
+                                                                        <a href="#" onclick="ClearPreview()"><i class="glyphicon glyphicon-trash"></i></a>
+                                                                        <span id="description"></span>
+                                                                    </div>
+
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <!-- /.BURDAN SONRASI VALUE="X" OLANLARI ÇEK ÜSTTEKİNİ ELLEME!  -->
+                                                                <p>İsim Soyisim</p>
+                                                                @Html.TextBoxFor(m => m.name, new { oninput = "text(this.id);", @Value = "", @class = "form-control", @required = "required", id = "isimdegis" })
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <p>Tc</p>
+                                                                @Html.TextBoxFor(m => m.tc, new { @class = "form-control", id = "tcdegis", oninput = "TcNumber(this.id);", maxlength = "11", @required = "required", placeholder = "Lütfen 11 Haneli TC Kimlik Numaranızı Giriniz." })
+
+                                                            </td>
+                                                            <td>
+                                                                <p>Telefon</p>
+                                                                @Html.TextBoxFor(m => m.tel, new { @class = "form-control", id = "phoneNumber", oninput = "PhoneNumber(this.id);", maxlength = "17", @required = "required", placeholder = "Lütfen Başında 0 Olmadan 11 Haneli Telefon Numaranızı Giriniz." })
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <p>Parola</p><!-- /.PAROLAYI ELLEME!  VALUE BOŞ KALSIN!-->
+                                                                @Html.PasswordFor(m => m.password, new { @class = "form-control", @required = "required" })
+
+
+                                                                @Html.HiddenFor(m => m.securitykey, new { @Value = "", @class = "form-control", @required = "required", id = "hsecuritykey" })
+                                                            </td>
+                                                            <td>
+                                                                <p>E-Mail</p>
+                                                                @Html.TextBoxFor(m => m.email, new { @Value = "", @class = "form-control", @required = "required", id = "maildegis", type = "email" })
+                                                                @Html.HiddenFor(m => m.userid, new { @class = "form-control", id = "userid1" })
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><button type="submit" onclick="Uploadimage()" class="fa fa-floppy-o btn btn-success" /> Kaydet</td>
+                                                        </tr>
+                                                    </table>
+                                                }
+                                            </div>
+                                            <div class="modal-footer justify-content-between">
+                                                <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Vazgeç</button>
+                                            </div>
+                                        </div>
+                                        <!-- /.modal-content -->
+                                    </div>
+                                    <!-- /.modal-dialog -->
+                                </div>
+                                <!-- /USER GÜNCELLEME BİTTİ POP UP! -->
+                                <br />
+                                <!-- /USER durumum BAŞLAR POP UP! -->
+                                <button type="button" class="btn btn-outline-warning btn-block" data-toggle="modal" data-target="#status" onclick="scode()"><b>Anlık Durumum</b></button>
+                                <div class="modal fade" id="status">
+                                    <div class="modal-dialog modal-xl">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h4 class="modal-title"><font style="color:#007bff;">Anlık Durumum</font></h4>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+
+                                                <table id="example1" class="table table-striped table-bordered" style="width:100%">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Öğrenci</th>
+                                                            <th>Öğrenci</th>
+                                                            <th>Öğrenci</th>
+                                                            <th>Öğrenci</th>
+                                                            <th>Öğrenci</th>
+                                                            <th>Öğrenci</th>
+                                                            <th>Öğrenci</th>
+                                                            <th>Öğrenci</th>
+                                                            <th>Öğrenci</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Öğrenci</td>
+                                                            <td>Öğrenci</td>
+                                                            <td>Öğrenci</td>
+                                                            <td>Öğrenci</td>
+                                                            <td>Öğrenci</td>
+                                                            <td>Öğrenci</td>
+                                                            <td>Öğrenci</td>
+                                                            <td>Öğrenci</td>
+                                                            <td>Öğrenci</td>
+                                                        </tr>
+                                                    </tbody>
+
+                                                </table>
+                                            </div>
+                                            <div class="modal-footer justify-content-between">
+                                                <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Vazgeç</button>
+                                            </div>
+                                        </div>
+                                        <!-- /.modal-content -->
+                                    </div>
+                                    <!-- /.modal-dialog -->
+                                </div>
+                                <!-- /USER beslenme BİTTİ POP UP! -->
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+                        <!-- /.card -->
+                    </div><!-- profile get-->
+                </div>
+                <!-- /.col -->
+                <div class="col-md-9">
+                    <div class="card">
+                        <div class="card-header p-2">
+                            <ul class="nav nav-pills">
+                                <li class="nav-item"><a class="nav-link active" href="#mynutrition" data-toggle="tab"><i class="fa fa-cutlery"> Beslenme Planım</i></a></li>
+                                <li class="nav-item"><a class="nav-link" href="#myexercise" data-toggle="tab"><i class="fa fa-check-circle"> Egzersiz Planım</i></a></li>
+                                <li class="nav-item"><a class="nav-link" href="#myhomework" data-toggle="tab"><i class="fa fa-pencil"> Ödevlerim</i></a></li>
+                                &nbsp;
+                                @if (User.IsInRole("User"))
+                                {
+                                    <li class="nav-item">
+                                        &nbsp;
+                                        @Html.ActionLink(" Yeni Akış Oluştur ", "homeekle", null, new { @class = "fa fa-plus btn btn-warning" })
+                                    </li>
+                                }
+                                &nbsp;
+                                @if (User.IsInRole("Yonetici"))
+                                {
+                                    <li class="nav-item">
+                                        &nbsp;
+                                        @Html.ActionLink(" Yeni Akış Oluştur ", "homeekleyonetim", null, new { @class = "fa fa-plus btn btn-warning" })
+
+
+                                    </li>
+                                }
+
+                            </ul>
+                        </div><!-- /.card-header -->
+                        <div class="card-body">
+                            <div class="tab-content">
+
+                                <div class="active tab-pane" id="mynutrition">
+                                    <div class="timeline-footer">
+                                        <table id="example3" class="table table-striped table-bordered" style="width:100%">
+                                            <thead>
+                                                <tr>
+                                                    <th>Öğün</th>
+                                                    <th>Besin</th>
+                                                    <th>Açıklama</th>
+                                                    <th>Protein</th>
+                                                    <th>Carb</th>
+                                                    <th>Yağ</th>
+                                                    <th>Kalori</th>
+                                                    <th>Miktar/Gr-Adet</th>
+                                                    <th>Kolesterol</th>
+                                                    <th>Potasyum</th>
+                                                    <th>Sodyum</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody></tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="tab-pane" id="myexercise">
+                                    <div class="timeline-footer">
+                                        <table id="example2" class="table table-striped table-bordered" style="width:100%">
+                                            <thead>
+                                                <tr>
+                                                    <th>Egzersiz</th>
+                                                    <th>Açıklama</th>
+                                                    <th>Görsel 1</th>
+                                                    <th>Görsel 2</th>
+                                                    <th>Görsel 3</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody></tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="tab-pane" id="myhomework">
+                                    <div class="timeline-footer">
+                                        <table id="example4" class="table table-striped table-bordered" style="width:100%">
+                                            <thead>
+                                                <tr>
+                                                    <th>Ödev</th>
+                                                    <th>Açıklama</th>
+                                                    <th>Egzersiz</th>
+                                                    <th>Beslenme</th>
+                                                    <th>Görsel 1</th>
+                                                    <th>Görsel 2</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody></tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.card-body -->
+                    </div>
+                    <!-- /.nav-tabs-custom -->
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </section>
+</div>
+
+
+<script>
+    $(function () {
+        $(document).on('click', '[data-toggle="lightbox"]', function (event) {
+            event.preventDefault();
+            $(this).ekkoLightbox({
+                alwaysShowClose: true
+            });
+        });
+
+    })
+</script>
+
+<script>
+    var _validFileExtensions2 = [".jpg", ".jpeg", ".bmp", ".gif", ".png"];
+
+    $(document).ready(function () {
+
+        $("#imageBrowes").change(function () {
+            var File = this.files;
+            var numb = $(this)[0].files[0].size / 1024 / 1024;
+            numb = numb.toFixed(2);
+            if (numb > 2) {
+                $("#errortype").text('');
+                $("#errorfile").text('Max dosya boyutu 2 MB! Dosyanız: ' + numb + ' MB');
+                $("#imageBrowes").val('');
+                $("#description").text('');
+                $("#imgPreview").hide();
+            }
+            else {
+                if (File && File[0]) {
+                    ReadImage(File[0]);
+                }
+                $("#errortype").text('');
+                $("#errorfile").text('');
+
+            }
+        })
+
+    })
+
+
+    var ReadImage = function (file) {
+
+        var reader = new FileReader;
+        var image = new Image;
+
+        reader.readAsDataURL(file);
+        reader.onload = function (_file) {
+
+            image.src = _file.target.result;
+            image.onload = function () {
+
+                var height = this.height;
+                var width = this.width;
+                var type = file.type;
+                var size = ~~(file.size / 2048) + "KB";
+
+
+                $("#targetImg").attr('src', _file.target.result);
+                $("#description").text("Size:" + size + ", " + height + "X " + width + ", " + type + "");
+                $("#imgPreview").show();
+
+            }
+
+        }
+
+    }
+
+    var ClearPreview = function () {
+        $("#imageBrowes").val('');
+        $("#description").text('');
+        $("#imgPreview").hide();
+
+    }
+
+    var Uploadimage = function () {
+
+        var file = $("#imageBrowes").get(0).files;
+
+        var data = new FormData;
+        data.append("profilephotoFile", file[0]);
+
+
+        $.ajax({
+
+            type: "Post",
+            url: "/Home/uImageUpload",
+            data: data,
+            contentType: false,
+            processData: false,
+            success: function (response) {
+                ClearPreview();
+
+
+
+            }
+
+        })
+
+
+        //
+    }
+    function ValidateSingleInput(oInput) {
+        if (oInput.type == "file") {
+            var sFileName = oInput.value;
+            if (sFileName.length > 0) {
+                var blnValid = false;
+                for (var j = 0; j < _validFileExtensions2.length; j++) {
+                    var sCurExtension = _validFileExtensions2[j];
+                    if (sFileName.substr(sFileName.length - sCurExtension.length, sCurExtension.length).toLowerCase() == sCurExtension.toLowerCase()) {
+                        blnValid = true;
+                        break;
+                    }
+
+                }
+
+
+
+                if (!blnValid) {
+                    $("#errortype").text('Seçilen dosya ".jpg", ".jpeg", ".bmp", ".gif", ".png" uzantılı olmak zorundadır.');
+                    oInput.value = "";
+                    $("#errorfile").text('');
+                    $("#imageBrowes").val('');
+                    $("#description").text('');
+                    $("#imgPreview").hide();
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+</script>
+
+
+
+<!-- BURASI SESSİON A GÖRE ÇEKTİĞİN KULLANICI BİLGİLERİ! -->
+<script>
+    var maillist = [];
+    var usrnamelist = [];
+    var genderlist = [];
+    var fotolist = [];
+    var namelist = [];
+    var usridlist = [];
+    var tclist = [];
+    var telnolist = [];
+    var rolelist = [];
+    var meallist = [];
+    var nutrition1list = [];
+    var descriptionslist = [];
+    var proteinlist = [];
+    var carblist = [];
+    var fatlist = [];
+    var calorilist = [];
+    var quantitylist = [];
+    var cholesterollist = [];
+    var potassiumlist = [];
+    var sodiumlist = [];
+    var usrgetlist = [];
+    var usrgetlist2 = [];
+    var subjectlist2 = [];
+    var descriptionslist2 = [];
+    var content1list2 = [];
+    var content2list2 = [];
+    var content3list2 = [];
+    var subjectlist3 = [];
+    var descriptionslist3 = [];
+    var exerciselist3 = [];
+    var nutritionlist3 = [];
+    var content1list3 = [];
+    var content2list3 = [];
+    var usrgetlist3 = [];
+    var loginurl = '/Login/ForgotPw';
+    var myexurl = '/Home/myexercise';
+    var mynuturl = '/Home/mynutrition';
+    var myhwurl = '/Home/myhomework';
+    tbl2 = document.getElementById('example2');
+    tbl = document.getElementById('example3');
+    tbl3 = document.getElementById('example4');
+    var username = document.getElementById("dbusername").innerText;
+    $.getJSON(loginurl, function (data) {
+        for (var item in data.Result) {
+            var deger = '<tr>' + data.Result[item].name + ',' + data.Result[item].userid + ',' + data.Result[item].usrname + ',' + data.Result[item].tc + ',' + data.Result[item].tel + ',' + data.Result[item].email + ',' + data.Result[item].role + ',' + data.Result[item].profilephoto + ',' + data.Result[item].gender + '</tr>';
+            $('table').append(deger);
+            var name = data.Result[item].name;
+            var usrid = data.Result[item].userid;
+            var tc = data.Result[item].tc;
+            var telno = data.Result[item].tel;
+            var role = data.Result[item].role;
+            var mail1 = data.Result[item].email;
+            var gender = data.Result[item].gender;
+            var foto = data.Result[item].profilephoto;
+            var usrname = data.Result[item].usrname;
+            maillist.push(mail1);
+            usrnamelist.push(usrname);
+            genderlist.push(gender);
+            fotolist.push(foto);
+            namelist.push(name);
+            usridlist.push(usrid);
+            tclist.push(tc);
+            telnolist.push(telno);
+            rolelist.push(role);
+        };
+        kullanıcıbilgileri();
+        $.getJSON(mynuturl, function (data) {
+            for (var item in data.Result) {
+                var deger1 = '<tr>' + data.Result[item].usersget + ',' + data.Result[item].meal + ',' + data.Result[item].nutrition1 + ',' + data.Result[item].descriptions + ',' + data.Result[item].date + ',' + data.Result[item].protein + ',' + data.Result[item].carb + ',' + data.Result[item].fat + ',' + data.Result[item].calori + ',' + data.Result[item].quantity + ',' + data.Result[item].cholesterol + ',' + data.Result[item].potassium + ',' + data.Result[item].sodium + '</tr>';
+                $('table1').append(deger1);
+                var id = data.Result[item].usersget;
+                var meal = data.Result[item].meal;
+                var nutrition1 = data.Result[item].nutrition1;
+                var descriptions = data.Result[item].descriptions;
+                var protein = data.Result[item].protein;
+                var carb = data.Result[item].carb;
+                var fat = data.Result[item].fat;
+                var calori = data.Result[item].calori;
+                var quantity = data.Result[item].quantity;
+                var cholesterol = data.Result[item].cholesterol;
+                var potassium = data.Result[item].potassium;
+                var sodium = data.Result[item].sodium;
+                usrgetlist.push(id);
+                meallist.push(meal);
+                nutrition1list.push(nutrition1);
+                descriptionslist.push(descriptions);
+                proteinlist.push(protein);
+                carblist.push(carb);
+                fatlist.push(fat);
+                calorilist.push(calori);
+                quantitylist.push(quantity);
+                cholesterollist.push(cholesterol);
+                potassiumlist.push(potassium);
+                sodiumlist.push(sodium);
+
+            };
+            mynutritionget();
+            $.getJSON(myexurl, function (data) {
+                for (var item in data.Result) {
+                    var deger1 = '<tr>' + data.Result[item].usersget + ',' + data.Result[item].subject + ',' + data.Result[item].descriptions + ',' + data.Result[item].date + ',' + data.Result[item].content1 + ',' + data.Result[item].content2 + ',' + data.Result[item].content3 + '</tr>';
+                    $('table1').append(deger1);
+                    var subjectex2 = data.Result[item].subject;
+                    var descriptionsex2 = data.Result[item].descriptions;
+                    var content1ex2 = data.Result[item].content1;
+                    var content2ex2 = data.Result[item].content2;
+                    var content3ex2 = data.Result[item].content3;
+                    var usrget = data.Result[item].usersget;
+                    usrgetlist2.push(usrget);
+                    subjectlist2.push(subjectex2);
+                    descriptionslist2.push(descriptionsex2);
+                    content1list2.push(content1ex2);
+                    content2list2.push(content2ex2);
+                    content3list2.push(content3ex2);
+                };
+                myexerciseget();
+                $.getJSON(myhwurl, function (data) {
+                    for (var item in data.Result) {
+                        var deger1 = '<tr>' + data.Result[item].usersget + ',' + data.Result[item].subject + ',' + data.Result[item].descriptions + ',' + data.Result[item].date + ',' + data.Result[item].exercise + ',' + data.Result[item].nutrition + ',' + data.Result[item].hworktime + ',' + data.Result[item].content1 + ',' + data.Result[item].content2 + '</tr>';
+                        $('table1').append(deger1);
+                        var subjecthw3 = data.Result[item].subject;
+                        var descriptionshw3 = data.Result[item].descriptions;
+                        var exercisehw3 = data.Result[item].exercise;
+                        var nutritionhw3 = data.Result[item].nutrition;
+                        var content1hw3 = data.Result[item].content1;
+                        var content2h23 = data.Result[item].content2;
+                        var usrget3 = data.Result[item].usersget;
+                        usrgetlist3.push(usrget3);
+                        subjectlist3.push(subjecthw3);
+                        descriptionslist3.push(descriptionshw3);
+                        exerciselist3.push(exercisehw3);
+                        nutritionlist3.push(nutritionhw3);
+                        content1list3.push(content1hw3);
+                        content2list3.push(content2h23);
+                    };
+                    myhomework();
+
+                });
+
+            });
+
+        });
+    });
+
+    function kullanıcıbilgileri() {
+        for (i = 0; i < usrnamelist.length; i++) {
+            if (username == usrnamelist[i]) {
+                var img = document.getElementById("foto1");
+                img.src = ("/Content/Admin/data/user/uimg/" + fotolist[i]);
+                $("#foto1").attr("src", ("/Content/Admin/data/user/uimg/" + fotolist[i]));
+                document.getElementById("name1").innerHTML = namelist[i];
+                document.getElementById("email1").innerHTML = maillist[i];
+                document.getElementById("tc1").innerHTML = tclist[i];
+                document.getElementById("tel").innerHTML = telnolist[i];
+                document.getElementById("gender1").innerHTML = genderlist[i];
+                //bu alandan altı value değerleri!
+                document.getElementById("userid1").value = usridlist[i];
+                document.getElementById("isimdegis").value = namelist[i];
+                document.getElementById("tcdegis").value = tclist[i];
+                document.getElementById("maildegis").value = maillist[i];
+                document.getElementById("phoneNumber").value = telnolist[i];
+                // AYNI MANTIK
+            }
+            else {
+                continue;
+            }
+        }
+    }
+
+
+    //<!-- BİTTİ SESSİON A GÖRE ÇEKTİĞİN KULLANICI BİLGİLERİ! -->
+    //<!-- BURASI YUKARIDAKİ FONKSİYONA GÖRE " ID.VALUE = USERGET " DEĞERİNE GÖRE ÇEKİLECEK BESLENME VERİLERİ -->
+    //<!-- YUKARDAKİ "userid1" DEĞERİ BURDAKİ "usersget" E EĞİŞ USER GET TEN SONRASI ÇEKİLECEK  -->
+
+</script>
+
+
+
+
+<script>
+
+
+
+    function mynutritionget() {
+        for (i = 0; i < usrgetlist.length; i++) {
+            if (document.getElementById("userid1").value == usrgetlist[i]) {
+                addRow(tbl, meallist[i], nutrition1list[i], descriptionslist[i], proteinlist[i], carblist[i], fatlist[i], calorilist[i], quantitylist[i], cholesterollist[i], potassiumlist[i], sodiumlist[i]);
+
+            }
+            else {
+                continue;
+            }
+        }
+    }
+    function addCell(tr, val) {
+        var td = document.createElement('td');
+        td.innerHTML = val;
+        tr.appendChild(td)
+    }
+
+
+    function addRow(tbl, val_1, val_2, val_3, val_4, val_5, val_6, val_7, val_8, val_9, val_10, val_11) {
+        var tr = document.createElement('tr');
+        addCell(tr, val_1);
+        addCell(tr, val_2);
+        addCell(tr, val_3);
+        addCell(tr, val_4);
+        addCell(tr, val_5);
+        addCell(tr, val_6);
+        addCell(tr, val_7);
+        addCell(tr, val_8);
+        addCell(tr, val_9);
+        addCell(tr, val_10);
+        addCell(tr, val_11);
+        tbl.appendChild(tr)
+    }
+</script>
+<script>
+
+
+
+    function myexerciseget() {
+        for (i = 0; i < usrgetlist2.length; i++) {
+            if (document.getElementById("userid1").value == usrgetlist2[i]) {
+                addRow2(tbl2, subjectlist2[i], descriptionslist2[i], content1list2[i], content2list2[i], content3list2[i]);
+            }
+            else {
+                continue;
+            }
+        }
+    }
+    function addCell2(tr, val) {
+        var td = document.createElement('td');
+        td.innerHTML = val;
+        tr.appendChild(td)
+    }
+    // BUNA BİR ARA BAK
+    var counter = 0;
+    function addImgCell(tr, val) {
+        var td = document.createElement("td");
+        var a = document.createElement('a');
+        var b = document.createElement('div');
+        a.id = counter;
+        counter++;
+        b.className = "timeline-footer";
+        a.href = ("/Content/Admin/data/exercise/eimg/" + val);
+        a.setAttribute("data-toggle", "lightbox");
+        a.setAttribute("data-gallery", "gallery");
+        td.id = val;
+        tr.appendChild(td);
+        td.appendChild(b);
+        b.appendChild(a);
+        a.appendChild(addImg(val));
+    }
+    function addImg(val) {
+        var img = document.createElement('img');
+        img.src = ("/Content/Admin/data/exercise/eimg/" + val);
+        img.style.height = '100px';
+        img.style.width = '100px';
+        img.style.display = ' block';
+        img.style.marginLeft = 'auto';
+        img.style.marginRight = 'auto';
+        img.className = "img-fluid mb-2";
+        return img;
+    }
+    function addRow2(tbl2, val_1, val_2, val_3, val_4, val_5) {
+        var tr = document.createElement('tr');
+        addCell2(tr, val_1);
+        addCell2(tr, val_2);
+        addImgCell(tr, val_3);
+        addImgCell(tr, val_4);
+        addImgCell(tr, val_5);
+        tbl2.appendChild(tr);
+    }
+</script>
+<script>
+
+
+
+    function myhomework() {
+        for (i = 0; i < usrgetlist3.length; i++) {
+            if (document.getElementById("userid1").value == usrgetlist3[i]) {
+                addRow3(tbl3, subjectlist3[i], descriptionslist3[i], exerciselist3[i], nutritionlist3[i], content1list3[i], content2list3[i]);
+            }
+            else {
+                continue;
+            }
+        }
+    }
+    function addCell3(tr, val) {
+        var td = document.createElement('td');
+        td.innerHTML = val;
+        tr.appendChild(td)
+    }
+    var counter1 = 5;
+    function addImgCell3(tr, val) {
+        var td = document.createElement("td");
+        var a = document.createElement('a');
+        a.id = counter1;
+        counter1++;
+        a.href = ("/Content/Admin/data/homework/hwimg/" + val);
+        a.setAttribute("data-toggle", "lightbox");
+        a.setAttribute("data-gallery", "gallery");
+        td.id = val;
+        tr.appendChild(td);
+        td.appendChild(a);
+        a.appendChild(addImg3(val));
+    }
+    function addImg3(val) {
+        var img = document.createElement('img');
+        img.src = ("/Content/Admin/data/homework/hwimg/" + val);
+        img.style.height = '100px';
+        img.style.width = '100px';
+        img.style.display = ' block';
+        img.style.marginLeft = 'auto';
+        img.style.marginRight = 'auto';
+        img.className = "img-fluid mb-2";
+        return img;
+    }
+
+
+    function addRow3(tbl3, val_1, val_2, val_3, val_4, val_5, val_6) {
+        var tr = document.createElement('tr');
+        addCell3(tr, val_1);
+        addCell3(tr, val_2);
+        addCell3(tr, val_3);
+        addCell3(tr, val_4);
+        addImgCell3(tr, val_5);
+        addImgCell3(tr, val_6);
+        tbl3.appendChild(tr)
+    }
+
+</script>

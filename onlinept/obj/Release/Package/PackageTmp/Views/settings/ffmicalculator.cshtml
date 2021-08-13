@@ -1,0 +1,271 @@
+﻿
+@{
+    ViewBag.Title = "FFMI Hesaplayıcı";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+        ViewBag.link = "ffmi";
+        ViewBag.menuactive = "Hesapla";
+}
+
+
+
+<div class="content-wrapper">
+
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h1>FFMI HESAPLA</h1>
+                </div>
+            </div>
+        </div>
+        <!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+
+                    <div class="ffmi__wrap" >
+                        <div class="ffmi__content">
+                            <div class="ffmi__result">
+                                <div class="chart ffmi__chart chart_ffmi">
+                                    <div class="ffmi__chart-container" id="container" data-highcharts-chart="0" style="overflow: hidden;"><div id="highcharts-1dq7jnd-0" dir="ltr" class="highcharts-container " style="position: relative; overflow: hidden; width: 220px; height: 200px; text-align: left; line-height: normal; z-index: 0; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><svg version="1.1" class="highcharts-root" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Arial, Helvetica, sans-serif;font-size:12px;" xmlns="http://www.w3.org/2000/svg" width="220" height="200" viewBox="0 0 220 200"><desc>Created with Highcharts 7.0.2</desc><defs><clipPath id="highcharts-1dq7jnd-2"><rect x="5" y="0" width="195" height="185" fill="none"></rect></clipPath><linearGradient x1="0" y1="300" x2="300" y2="0" gradientUnits="userSpaceOnUse" id="highcharts-1dq7jnd-3"><stop offset="0" stop-color="#5c6bed" stop-opacity="1"></stop><stop offset="0.2" stop-color="#6390ff" stop-opacity="1"></stop><stop offset="0.4" stop-color="#547ff8" stop-opacity="1"></stop><stop offset="0.7" stop-color="#7235d3" stop-opacity="1"></stop></linearGradient></defs><rect fill="#ffffff" class="highcharts-background" x="0" y="0" width="220" height="200" rx="0" ry="0"></rect><rect fill="none" class="highcharts-plot-background" x="10" y="0" width="200" height="185"></rect><g class="highcharts-pane-group" data-z-index="0"><path fill="transparent" d="M 110 92.5 A 0 0 0 1 1 110 92.5 M 110 92.5 A 0 0 0 1 0 110 92.5 " class="highcharts-pane "></path></g><g class="highcharts-grid highcharts-yaxis-grid " data-z-index="1"></g><rect fill="none" class="highcharts-plot-border" data-z-index="1" x="10" y="0" width="200" height="185"></rect><g class="highcharts-axis highcharts-yaxis " data-z-index="2"><path fill="none" class="highcharts-axis-line" stroke="#ccd6eb" stroke-width="10" data-z-index="7" d="M 59.46082418839583 152.73024434022963 A 78.625 78.625 0 1 1 160.59938077632023 152.67967505772157 M 110 92.5 A 0 0 0 1 0 110 92.5 "></path></g><g class="highcharts-series-group" data-z-index="3"><g data-z-index="0.1" class="highcharts-series highcharts-series-0 highcharts-solidgauge-series  highcharts-tracker" transform="translate(10,0) scale(1 1)" clip-path="url(#highcharts-1dq7jnd-2)"><path fill="url(#highcharts-1dq7jnd-3)" d="M 52.998566495208124 148.51412723641357 A 73.12125 73.12125 0 0 1 86.25576122948574 20.68208369646476 L 84.18673603822553 9.870784467975596 A 84.12875 84.12875 0 0 0 45.92308188158354 156.9463614440457 Z" sweep-flag="0" stroke-linecap="round" stroke-linejoin="round" stroke="none" stroke-width="14px" class="highcharts-point highcharts-color-0"></path></g><g data-z-index="0.1" class="highcharts-markers highcharts-series-0 highcharts-solidgauge-series " transform="translate(10,0) scale(1 1)" clip-path="none"></g></g><text x="10" text-anchor="undefined" class="highcharts-title" data-z-index="4" style="color:#333333;font-size:18px;fill:#333333;" y="24"></text><text x="110" text-anchor="middle" class="highcharts-subtitle" data-z-index="4" style="color:#666666;fill:#666666;" y="24"></text><g class="highcharts-legend" data-z-index="7"><rect fill="none" class="highcharts-legend-box" rx="0" ry="0" x="0" y="0" width="8" height="8" visibility="hidden"></rect><g data-z-index="1"><g></g></g></g><g class="highcharts-axis-labels highcharts-yaxis-labels " data-z-index="7"></g></svg></div></div>
+                                </div>
+                                <!--<div>-->
+                                <table class="ffmi__result-table">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                Saf Kas Kütlesi
+                                            </td>
+                                            <td class="right">
+                                                <span id="FFM">160.13</span>
+                                                <span id="FFMMeasurment">lbs</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Yağ Oranı
+                                            </td>
+                                            <td class="right">
+                                                <span id="TBF">22.88</span>
+                                                <span id="TBFMeasurment">%</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                FFMI
+                                            </td>
+                                            <td class="right">
+                                                <span id="FFMI">22.46</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Normalized FFMI
+                                            </td>
+                                            <td class="right">
+                                                <span id="normalizedFFMI">22.46</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <!--</div>-->
+
+                            </div>
+                            <div class="ffmi__controls-box">
+                                <div class="ffmi__measurment">
+                                    <span class="active" data-measurment-btn="" data-measurment-val="imperial">imperial</span>
+                                    <div class="" data-measurment-toggler="">
+                                        <svg class="measurment-toggler measurment-toggler__left" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                            <defs>
+                                                <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                                                    <stop offset="0%" style="stop-color:rgb(55,49,152);stop-opacity:1"></stop>
+                                                    <stop offset="100%" style="stop-color:rgb(84,86,246);stop-opacity:1"></stop>
+                                                </linearGradient>
+                                            </defs>
+                                            <path fill="url(#grad1)" d="M17 7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h10c2.76 0 5-2.24 5-5s-2.24-5-5-5zM7 15c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z"></path>
+
+                                            <path fill="none" d="M0 0h24v24H0z"></path>
+                                        </svg>
+                                        <svg class="measurment-toggler measurment-toggler__right" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                            <defs>
+                                                <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="0%">
+                                                    <stop offset="0%" style="stop-color:rgb(84,86,246);stop-opacity:1"></stop>
+                                                    <stop offset="100%" style="stop-color:rgb(55,49,152);stop-opacity:1"></stop>
+                                                </linearGradient>
+                                            </defs>
+                                            <path fill="url(#grad2)" d="M17 7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h10c2.76 0 5-2.24 5-5s-2.24-5-5-5zm0 8c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z"></path>
+                                            <path fill="none" d="M0 0h24v24H0z"></path>
+                                        </svg>
+                                    </div>
+                                    <span class="" data-measurment-btn="" data-measurment-val="metric">metric</span>
+                                </div>
+
+
+                                <div class="ffmi__controls" data-ffmi-controls="metric">
+                                    <div class="control">
+                                        <div class="control__text">
+                                            <div class="control__label">
+                                                Boy
+                                            </div>
+                                            <div class="control__value control__value_x2" data-calc-measurment="imperial">
+                                                <input class="control__value-num control__value-num_feet" data-calc-val="height-feet" type="text" value="5" aria-label="Height(feet)">
+                                                <span class="control__value-text">ft</span>
+                                                <input class="control__value-num control__value-num_inches" data-calc-val="height-inches" type="text" value="10.87" aria-label="Height(inches)">
+                                                <span class="control__value-text">in</span>
+                                                <input type="hidden" data-calc-val="heightInchesHidden" value="70.87">
+                                            </div>
+                                            <div class="control__value" data-calc-measurment="metric">
+                                                <input class="control__value-num" data-calc-val="height" type="text" value="180" aria-label="Height(m)">
+                                                <span class="control__value-text">cm</span>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="control__slider" data-calc-measurment="imperial">
+                                            <div id="heightInchesHiddenSlider" data-slider="heightSlider" class="ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 58.3333%;"></span></div>
+                                        </div>
+                                        <div class="control__slider-labels visible" data-calc-measurment="imperial">
+                                            <span>3 feet</span>
+                                            <span>8 feet</span>
+                                        </div>
+
+
+                                        <div class="control__slider" data-calc-measurment="metric">
+                                            <div id="heightSlider" data-slider="heightSlider" class="ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 60%;"></span></div>
+                                        </div>
+                                        <div class="control__slider-labels hidden" data-calc-measurment="metric">
+                                            <span>120 cm</span>
+                                            <span>220 cm</span>
+                                        </div>
+                                    </div>
+                                    <div class="control">
+                                        <div class="control__text">
+                                            <div class="control__label">
+                                                Kilo
+                                            </div>
+                                            <div class="control__value" data-calc-measurment="metric">
+                                                <input class="control__value-num" data-calc-val="weight" type="text" value="85" aria-label="Weight(kg)">
+                                                <span class="control__value-text">kg</span>
+                                            </div>
+                                            <div class="control__value" data-calc-measurment="imperial">
+                                                <input class="control__value-num" data-calc-val="weightLbs" type="text" value="183" aria-label="Weight(lbs)">
+                                                <span class="control__value-text">lbs</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="control__slider" data-calc-measurment="imperial">
+                                            <div id="weightLbsSlider" data-slider="weightSlider" class="ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 41.4035%;"></span></div>
+                                        </div>
+                                        <div class="control__slider" data-calc-measurment="metric">
+                                            <div id="weightSlider" data-slider="weightSlider" class="ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 42.3077%;"></span></div>
+                                        </div>
+
+                                        <div class="control__slider-labels visible" data-calc-measurment="imperial">
+                                            <span>65 lbs</span>
+                                            <span>350 lbs</span>
+                                        </div>
+                                        <div class="control__slider-labels hidden" data-calc-measurment="metric">
+                                            <span>30 kg</span>
+                                            <span>160 kg</span>
+                                        </div>
+                                    </div>
+                                    <div class="control">
+                                        <div class="control__text">
+                                            <div class="control__label">
+                                                Yağ Oranı
+                                            </div>
+                                            <div class="control__value">
+                                                <input class="control__value-num" data-calc-val="bodyFat" type="text" value="12.5" aria-label="Body Fat(%)">
+                                                <span class="control__value-text">%</span>
+                                            </div>
+                                        </div>
+                                        <div class="control__slider">
+                                            <div id="bodyFatSlider" data-slider="bodyFatSlider" class="ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 13%;"></span></div>
+                                        </div>
+                                        <div class="control__slider-labels">
+                                            <span>0 %</span>
+                                            <span>100 %</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="ffmi__scale">
+                            <div class="pointer" id="pointer" style="left: 46.1327%;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path fill="none" d="M0 0h24v24H0V0z"></path>
+                                    <path d="M3.84 5.49l7.29 12.96c.38.68 1.36.68 1.74 0l7.29-12.96c.38-.67-.11-1.49-.87-1.49H4.71c-.76 0-1.25.82-.87 1.49zM6.38 6h11.25L12 16 6.38 6z"></path>
+                                </svg>
+                            </div>
+                            <div class="scale">
+                                <!--<div class="scale__segment"></div>-->
+                                <div class="scale__segment">
+                                    <span class="scale__label">Ortalama Altı</span>
+                                    <span class="scale__segment-value">16</span>
+                                </div>
+                                <div class="scale__segment">
+                                    <span class="scale__segment-value">17</span>
+                                </div>
+                                <div class="scale__segment">
+                                    <span class="scale__label">Ortalama</span>
+                                    <span class="scale__segment-value">18</span>
+                                </div>
+                                <div class="scale__segment">
+                                    <span class="scale__segment-value">19</span>
+                                </div>
+                                <div class="scale__segment">
+                                    <span class="scale__label">Ortalama Üstü</span>
+                                    <span class="scale__segment-value">20</span>
+                                </div>
+                                <div class="scale__segment">
+                                    <span class="scale__segment-value">21</span>
+                                </div>
+                                <div class="scale__segment" data-segment-value="22">
+                                    <span class="scale__label">Mükemmel</span>
+                                    <span class="scale__segment-value">22</span>
+                                </div>
+                                <div class="scale__segment">
+
+                                    <span class="scale__segment-value">23</span>
+                                </div>
+                                <div class="scale__segment">
+                                    <span class="scale__label">Üstün</span>
+                                    <span class="scale__segment-value">24</span>
+                                </div>
+                                <div class="scale__segment">
+                                    <span class="scale__segment-value">25</span>
+                                </div>
+                                <div class="scale__segment">
+                                    <span class="scale__label">Şüpheli</span>
+                                    <span class="scale__segment-value">26</span>
+                                </div>
+                                <div class="scale__segment">
+                                    <span class="scale__segment-value">27</span>
+                                </div>
+                                <div class="scale__segment">
+
+                                    <span class="scale__segment-value">28</span>
+                                </div>
+                                <div class="scale__segment">
+                                    <span class="scale__label">İlaçlı</span>
+                                    <span class="scale__segment-value">29</span>
+                                    <span class="scale__segment-value scale__segment-value_right">30</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+ </div>
+                <!-- /.card-body -->
+
+<link href="~/Content/Admin/plugins/custom/ffmi/style.min.css" rel="stylesheet" />
+
+<script src="~/Content/Admin/plugins/custom/ffmi/build.min.js"></script>
+
+<ym-measure class="ym-viewport" style="display: block; top: 0px; right: 0px; bottom: 0px; left: 0px; height: 100vh; width: 100vw; position: fixed; transform: translate(0px, -100%); transform-origin: 0px 0px;"></ym-measure>
+
+
+

@@ -1,0 +1,864 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="onlineptModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="allexerciselist">
+    <Key>
+      <PropertyRef Name="allexerciseid" />
+    </Key>
+    <Property Name="allexerciseid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Area" Type="varchar" MaxLength="500" />
+    <Property Name="Content1" Type="varchar" MaxLength="500" />
+    <Property Name="Descriptions" Type="varchar" MaxLength="1000" />
+    <Property Name="name" Type="varchar" MaxLength="500" />
+    <Property Name="areaid" Type="int" />
+  </EntityType>
+  <EntityType Name="events">
+    <Key>
+      <PropertyRef Name="EventID" />
+    </Key>
+    <Property Name="EventID" Type="int" Nullable="false" />
+    <Property Name="usersget" Type="int" />
+    <Property Name="mylistget" Type="int" />
+    <Property Name="Subject" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="1500" />
+    <Property Name="Start" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="End" Type="datetime" Precision="0" />
+    <Property Name="ThemeColor" Type="varchar" MaxLength="10" />
+    <Property Name="IsFullDay" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="exercise">
+    <Key>
+      <PropertyRef Name="exerciseid" />
+    </Key>
+    <Property Name="exerciseid" Type="int" Nullable="false" />
+    <Property Name="mylistget" Type="int" Nullable="false" />
+    <Property Name="usersget" Type="int" Nullable="false" />
+    <Property Name="subject" Type="text" Nullable="false" />
+    <Property Name="descriptions" Type="text" Nullable="false" />
+    <Property Name="descriptions1" Type="text" Nullable="false" />
+    <Property Name="descriptions2" Type="text" Nullable="false" />
+    <Property Name="descriptions3" Type="text" Nullable="false" />
+    <Property Name="descriptions4" Type="text" Nullable="false" />
+    <Property Name="descriptions5" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions6" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions7" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions8" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions9" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions10" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions11" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions12" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions13" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions14" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions15" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions16" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions17" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions18" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions19" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions20" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions21" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions22" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions23" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions24" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions25" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions26" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions27" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions28" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions29" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions30" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions31" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions32" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions33" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions34" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions35" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions36" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions37" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions38" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions39" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions40" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions41" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions42" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions43" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions44" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions45" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions46" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions47" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions48" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions49" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions50" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions51" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions52" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions53" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions54" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions55" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions56" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions57" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions58" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions59" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions60" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions61" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions62" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions63" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions64" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions65" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions66" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions67" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions68" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions69" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions70" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions71" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions72" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions73" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions74" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions75" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions76" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions77" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions78" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions79" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions80" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions81" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions82" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions83" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions84" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions85" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions86" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions87" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions88" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions89" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions90" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions91" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions92" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions93" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions94" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions95" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions96" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions97" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions98" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions99" Type="mediumtext" Nullable="false" />
+    <Property Name="descriptions100" Type="mediumtext" Nullable="false" />
+    <Property Name="date" Type="date" Nullable="false" />
+    <Property Name="content1" Type="varchar" MaxLength="200" />
+    <Property Name="content2" Type="varchar" MaxLength="200" />
+    <Property Name="content3" Type="varchar" MaxLength="200" />
+    <Property Name="content4" Type="varchar" MaxLength="200" />
+    <Property Name="content5" Type="varchar" MaxLength="200" />
+    <Property Name="content6" Type="varchar" MaxLength="200" />
+    <Property Name="content7" Type="varchar" MaxLength="200" />
+    <Property Name="content8" Type="varchar" MaxLength="200" />
+    <Property Name="content9" Type="varchar" MaxLength="200" />
+    <Property Name="content10" Type="varchar" MaxLength="200" />
+    <Property Name="content11" Type="varchar" MaxLength="200" />
+    <Property Name="content12" Type="varchar" MaxLength="200" />
+    <Property Name="content13" Type="varchar" MaxLength="200" />
+    <Property Name="content14" Type="varchar" MaxLength="200" />
+    <Property Name="content15" Type="varchar" MaxLength="200" />
+    <Property Name="content16" Type="varchar" MaxLength="200" />
+    <Property Name="content17" Type="varchar" MaxLength="200" />
+    <Property Name="content18" Type="varchar" MaxLength="200" />
+    <Property Name="content19" Type="varchar" MaxLength="200" />
+    <Property Name="content20" Type="varchar" MaxLength="200" />
+    <Property Name="content21" Type="varchar" MaxLength="200" />
+    <Property Name="content22" Type="varchar" MaxLength="200" />
+    <Property Name="content23" Type="varchar" MaxLength="200" />
+    <Property Name="content24" Type="varchar" MaxLength="200" />
+    <Property Name="content25" Type="varchar" MaxLength="200" />
+    <Property Name="content26" Type="varchar" MaxLength="200" />
+    <Property Name="content27" Type="varchar" MaxLength="200" />
+    <Property Name="content28" Type="varchar" MaxLength="200" />
+    <Property Name="content29" Type="varchar" MaxLength="200" />
+    <Property Name="content30" Type="varchar" MaxLength="200" />
+    <Property Name="content31" Type="varchar" MaxLength="200" />
+    <Property Name="content32" Type="varchar" MaxLength="200" />
+    <Property Name="content33" Type="varchar" MaxLength="200" />
+    <Property Name="content34" Type="varchar" MaxLength="200" />
+    <Property Name="content35" Type="varchar" MaxLength="200" />
+    <Property Name="content36" Type="varchar" MaxLength="200" />
+    <Property Name="content37" Type="varchar" MaxLength="200" />
+    <Property Name="content38" Type="varchar" MaxLength="200" />
+    <Property Name="content39" Type="varchar" MaxLength="200" />
+    <Property Name="content40" Type="varchar" MaxLength="200" />
+    <Property Name="content41" Type="varchar" MaxLength="200" />
+    <Property Name="content42" Type="varchar" MaxLength="200" />
+    <Property Name="content43" Type="varchar" MaxLength="200" />
+    <Property Name="content44" Type="varchar" MaxLength="200" />
+    <Property Name="content45" Type="varchar" MaxLength="200" />
+    <Property Name="content46" Type="varchar" MaxLength="200" />
+    <Property Name="content47" Type="varchar" MaxLength="200" />
+    <Property Name="content48" Type="varchar" MaxLength="200" />
+    <Property Name="content49" Type="varchar" MaxLength="200" />
+    <Property Name="content50" Type="varchar" MaxLength="200" />
+    <Property Name="content51" Type="varchar" MaxLength="200" />
+    <Property Name="content52" Type="varchar" MaxLength="200" />
+    <Property Name="content53" Type="varchar" MaxLength="200" />
+    <Property Name="content54" Type="varchar" MaxLength="200" />
+    <Property Name="content55" Type="varchar" MaxLength="200" />
+    <Property Name="content56" Type="varchar" MaxLength="200" />
+    <Property Name="content57" Type="varchar" MaxLength="200" />
+    <Property Name="content58" Type="varchar" MaxLength="200" />
+    <Property Name="content59" Type="varchar" MaxLength="200" />
+    <Property Name="content60" Type="varchar" MaxLength="200" />
+    <Property Name="content61" Type="varchar" MaxLength="200" />
+    <Property Name="content62" Type="varchar" MaxLength="200" />
+    <Property Name="content63" Type="varchar" MaxLength="200" />
+    <Property Name="content64" Type="varchar" MaxLength="200" />
+    <Property Name="content65" Type="varchar" MaxLength="200" />
+    <Property Name="content66" Type="varchar" MaxLength="200" />
+    <Property Name="content67" Type="varchar" MaxLength="200" />
+    <Property Name="content68" Type="varchar" MaxLength="200" />
+    <Property Name="content69" Type="varchar" MaxLength="200" />
+    <Property Name="content70" Type="varchar" MaxLength="200" />
+    <Property Name="content71" Type="varchar" MaxLength="200" />
+    <Property Name="content72" Type="varchar" MaxLength="200" />
+    <Property Name="content73" Type="varchar" MaxLength="200" />
+    <Property Name="content74" Type="varchar" MaxLength="200" />
+    <Property Name="content75" Type="varchar" MaxLength="200" />
+    <Property Name="content76" Type="varchar" MaxLength="200" />
+    <Property Name="content77" Type="varchar" MaxLength="200" />
+    <Property Name="content78" Type="varchar" MaxLength="200" />
+    <Property Name="content79" Type="varchar" MaxLength="200" />
+    <Property Name="content80" Type="varchar" MaxLength="200" />
+    <Property Name="content81" Type="varchar" MaxLength="200" />
+    <Property Name="content82" Type="varchar" MaxLength="200" />
+    <Property Name="content83" Type="varchar" MaxLength="200" />
+    <Property Name="content84" Type="varchar" MaxLength="200" />
+    <Property Name="content85" Type="varchar" MaxLength="200" />
+    <Property Name="content86" Type="varchar" MaxLength="200" />
+    <Property Name="content87" Type="varchar" MaxLength="200" />
+    <Property Name="content88" Type="varchar" MaxLength="200" />
+    <Property Name="content89" Type="varchar" MaxLength="200" />
+    <Property Name="content90" Type="varchar" MaxLength="200" />
+    <Property Name="content91" Type="varchar" MaxLength="200" />
+    <Property Name="content92" Type="varchar" MaxLength="200" />
+    <Property Name="content93" Type="varchar" MaxLength="200" />
+    <Property Name="content94" Type="varchar" MaxLength="200" />
+    <Property Name="content95" Type="varchar" MaxLength="200" />
+    <Property Name="content96" Type="varchar" MaxLength="200" />
+    <Property Name="content97" Type="varchar" MaxLength="200" />
+    <Property Name="content98" Type="varchar" MaxLength="200" />
+    <Property Name="content99" Type="varchar" MaxLength="200" />
+    <Property Name="content100" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="home">
+    <Key>
+      <PropertyRef Name="homeid" />
+    </Key>
+    <Property Name="homeid" Type="int" Nullable="false" />
+    <Property Name="mylistget" Type="int" Nullable="false" />
+    <Property Name="usersget" Type="int" Nullable="false" />
+    <Property Name="subject" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="descriptions" Type="varchar" MaxLength="1500" Nullable="false" />
+    <Property Name="date" Type="date" Nullable="false" />
+    <Property Name="content1" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="content2" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="content3" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="content4" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="content5" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="content6" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="color" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="protein" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="carb" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="fat" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="calori" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="homework">
+    <Key>
+      <PropertyRef Name="homeworkid" />
+    </Key>
+    <Property Name="homeworkid" Type="int" Nullable="false" />
+    <Property Name="mylistget" Type="int" Nullable="false" />
+    <Property Name="usersget" Type="int" Nullable="false" />
+    <Property Name="subject" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="descriptions" Type="varchar" MaxLength="1500" Nullable="false" />
+    <Property Name="date" Type="date" Nullable="false" />
+    <Property Name="exercise" Type="varchar" MaxLength="1500" Nullable="false" />
+    <Property Name="nutrition" Type="varchar" MaxLength="1500" Nullable="false" />
+    <Property Name="hworktime" Type="date" Nullable="false" />
+    <Property Name="content1" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="content2" Type="varchar" MaxLength="500" Nullable="false" />
+  </EntityType>
+  <EntityType Name="messagebox">
+    <Key>
+      <PropertyRef Name="messageid" />
+    </Key>
+    <Property Name="messageid" Type="int" Nullable="false" />
+    <Property Name="namesurname" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="youremail" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="subject" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="message" Type="varchar" MaxLength="1500" Nullable="false" />
+    <Property Name="date" Type="date" Nullable="false" />
+    <Property Name="color" Type="varchar" MaxLength="500" Nullable="false" />
+  </EntityType>
+  <EntityType Name="myconnect">
+    <Key>
+      <PropertyRef Name="myconnectid" />
+    </Key>
+    <Property Name="myconnectid" Type="int" Nullable="false" />
+    <Property Name="usersget" Type="int" Nullable="false" />
+    <Property Name="namesurname" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="adres" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="tel" Type="varchar" MaxLength="13" Nullable="false" />
+    <Property Name="youremail" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="subject" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="descriptions" Type="varchar" MaxLength="1500" Nullable="false" />
+    <Property Name="color" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="date" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="mylist">
+    <Key>
+      <PropertyRef Name="mylistid" />
+    </Key>
+    <Property Name="mylistid" Type="int" Nullable="false" />
+    <Property Name="usersget" Type="int" Nullable="false" />
+    <Property Name="listname" Type="varchar" MaxLength="8" Nullable="false" />
+  </EntityType>
+  <EntityType Name="mymessage">
+    <Key>
+      <PropertyRef Name="mymessageid" />
+    </Key>
+    <Property Name="mymessageid" Type="int" Nullable="false" />
+    <Property Name="mylistget" Type="int" Nullable="false" />
+    <Property Name="usersget" Type="int" Nullable="false" />
+    <Property Name="namesurname" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="youremail" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="subject" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="message" Type="varchar" MaxLength="1500" Nullable="false" />
+    <Property Name="date" Type="date" Nullable="false" />
+    <Property Name="color" Type="varchar" MaxLength="200" Nullable="false" />
+  </EntityType>
+  <EntityType Name="mynotification">
+    <Key>
+      <PropertyRef Name="mynotificationid" />
+    </Key>
+    <Property Name="mynotificationid" Type="int" Nullable="false" />
+    <Property Name="mylistget" Type="int" Nullable="false" />
+    <Property Name="usersget" Type="int" Nullable="false" />
+    <Property Name="mynotification" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="color" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="date" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="myquestions">
+    <Key>
+      <PropertyRef Name="myquestionsid" />
+    </Key>
+    <Property Name="myquestionsid" Type="int" Nullable="false" />
+    <Property Name="mylistget" Type="int" Nullable="false" />
+    <Property Name="usersget" Type="int" Nullable="false" />
+    <Property Name="namesurname" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="youremail" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="subject" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="message" Type="varchar" MaxLength="1500" Nullable="false" />
+    <Property Name="date" Type="date" Nullable="false" />
+    <Property Name="color" Type="varchar" MaxLength="500" Nullable="false" />
+  </EntityType>
+  <EntityType Name="nutrition">
+    <Key>
+      <PropertyRef Name="nutritionid" />
+    </Key>
+    <Property Name="nutritionid" Type="int" Nullable="false" />
+    <Property Name="mylistget" Type="int" Nullable="false" />
+    <Property Name="usersget" Type="int" Nullable="false" />
+    <Property Name="meal" Type="varchar" MaxLength="1500" Nullable="false" />
+    <Property Name="nutrition" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="descriptions" Type="varchar" MaxLength="1500" />
+    <Property Name="date" Type="date" Nullable="false" />
+    <Property Name="protein" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="carb" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="fat" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="calori" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="quantity" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="cholesterol" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="potassium" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="sodium" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="onlinecourse">
+    <Key>
+      <PropertyRef Name="onlinecourse" />
+    </Key>
+    <Property Name="onlinecourse" Type="int" Nullable="false" />
+    <Property Name="mylistget" Type="int" Nullable="false" />
+    <Property Name="usersget" Type="int" Nullable="false" />
+    <Property Name="date" Type="date" Nullable="false" />
+    <Property Name="subject" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="descriptions" Type="varchar" MaxLength="1500" Nullable="false" />
+  </EntityType>
+  <EntityType Name="payment">
+    <Key>
+      <PropertyRef Name="paymentid" />
+    </Key>
+    <Property Name="paymentid" Type="int" Nullable="false" />
+    <Property Name="mylistget" Type="int" Nullable="false" />
+    <Property Name="usersget" Type="int" Nullable="false" />
+    <Property Name="date" Type="date" Nullable="false" />
+    <Property Name="pay1" Type="varchar" MaxLength="50" />
+    <Property Name="pay2" Type="varchar" MaxLength="50" />
+    <Property Name="pay3" Type="varchar" MaxLength="50" />
+    <Property Name="pay4" Type="varchar" MaxLength="50" />
+    <Property Name="pay5" Type="varchar" MaxLength="50" />
+    <Property Name="pay6" Type="varchar" MaxLength="50" />
+    <Property Name="pay7" Type="varchar" MaxLength="50" />
+    <Property Name="pay8" Type="varchar" MaxLength="50" />
+    <Property Name="pay9" Type="varchar" MaxLength="50" />
+    <Property Name="pay10" Type="varchar" MaxLength="50" />
+    <Property Name="pay11" Type="varchar" MaxLength="50" />
+    <Property Name="pay12" Type="varchar" MaxLength="50" />
+    <Property Name="total" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="sendusersanalysis">
+    <Key>
+      <PropertyRef Name="sendusersanalysisid" />
+    </Key>
+    <Property Name="sendusersanalysisid" Type="int" Nullable="false" />
+    <Property Name="mylistget" Type="int" />
+    <Property Name="usersget" Type="int" />
+    <Property Name="namesurname" Type="varchar" MaxLength="500" />
+    <Property Name="youremail" Type="varchar" MaxLength="500" />
+    <Property Name="Content1" Type="varchar" MaxLength="500" />
+    <Property Name="Content2" Type="varchar" MaxLength="500" />
+    <Property Name="Content3" Type="varchar" MaxLength="500" />
+    <Property Name="color" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="date" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="student">
+    <Key>
+      <PropertyRef Name="studentid" />
+    </Key>
+    <Property Name="studentid" Type="int" Nullable="false" />
+    <Property Name="mylistget" Type="int" Nullable="false" />
+    <Property Name="usersget" Type="int" Nullable="false" />
+    <Property Name="viewkey" Type="int" Nullable="false" />
+    <Property Name="gender" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="weight" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="height" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="age" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="date" Type="date" Nullable="false" />
+    <Property Name="bodyfat" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="bodymuscle" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="neck" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="shoulder" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="chest" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="larm" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="lfarm" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="rarm" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="rfarm" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="waist" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="hip" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="lleg" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="lcalves" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="rleg" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="rcalves" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="calori" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="protein" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="carb" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="fat" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="caloriedeficit" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="content1" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="content2" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="content3" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="inseam" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="fatneck" Type="varchar" MaxLength="50" />
+    <Property Name="fatlarm" Type="varchar" MaxLength="50" />
+    <Property Name="fatrarm" Type="varchar" MaxLength="50" />
+    <Property Name="fatbody" Type="varchar" MaxLength="50" />
+    <Property Name="fatlleg" Type="varchar" MaxLength="50" />
+    <Property Name="fatrleg" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="users">
+    <Key>
+      <PropertyRef Name="userid" />
+    </Key>
+    <Property Name="userid" Type="int" Nullable="false" />
+    <Property Name="viewkey" Type="int" Nullable="false" />
+    <Property Name="roleid" Type="int" Nullable="false" />
+    <Property Name="viewmylist" Type="int" Nullable="false" />
+    <Property Name="active" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="profilephoto" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="usrname" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="tc" Type="varchar" MaxLength="11" Nullable="false" />
+    <Property Name="tel" Type="varchar" MaxLength="13" Nullable="false" />
+    <Property Name="role" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="gender" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="securitykey" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="yuklenenbelgeler">
+    <Key>
+      <PropertyRef Name="belgeid" />
+    </Key>
+    <Property Name="belgeid" Type="int" Nullable="false" />
+    <Property Name="belge" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="date" Type="date" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="1500" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_exercise_mylist">
+    <End Role="mylist" Type="Self.mylist" Multiplicity="1" />
+    <End Role="exercise" Type="Self.exercise" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="mylist">
+        <PropertyRef Name="mylistid" />
+      </Principal>
+      <Dependent Role="exercise">
+        <PropertyRef Name="mylistget" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_exercise_users">
+    <End Role="users" Type="Self.users" Multiplicity="1" />
+    <End Role="exercise" Type="Self.exercise" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="userid" />
+      </Principal>
+      <Dependent Role="exercise">
+        <PropertyRef Name="usersget" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_home_mylist">
+    <End Role="mylist" Type="Self.mylist" Multiplicity="1" />
+    <End Role="home" Type="Self.home" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="mylist">
+        <PropertyRef Name="mylistid" />
+      </Principal>
+      <Dependent Role="home">
+        <PropertyRef Name="mylistget" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_home_users">
+    <End Role="users" Type="Self.users" Multiplicity="1" />
+    <End Role="home" Type="Self.home" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="userid" />
+      </Principal>
+      <Dependent Role="home">
+        <PropertyRef Name="usersget" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_homework_mylist">
+    <End Role="mylist" Type="Self.mylist" Multiplicity="1" />
+    <End Role="homework" Type="Self.homework" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="mylist">
+        <PropertyRef Name="mylistid" />
+      </Principal>
+      <Dependent Role="homework">
+        <PropertyRef Name="mylistget" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_homework_users">
+    <End Role="users" Type="Self.users" Multiplicity="1" />
+    <End Role="homework" Type="Self.homework" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="userid" />
+      </Principal>
+      <Dependent Role="homework">
+        <PropertyRef Name="usersget" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_mymessage_mylist">
+    <End Role="mylist" Type="Self.mylist" Multiplicity="1" />
+    <End Role="mymessage" Type="Self.mymessage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="mylist">
+        <PropertyRef Name="mylistid" />
+      </Principal>
+      <Dependent Role="mymessage">
+        <PropertyRef Name="mylistget" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_mymessage_users">
+    <End Role="users" Type="Self.users" Multiplicity="1" />
+    <End Role="mymessage" Type="Self.mymessage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="userid" />
+      </Principal>
+      <Dependent Role="mymessage">
+        <PropertyRef Name="usersget" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_mynotification_mylist">
+    <End Role="mylist" Type="Self.mylist" Multiplicity="1" />
+    <End Role="mynotification" Type="Self.mynotification" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="mylist">
+        <PropertyRef Name="mylistid" />
+      </Principal>
+      <Dependent Role="mynotification">
+        <PropertyRef Name="mylistget" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_mynotification_users">
+    <End Role="users" Type="Self.users" Multiplicity="1" />
+    <End Role="mynotification" Type="Self.mynotification" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="userid" />
+      </Principal>
+      <Dependent Role="mynotification">
+        <PropertyRef Name="usersget" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_myquestions_mylist">
+    <End Role="mylist" Type="Self.mylist" Multiplicity="1" />
+    <End Role="myquestions" Type="Self.myquestions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="mylist">
+        <PropertyRef Name="mylistid" />
+      </Principal>
+      <Dependent Role="myquestions">
+        <PropertyRef Name="mylistget" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_myquestions_users">
+    <End Role="users" Type="Self.users" Multiplicity="1" />
+    <End Role="myquestions" Type="Self.myquestions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="userid" />
+      </Principal>
+      <Dependent Role="myquestions">
+        <PropertyRef Name="usersget" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_nutrition_mylist">
+    <End Role="mylist" Type="Self.mylist" Multiplicity="1" />
+    <End Role="nutrition" Type="Self.nutrition" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="mylist">
+        <PropertyRef Name="mylistid" />
+      </Principal>
+      <Dependent Role="nutrition">
+        <PropertyRef Name="mylistget" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_nutrition_users">
+    <End Role="users" Type="Self.users" Multiplicity="1" />
+    <End Role="nutrition" Type="Self.nutrition" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="userid" />
+      </Principal>
+      <Dependent Role="nutrition">
+        <PropertyRef Name="usersget" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_onlinecourse_mylist">
+    <End Role="mylist" Type="Self.mylist" Multiplicity="1" />
+    <End Role="onlinecourse" Type="Self.onlinecourse" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="mylist">
+        <PropertyRef Name="mylistid" />
+      </Principal>
+      <Dependent Role="onlinecourse">
+        <PropertyRef Name="mylistget" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_onlinecourse_users">
+    <End Role="users" Type="Self.users" Multiplicity="1" />
+    <End Role="onlinecourse" Type="Self.onlinecourse" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="userid" />
+      </Principal>
+      <Dependent Role="onlinecourse">
+        <PropertyRef Name="usersget" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_payment_mylist">
+    <End Role="mylist" Type="Self.mylist" Multiplicity="1" />
+    <End Role="payment" Type="Self.payment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="mylist">
+        <PropertyRef Name="mylistid" />
+      </Principal>
+      <Dependent Role="payment">
+        <PropertyRef Name="mylistget" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_payment_users">
+    <End Role="users" Type="Self.users" Multiplicity="1" />
+    <End Role="payment" Type="Self.payment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="userid" />
+      </Principal>
+      <Dependent Role="payment">
+        <PropertyRef Name="usersget" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_sendusersanalysis_mylist">
+    <End Role="mylist" Type="Self.mylist" Multiplicity="0..1" />
+    <End Role="sendusersanalysis" Type="Self.sendusersanalysis" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="mylist">
+        <PropertyRef Name="mylistid" />
+      </Principal>
+      <Dependent Role="sendusersanalysis">
+        <PropertyRef Name="mylistget" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_sendusersanalysis_users">
+    <End Role="users" Type="Self.users" Multiplicity="0..1" />
+    <End Role="sendusersanalysis" Type="Self.sendusersanalysis" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="userid" />
+      </Principal>
+      <Dependent Role="sendusersanalysis">
+        <PropertyRef Name="usersget" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_student_mylist">
+    <End Role="mylist" Type="Self.mylist" Multiplicity="1" />
+    <End Role="student" Type="Self.student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="mylist">
+        <PropertyRef Name="mylistid" />
+      </Principal>
+      <Dependent Role="student">
+        <PropertyRef Name="mylistget" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_student_users">
+    <End Role="users" Type="Self.users" Multiplicity="1" />
+    <End Role="student" Type="Self.student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="userid" />
+      </Principal>
+      <Dependent Role="student">
+        <PropertyRef Name="usersget" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="onlineptModelStoreContainer">
+    <EntitySet Name="allexerciselist" EntityType="Self.allexerciselist" Schema="onlinept" store:Type="Tables" />
+    <EntitySet Name="events" EntityType="Self.events" Schema="onlinept" store:Type="Tables" />
+    <EntitySet Name="exercise" EntityType="Self.exercise" Schema="onlinept" store:Type="Tables" />
+    <EntitySet Name="home" EntityType="Self.home" Schema="onlinept" store:Type="Tables" />
+    <EntitySet Name="homework" EntityType="Self.homework" Schema="onlinept" store:Type="Tables" />
+    <EntitySet Name="messagebox" EntityType="Self.messagebox" Schema="onlinept" store:Type="Tables" />
+    <EntitySet Name="myconnect" EntityType="Self.myconnect" Schema="onlinept" store:Type="Tables" />
+    <EntitySet Name="mylist" EntityType="Self.mylist" Schema="onlinept" store:Type="Tables" />
+    <EntitySet Name="mymessage" EntityType="Self.mymessage" Schema="onlinept" store:Type="Tables" />
+    <EntitySet Name="mynotification" EntityType="Self.mynotification" Schema="onlinept" store:Type="Tables" />
+    <EntitySet Name="myquestions" EntityType="Self.myquestions" Schema="onlinept" store:Type="Tables" />
+    <EntitySet Name="nutrition" EntityType="Self.nutrition" Schema="onlinept" store:Type="Tables" />
+    <EntitySet Name="onlinecourse" EntityType="Self.onlinecourse" Schema="onlinept" store:Type="Tables" />
+    <EntitySet Name="payment" EntityType="Self.payment" Schema="onlinept" store:Type="Tables" />
+    <EntitySet Name="sendusersanalysis" EntityType="Self.sendusersanalysis" Schema="onlinept" store:Type="Tables" />
+    <EntitySet Name="student" EntityType="Self.student" Schema="onlinept" store:Type="Tables" />
+    <EntitySet Name="users" EntityType="Self.users" Schema="onlinept" store:Type="Tables" />
+    <EntitySet Name="yuklenenbelgeler" EntityType="Self.yuklenenbelgeler" Schema="onlinept" store:Type="Tables" />
+    <AssociationSet Name="FK_exercise_mylist" Association="Self.FK_exercise_mylist">
+      <End Role="mylist" EntitySet="mylist" />
+      <End Role="exercise" EntitySet="exercise" />
+    </AssociationSet>
+    <AssociationSet Name="FK_exercise_users" Association="Self.FK_exercise_users">
+      <End Role="users" EntitySet="users" />
+      <End Role="exercise" EntitySet="exercise" />
+    </AssociationSet>
+    <AssociationSet Name="FK_home_mylist" Association="Self.FK_home_mylist">
+      <End Role="mylist" EntitySet="mylist" />
+      <End Role="home" EntitySet="home" />
+    </AssociationSet>
+    <AssociationSet Name="FK_home_users" Association="Self.FK_home_users">
+      <End Role="users" EntitySet="users" />
+      <End Role="home" EntitySet="home" />
+    </AssociationSet>
+    <AssociationSet Name="FK_homework_mylist" Association="Self.FK_homework_mylist">
+      <End Role="mylist" EntitySet="mylist" />
+      <End Role="homework" EntitySet="homework" />
+    </AssociationSet>
+    <AssociationSet Name="FK_homework_users" Association="Self.FK_homework_users">
+      <End Role="users" EntitySet="users" />
+      <End Role="homework" EntitySet="homework" />
+    </AssociationSet>
+    <AssociationSet Name="FK_mymessage_mylist" Association="Self.FK_mymessage_mylist">
+      <End Role="mylist" EntitySet="mylist" />
+      <End Role="mymessage" EntitySet="mymessage" />
+    </AssociationSet>
+    <AssociationSet Name="FK_mymessage_users" Association="Self.FK_mymessage_users">
+      <End Role="users" EntitySet="users" />
+      <End Role="mymessage" EntitySet="mymessage" />
+    </AssociationSet>
+    <AssociationSet Name="FK_mynotification_mylist" Association="Self.FK_mynotification_mylist">
+      <End Role="mylist" EntitySet="mylist" />
+      <End Role="mynotification" EntitySet="mynotification" />
+    </AssociationSet>
+    <AssociationSet Name="FK_mynotification_users" Association="Self.FK_mynotification_users">
+      <End Role="users" EntitySet="users" />
+      <End Role="mynotification" EntitySet="mynotification" />
+    </AssociationSet>
+    <AssociationSet Name="FK_myquestions_mylist" Association="Self.FK_myquestions_mylist">
+      <End Role="mylist" EntitySet="mylist" />
+      <End Role="myquestions" EntitySet="myquestions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_myquestions_users" Association="Self.FK_myquestions_users">
+      <End Role="users" EntitySet="users" />
+      <End Role="myquestions" EntitySet="myquestions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_nutrition_mylist" Association="Self.FK_nutrition_mylist">
+      <End Role="mylist" EntitySet="mylist" />
+      <End Role="nutrition" EntitySet="nutrition" />
+    </AssociationSet>
+    <AssociationSet Name="FK_nutrition_users" Association="Self.FK_nutrition_users">
+      <End Role="users" EntitySet="users" />
+      <End Role="nutrition" EntitySet="nutrition" />
+    </AssociationSet>
+    <AssociationSet Name="FK_onlinecourse_mylist" Association="Self.FK_onlinecourse_mylist">
+      <End Role="mylist" EntitySet="mylist" />
+      <End Role="onlinecourse" EntitySet="onlinecourse" />
+    </AssociationSet>
+    <AssociationSet Name="FK_onlinecourse_users" Association="Self.FK_onlinecourse_users">
+      <End Role="users" EntitySet="users" />
+      <End Role="onlinecourse" EntitySet="onlinecourse" />
+    </AssociationSet>
+    <AssociationSet Name="FK_payment_mylist" Association="Self.FK_payment_mylist">
+      <End Role="mylist" EntitySet="mylist" />
+      <End Role="payment" EntitySet="payment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_payment_users" Association="Self.FK_payment_users">
+      <End Role="users" EntitySet="users" />
+      <End Role="payment" EntitySet="payment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_sendusersanalysis_mylist" Association="Self.FK_sendusersanalysis_mylist">
+      <End Role="mylist" EntitySet="mylist" />
+      <End Role="sendusersanalysis" EntitySet="sendusersanalysis" />
+    </AssociationSet>
+    <AssociationSet Name="FK_sendusersanalysis_users" Association="Self.FK_sendusersanalysis_users">
+      <End Role="users" EntitySet="users" />
+      <End Role="sendusersanalysis" EntitySet="sendusersanalysis" />
+    </AssociationSet>
+    <AssociationSet Name="FK_student_mylist" Association="Self.FK_student_mylist">
+      <End Role="mylist" EntitySet="mylist" />
+      <End Role="student" EntitySet="student" />
+    </AssociationSet>
+    <AssociationSet Name="FK_student_users" Association="Self.FK_student_users">
+      <End Role="users" EntitySet="users" />
+      <End Role="student" EntitySet="student" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

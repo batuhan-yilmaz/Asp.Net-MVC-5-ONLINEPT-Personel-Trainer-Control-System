@@ -1,0 +1,302 @@
+﻿@using onlinept.Models.Entity
+@model List<student>
+
+@{
+    ViewBag.Title = "Öğrenciler";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.link = "mystudent";
+}
+
+@if (TempData["studentGuncelle"] != null)
+{
+
+    <script>
+        Swal.fire('Başarılı', 'İşlem gerçekleşti', 'success');
+    </script>
+}
+<link href="~/Content/Admin/plugins/custom/4nlytc/4nlytc.css" rel="stylesheet" />
+<!-- ADMİN Wrapper. Contains page content -->
+<div class="content-wrapper">
+
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h1>Öğrenci Bilgileri</h1>
+                </div>
+            </div>
+        </div>
+        <!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content d-flex">
+        <div class="row">
+            <div class="card">
+                <!-- /.card-header -->
+                <div class="card-body">
+                    <table id="example2" class="table table-striped table-bordered" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>Öğrenci</th>
+                                <th>Boy /cm</th>
+                                <th>Kilo /kg</th>
+                                <th>Yaş</th>
+                                <th>Güncelleme Tarihi</th>
+                                <th>Önden Görünüm</th>
+                                <th>Yandan Görünüm</th>
+                                <th>Arkadan Görünüm</th>
+                                <th>Bölgesel Yağ Oranı</th>
+                                <th>Bölgesel Ölçüler</th>
+                                <th>3D Öğrenci Modelleme</th>
+                                <th>Egzersizleri</th>
+                                <th>Beslenme Planları</th>
+                                <th>Ödevleri</th>
+                                <th>Güncelle</th>
+                                <th>Sil</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var student in Model)
+                            {
+                            <tr>
+                                <td><font color="#007bff"><b>@student.users.name</b></font></td>
+                                <td>@student.height</td>
+                                <td>@student.weight</td>
+                                <td>@student.age</td>
+                                <td><font color="red"><b> @Html.DisplayFor(m => student.date)</b></font></td>
+                                <td>
+                                    <div class="timeline-footer">
+                                        <a href="~/Content/Admin/data/student/simg/@student.content1" data-toggle="lightbox" data-gallery="gallery">
+                                            <img src="~/Content/Admin/data/student/simg/@student.gender-on.png" style="width:50px; height:50px;" class="img-fluid mb-2" />
+                                        </a>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="timeline-footer">
+                                        <a href="~/Content/Admin/data/student/simg/@student.content2" data-toggle="lightbox" data-gallery="gallery">
+                                            <img src="~/Content/Admin/data/student/simg/@student.gender-yan.png" style="width:50px; height:50px;" class="img-fluid mb-2" />
+                                        </a>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="timeline-footer">
+                                        <a href="~/Content/Admin/data/student/simg/@student.content3" data-toggle="lightbox" data-gallery="gallery">
+                                            <img src="~/Content/Admin/data/student/simg/@student.gender-arka.png" style="width:50px; height:50px;" class="img-fluid mb-2" />
+                                        </a>
+                                    </div>
+                                </td>
+                                <td>
+                                    <button type="button" class="fa fa-pencil-square-o btn btn-outline-success" data-toggle="modal" data-target="#fatdetay_@student.studentid">İncele</button>
+                                    <div class="modal fade" id="fatdetay_@student.studentid">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h4 class="modal-title">Bölgesel Yağ Oranı</h4>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+
+                                                <div class="modal-body">
+                                                    <div class="callout callout-info">
+                                                        <p>
+                                                            <img style="width:30px; height:30px;" src="~/Content/Admin/plugins/custom/4nlytc/measure.png" /><b>Vücut Ölçüleri "cm" Cinsindendir.</b>
+                                                            <img style="width:30px; height:30px;" src="~/Content/Admin/plugins/custom/4nlytc/height.png" /><b>@student.height cm</b>
+                                                            <img style="width:30px; height:30px;" src="~/Content/Admin/plugins/custom/4nlytc/weight.png" /><b>@student.weight kg</b>
+                                                            <img style="width:30px; height:30px;" src="~/Content/Admin/plugins/custom/4nlytc/fat.png" /><b>Vücut Yağ Oranı @student.bodyfat %</b>
+                                                            <img style="width:30px; height:30px;" src="~/Content/Admin/plugins/custom/4nlytc/muscle.png" /><b>Vücut Kas Oranı @student.bodymuscle %</b>
+                                                        </p>
+                                                    </div>
+                                                    <div class="@student.gender-fat" style="height: 700px; background-repeat: no-repeat; background-image: url('/Content/Admin/plugins/custom/4nlytc/@student.gender-fat.png');">
+                                                        <div class="@student.gender-fatneck">
+                                                            <p>@student.fatneck</p>
+                                                        </div>
+                                                        <div class="@student.gender-fatlarm">
+                                                            <p>@student.fatlarm</p>
+                                                        </div>
+                                                        <div class="@student.gender-fatrarm">
+                                                            <p>@student.fatrarm</p>
+                                                        </div>
+                                                        <div class="@student.gender-fatbody">
+                                                            <p>@student.fatbody</p>
+                                                        </div>
+
+                                                        <div class="@student.gender-fatlleg">
+                                                            <p>@student.fatlleg</p>
+                                                        </div>
+
+                                                        <div class="@student.gender-fatrleg">
+                                                            <p>@student.fatrleg</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- /.modal-content -->
+                                        </div>
+                                        <!-- /.modal-dialog -->
+                                    </div>
+                                    <!-- /.modal -->
+                                </td>
+
+                                <td>
+                                    <button type="button" class="fa fa-pencil-square-o btn btn-outline-success" data-toggle="modal" data-target="#olcudetay_@student.studentid">İncele</button>
+                                    <div class="modal fade" id="olcudetay_@student.studentid">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h4 class="modal-title">Bölgesel Ölçüler</h4>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="callout callout-info">
+                                                        <p>
+                                                            <img style="width:40px; height:40px;" src="~/Content/Admin/plugins/custom/4nlytc/measure.png" /><b>Vücut Ölçüleri "cm" Cinsindendir.</b>
+                                                            <img style="width:40px; height:40px;" src="~/Content/Admin/plugins/custom/4nlytc/height.png" /><b>@student.height cm</b>
+                                                            <img style="width:40px; height:40px;" src="~/Content/Admin/plugins/custom/4nlytc/weight.png" /><b>@student.weight kg</b>
+                                                            <img style="width:30px; height:30px;" src="~/Content/Admin/plugins/custom/4nlytc/fat.png" /><b>Vücut Yağ Oranı @student.bodyfat %</b>
+                                                            <img style="width:40px; height:40px;" src="~/Content/Admin/plugins/custom/4nlytc/muscle.png" /><b>Vücut Kas Oranı @student.bodymuscle %</b>
+                                                        </p>
+                                                    </div>
+                                                    <div class="@student.gender-body" style="height: 700px; background-repeat: no-repeat; background-image: url('/Content/Admin/plugins/custom/4nlytc/@student.gender-mus.png');">
+
+                                                        <div class="@student.gender-neck">
+                                                            <p>@student.neck</p>
+                                                        </div>
+                                                        <div class="@student.gender-shoulder">
+                                                            <p>@student.shoulder</p>
+                                                        </div>
+                                                        <div class="@student.gender-chest">
+                                                            <p>@student.chest</p>
+                                                        </div>
+                                                        <div class="@student.gender-larm">
+                                                            <p>@student.larm</p>
+                                                        </div>
+                                                        <div class="@student.gender-lfarm">
+                                                            <p>@student.lfarm</p>
+                                                        </div>
+                                                        <div class="@student.gender-rarm">
+                                                            <p>@student.rarm</p>
+                                                        </div>
+                                                        <div class="@student.gender-rfarm">
+                                                            <p>@student.rfarm</p>
+                                                        </div>
+                                                        <div class="@student.gender-waist">
+                                                            <p>@student.waist</p>
+                                                        </div>
+                                                        <div class="@student.gender-hip">
+                                                            <p>@student.hip</p>
+                                                        </div>
+                                                        <div class="@student.gender-lleg">
+                                                            <p>@student.lleg</p>
+                                                        </div>
+                                                        <div class="@student.gender-lcalves">
+                                                            <p>@student.lcalves</p>
+                                                        </div>
+                                                        <div class="@student.gender-rleg">
+                                                            <p>@student.rleg</p>
+                                                        </div>
+                                                        <div class="@student.gender-rcalves">
+                                                            <p>@student.rcalves</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- /.modal-content -->
+                                        </div>
+                                        <!-- /.modal-dialog -->
+                                    </div>
+                                    <!-- /.modal -->
+                                </td>
+                                <td> @Html.ActionLink(" Detay ", "studentget", new { student.studentid }, new { @class = "fa fa-search-plus btn btn-outline-primary" })</td>
+                                <td> @Html.ActionLink(" Egzersizler ", "userexerciseget", new { student.usersget }, new { @class = "fa fa-search-plus btn btn-outline-success" })</td>
+                                <td> @Html.ActionLink(" Planlar ", "usernutritionget", new { student.usersget }, new { @class = "fa fa-search-plus btn btn-outline-warning" })</td>
+                                <td> @Html.ActionLink(" Ödevler ", "userhomeworkget", new { student.usersget }, new { @class = "fa fa-search-plus btn btn-outline-info" })</td>
+                                <td>
+                                    <button type="button" class="fa fa-pencil-square-o btn btn-outline-primary" data-toggle="modal" data-target="#guncelle_@student.studentid">Güncelle</button>
+                                    <div class="modal fade" id="guncelle_@student.studentid">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h4 class="modal-title">Öğrenciyi Güncelle</h4>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>Öğrenciyi Güncellemek İstiyormusunuz?</p>
+                                                </div>
+                                                <div class="modal-footer justify-content-between">
+                                                    <button type="button" class="btn btn-default" data-dismiss="modal">Vazgeç</button>
+                                                    @Html.ActionLink("Güncelle", "studentguncelle", new { @student.studentid }, new { @class = "fa fa-pencil-square-o btn btn-outline-primary" })
+                                                </div>
+                                            </div>
+                                            <!-- /.modal-content -->
+                                        </div>
+                                        <!-- /.modal-dialog -->
+                                    </div>
+                                    <!-- /.modal -->
+                                </td>
+                                <td>
+                                    <button type="button" class="fa fa-trash btn btn-outline-danger" data-toggle="modal" data-target="#sil_@student.studentid">Sil</button>
+                                    <div class="modal fade" id="sil_@student.studentid">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h4 class="modal-title">Öğrenciyi Sil</h4>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>Öğrenciyi Silmek İstiyormusunuz?</p>
+                                                </div>
+                                                <div class="modal-footer justify-content-between">
+                                                    <button type="button" class="btn btn-default" data-dismiss="modal">Vazgeç</button>
+                                                    @Html.ActionLink("Sil", "studentsil", new { @student.studentid }, new { @class = "fa fa-trash btn btn-outline-danger" })
+                                                </div>
+                                            </div>
+                                            <!-- /.modal-content -->
+                                        </div>
+                                        <!-- /.modal-dialog -->
+                                    </div>
+                                    <!-- /.modal -->
+                                </td>
+
+                            </tr>
+                            }
+
+                        </tbody>
+                        <tfoot>
+
+                        </tfoot>
+                    </table>
+                </div>
+                <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+        </div>
+        <!-- /.col -->
+        <!-- /.row -->
+    </section>
+    <!-- /.content -->
+
+</div>
+
+
+
+
+<script>
+    $(function () {
+        $(document).on('click', '[data-toggle="lightbox"]', function (event) {
+            event.preventDefault();
+            $(this).ekkoLightbox({
+                alwaysShowClose: true
+            });
+        });
+
+    })
+</script>

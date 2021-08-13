@@ -1,0 +1,182 @@
+﻿
+@{
+    ViewBag.Title = "Beslenme Planları";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.link = "mystudent";
+}
+
+@using onlinept.Models.Entity
+@model List<nutrition>
+
+
+@if (TempData["nutritionGuncelle"] != null)
+{
+
+    <script>
+        Swal.fire('Başarılı', 'İşlem gerçekleşti', 'success');
+    </script>
+}
+
+<!-- Content Wrapper. Contains page content -->
+
+<div class="content-wrapper">
+
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h1>Öğrenciye Ait Beslenme Planları</h1>
+                </div>
+            </div>
+        </div>
+        <!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content d-flex">
+        <div class="row">
+            <div class="card">
+                <!-- /.card-header -->
+                <div class="card-body">
+                    <table id="example" class="table table-striped table-bordered" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>Öğrenci</th>
+                                <th>Tarih</th>
+                                <th>Öğün</th>
+                                <th>Detay</th>
+                                <th>Protein</th>
+                                <th>Karbonhidrat</th>
+                                <th>Yağ</th>
+                                <th>Kalori</th>
+                                <th>Miktar</th>
+
+                                @if (User.IsInRole("Admin") || User.IsInRole("Yonetici"))
+                                {
+                                    <th>Güncelle</th>
+                                    <th>Sil</th>
+                                }
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var nutrition in Model)
+                            {
+                                <tr>
+                                    <td><font color="#007bff"><b>@nutrition.users.name</b></font></td>
+                                    <td><font color="red"><b> @Html.DisplayFor(m => nutrition.date)</b></font></td>
+                                    <td><b>@nutrition.meal</b></td>
+                                    <td>
+                                        <button type="button" class="fa fa-trash btn btn-outline-success" data-toggle="modal" data-target="#icerik_@nutrition.nutritionid">Detay!</button>
+                                        <div class="modal fade" id="icerik_@nutrition.nutritionid">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title"><font color="orangered">@nutrition.nutrition1</font></h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p>Protein:<font color="orangered"><b>@nutrition.protein</b></font> - Karbonhidrat:<font color="#007bff"><b>@nutrition.carb</b></font> - Yağ:<font color="orange"><b>@nutrition.fat</b></font> - Kalori:<font color="lime"><b>@nutrition.calori</b></font> - Miktar:<font color="#007bff"><b>@nutrition.quantity</b></font></p>
+                                                        <br />
+                                                        <p>@nutrition.descriptions</p>
+                                                    </div>
+                                                </div>
+                                                <!-- /.modal-content -->
+                                            </div>
+                                            <!-- /.modal-dialog -->
+                                        </div>
+                                        <!-- /.modal -->
+                                    </td>
+                                    <td><b>@nutrition.protein</b>/gr</td>
+                                    <td><b>@nutrition.carb</b>/gr</td>
+                                    <td><b>@nutrition.fat</b>/gr</td>
+                                    <td><b>@nutrition.calori</b>/cal</td>
+                                    <td><b>@nutrition.quantity</b>/gr</td>
+                                    @if (User.IsInRole("Admin") || User.IsInRole("Yonetici"))
+                                    {
+                                        <td>
+                                            <button type="button" class="fa fa-pencil-square-o btn btn-outline-primary" data-toggle="modal" data-target="#guncelle_@nutrition.nutritionid">Güncelle</button>
+                                            <div class="modal fade" id="guncelle_@nutrition.nutritionid">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h4 class="modal-title">Planı Güncelle</h4>
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <p>Planı Güncellemek İstiyormusunuz?</p>
+                                                        </div>
+                                                        <div class="modal-footer justify-content-between">
+                                                            <button type="button" class="btn btn-default" data-dismiss="modal">Vazgeç</button>
+                                                            @Html.ActionLink("Güncelle", "nutritionguncelle", new { @nutrition.nutritionid }, new { @class = "fa fa-pencil-square-o btn btn-outline-primary" })
+                                                        </div>
+                                                    </div>
+                                                    <!-- /.modal-content -->
+                                                </div>
+                                                <!-- /.modal-dialog -->
+                                            </div>
+                                            <!-- /.modal -->
+                                        </td>
+                                        <td>
+                                            <button type="button" class="fa fa-trash btn btn-outline-danger" data-toggle="modal" data-target="#sil_@nutrition.nutritionid">Sil</button>
+                                            <div class="modal fade" id="sil_@nutrition.nutritionid">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h4 class="modal-title">Planı Sil</h4>
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <p>Planı Silmek İstiyormusunuz?</p>
+                                                        </div>
+                                                        <div class="modal-footer justify-content-between">
+                                                            <button type="button" class="btn btn-default" data-dismiss="modal">Vazgeç</button>
+                                                            @Html.ActionLink("Sil", "nutritionsil", new { @nutrition.nutritionid }, new { @class = "fa fa-trash btn btn-outline-danger" })
+                                                        </div>
+                                                    </div>
+                                                    <!-- /.modal-content -->
+                                                </div>
+                                                <!-- /.modal-dialog -->
+                                            </div>
+                                            <!-- /.modal -->
+                                        </td>
+                                    }
+                                </tr>
+                            }
+
+                        </tbody>
+                        <tfoot>
+
+                        </tfoot>
+                    </table>
+                </div>
+                <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+        </div>
+        <!-- /.col -->
+        <!-- /.row -->
+    </section>
+    <!-- /.content -->
+
+</div>
+<script>
+    $(function () {
+        $(document).on('click', '[data-toggle="lightbox"]', function (event) {
+            event.preventDefault();
+            $(this).ekkoLightbox({
+                alwaysShowClose: true
+            });
+        });
+
+    })
+</script>
+
+
+

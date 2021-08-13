@@ -1,0 +1,161 @@
+﻿@using onlinept.Models.Entity
+@model List<payment>
+
+@{
+    ViewBag.Title = "Ödemeler";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.link = "payment";
+    ViewBag.menuactive = "Ayarlar";
+}
+
+@if (TempData["paymentGuncelle"] != null)
+{
+
+    <script>
+        Swal.fire('Başarılı', 'İşlem gerçekleşti', 'success');
+    </script>
+}
+
+<!-- Content Wrapper. Contains page content -->
+
+<div class="content-wrapper">
+
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h1>Ödeme Bilgileri</h1>
+
+                </div>
+            </div>
+        </div>
+        <!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="row">
+            <div class="row">
+                <!-- /.card -->
+
+                <div class="card">
+                    <div class="card-header">
+                        @Html.ActionLink(" Yeni Ödeme Planı Oluştur ", "paymentekleadmin", null, new { @class = "fa fa-plus btn btn-primary" })
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                        <table id="example" class="table table-striped table-bordered" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>Öğrenci</th>
+                                    <th>Güncelleme Tarihi</th>
+                                    <th>1.Ödeme</th>
+                                    <th>2.Ödeme</th>
+                                    <th>3.Ödeme</th>
+                                    <th>4.Ödeme</th>
+                                    <th>5.Ödeme</th>
+                                    <th>6.Ödeme</th>
+                                    <th>7.Ödeme</th>
+                                    <th>8.Ödeme</th>
+                                    <th>9.Ödeme</th>
+                                    <th>10.Ödeme</th>
+                                    <th>11.Ödeme</th>
+                                    <th>12.Ödeme</th>
+                                    <th>Toplam</th>
+                                    <th>Güncelle</th>
+                                    <th>Sil</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var payment in Model)
+                                {
+                                <tr>
+                                    <td><font color="#007bff"><b>@payment.users.name</b></font></td>
+                                    <td><font color="red"><b> @Html.DisplayFor(m => payment.date)</b></font></td>
+                                    <td>@payment.pay1</td>
+                                    <td>@payment.pay2</td>
+                                    <td>@payment.pay3</td>
+                                    <td>@payment.pay4</td>
+                                    <td>@payment.pay5</td>
+                                    <td>@payment.pay6</td>
+                                    <td>@payment.pay7</td>
+                                    <td>@payment.pay8</td>
+                                    <td>@payment.pay9</td>
+                                    <td>@payment.pay10</td>
+                                    <td>@payment.pay11</td>
+                                    <td>@payment.pay12</td>
+                                    <td><font color="red"><b> @payment.total</b></font></td>
+                                    <td>
+                                        <button type="button" class="fa fa-pencil-square-o btn btn-outline-primary" data-toggle="modal" data-target="#guncelle_@payment.paymentid">Güncelle</button>
+                                        <div class="modal fade" id="guncelle_@payment.paymentid">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">Ödemeyi Güncelle</h4>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p>Ödemeyi İstiyormusunuz?</p>
+                                                    </div>
+                                                    <div class="modal-footer justify-content-between">
+                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Vazgeç</button>
+                                                        @Html.ActionLink("Güncelle", "paymentguncelle", new { @payment.paymentid }, new { @class = "fa fa-pencil-square-o btn btn-outline-primary" })
+                                                    </div>
+                                                </div>
+                                                <!-- /.modal-content -->
+                                            </div>
+                                            <!-- /.modal-dialog -->
+                                        </div>
+                                        <!-- /.modal -->
+                                    </td>
+                                    <td>
+                                        <button type="button" class="fa fa-trash btn btn-outline-danger" data-toggle="modal" data-target="#sil_@payment.paymentid">Sil</button>
+                                        <div class="modal fade" id="sil_@payment.paymentid">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">Ödemeyi Sil</h4>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p>Ödemeyi Silmek İstiyormusunuz?</p>
+                                                    </div>
+                                                    <div class="modal-footer justify-content-between">
+                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Vazgeç</button>
+                                                        @Html.ActionLink("Sil", "paymentsil", new { @payment.paymentid }, new { @class = "fa fa-trash btn btn-outline-danger" })
+                                                    </div>
+                                                </div>
+                                                <!-- /.modal-content -->
+                                            </div>
+                                            <!-- /.modal-dialog -->
+                                        </div>
+                                        <!-- /.modal -->
+                                    </td>
+                                </tr>
+                                }
+
+                            </tbody>
+                            <tfoot>
+
+                            </tfoot>
+                        </table>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </section>
+    <!-- /.content -->
+
+</div>
+
+
+

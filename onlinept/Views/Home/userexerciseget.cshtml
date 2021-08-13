@@ -1,0 +1,333 @@
+﻿@using onlinept.Models.Entity
+@model List<exercise>
+
+@{
+    ViewBag.Title = "Egzersizleri";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.link = "mystudent";
+}
+
+@if (TempData["exerciseGuncelle"] != null)
+{
+
+    <script>
+        Swal.fire('Başarılı', 'İşlem gerçekleşti', 'success');
+    </script>
+}
+
+<!-- Content Wrapper. Contains page content -->
+
+<div class="content-wrapper">
+
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h1>Egzersizler</h1>
+                </div>
+            </div>
+        </div>
+        <!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content d-flex">
+        <div class="row">
+            <div class="card">
+                <!-- /.card-header -->
+                <div class="card-body">
+                    <table id="example" class="table table-striped table-bordered" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>Öğrenci</th>
+                                <th>Tarih</th>
+                                <th>Detay</th>
+                                @if (User.IsInRole("Admin") || User.IsInRole("Yonetici"))
+                                {
+                                    <th>Güncelle</th>
+                                    <th>Sil</th>
+                                }
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var exercise in Model)
+                            {
+                                <tr>
+                                    <td><font color="#007bff"><b>@exercise.users.name</b></font></td>
+                                    <td><font color="red"><b> @Html.DisplayFor(m => exercise.date)</b></font></td>
+                                    <td>
+                                        <button type="button" class="fa fa-trash btn btn-outline-success" data-toggle="modal" data-target="#icerik_@exercise.exerciseid">Detay!</button>
+                                        <div class="modal fade" id="icerik_@exercise.exerciseid">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title"><font color="orangered">@exercise.subject</font></h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p><font color="orangered"><b>Açıklama:</b></font>@exercise.descriptions</p>
+                                                        <div class="modal-body">
+
+                                                            <div id="exercises1" style="display:flex;">
+                                                                <div style="height:120px;">
+                                                                    <a data-toggle="lightbox" data-gallery="gallery" href="/Content/Admin/data/exercise/gifs/@exercise.content1">
+                                                                        <img src="/Content/Admin/data/exercise/gifs/@exercise.content1" id="im1" style="height:100px; float:left; width:100px;">
+                                                                    </a>
+                                                                    <div style="float:left; height:100px;">
+
+                                                                        <p style="color:#FF0000;">Egzersiz Açıklaması</p>
+                                                                        <textarea id="ds1" class="form-control" cols="40" readonly="readonly" placeholder="@exercise.descriptions1"></textarea>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div id="exercises2" style="display:flex;">
+                                                                <div style="height:120px;">
+                                                                    <a data-toggle="lightbox" data-gallery="gallery" href="/Content/Admin/data/exercise/gifs/@exercise.content2">
+                                                                        <img src="/Content/Admin/data/exercise/gifs/@exercise.content2" id="im2" style="height:100px; float:left; width:100px;">
+                                                                    </a>
+                                                                    <div style="float:left; height:100px;">
+
+                                                                        <p style="color:#FF0000;">Egzersiz Açıklaması</p>
+                                                                        <textarea id="ds2" class="form-control" cols="40" readonly="readonly" placeholder="@exercise.descriptions2"></textarea>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div id="exercises3" style="display:flex;">
+                                                                <div style="height:120px;">
+                                                                    <a data-toggle="lightbox" data-gallery="gallery" href="/Content/Admin/data/exercise/gifs/@exercise.content3">
+                                                                        <img src="/Content/Admin/data/exercise/gifs/@exercise.content3" id="im3" style="height:100px; float:left; width:100px;">
+                                                                    </a>
+                                                                    <div style="float:left; height:100px;">
+
+                                                                        <p style="color:#FF0000;">Egzersiz Açıklaması</p>
+                                                                        <textarea id="ds3" class="form-control" cols="40" readonly="readonly" placeholder="@exercise.descriptions3"></textarea>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div id="exercises4" style="display:flex;">
+                                                                <div style="height:120px;">
+                                                                    <a data-toggle="lightbox" data-gallery="gallery" href="/Content/Admin/data/exercise/gifs/@exercise.content4">
+                                                                        <img src="/Content/Admin/data/exercise/gifs/@exercise.content4" id="im4" style="height:100px; float:left; width:100px;">
+                                                                    </a>
+                                                                    <div style="float:left; height:100px;">
+
+                                                                        <p style="color:#FF0000;">Egzersiz Açıklaması</p>
+                                                                        <textarea id="ds4" class="form-control" cols="40" readonly="readonly" placeholder="@exercise.descriptions4"></textarea>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div id="exercises5" style="display:flex;">
+                                                                <div style="height:120px;">
+                                                                    <a data-toggle="lightbox" data-gallery="gallery" href="/Content/Admin/data/exercise/gifs/@exercise.content5">
+                                                                        <img src="/Content/Admin/data/exercise/gifs/@exercise.content5" id="im5" style="height:100px; float:left; width:100px;">
+                                                                    </a>
+                                                                    <div style="float:left; height:100px;">
+
+                                                                        <p style="color:#FF0000;">Egzersiz Açıklaması</p>
+                                                                        <textarea id="ds5" class="form-control" cols="40" readonly="readonly" placeholder="@exercise.descriptions5"></textarea>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div id="exercises6" style="display:flex;">
+                                                                <div style="height:120px;">
+                                                                    <a data-toggle="lightbox" data-gallery="gallery" href="/Content/Admin/data/exercise/gifs/@exercise.content6">
+                                                                        <img src="/Content/Admin/data/exercise/gifs/@exercise.content6" id="im6" style="height:100px; float:left; width:100px;">
+                                                                    </a>
+                                                                    <div style="float:left; height:100px;">
+
+                                                                        <p style="color:#FF0000;">Egzersiz Açıklaması</p>
+                                                                        <textarea id="ds6" class="form-control" cols="40" readonly="readonly" placeholder="@exercise.descriptions6"></textarea>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div id="exercises7" style="display:flex;">
+                                                                <div style="height:120px;">
+                                                                    <a data-toggle="lightbox" data-gallery="gallery" href="/Content/Admin/data/exercise/gifs/@exercise.content7">
+                                                                        <img src="/Content/Admin/data/exercise/gifs/@exercise.content7" id="im7" style="height:100px; float:left; width:100px;">
+                                                                    </a>
+                                                                    <div style="float:left; height:100px;">
+
+                                                                        <p style="color:#FF0000;">Egzersiz Açıklaması</p>
+                                                                        <textarea id="ds7" class="form-control" cols="40" readonly="readonly" placeholder="@exercise.descriptions7"></textarea>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div id="exercises8" style="display:flex;">
+                                                                <div style="height:120px;">
+                                                                    <a data-toggle="lightbox" data-gallery="gallery" href="/Content/Admin/data/exercise/gifs/@exercise.content8">
+                                                                        <img src="/Content/Admin/data/exercise/gifs/@exercise.content8" id="im8" style="height:100px; float:left; width:100px;">
+                                                                    </a>
+                                                                    <div style="float:left; height:100px;">
+
+                                                                        <p style="color:#FF0000;">Egzersiz Açıklaması</p>
+                                                                        <textarea id="ds8" class="form-control" cols="40" readonly="readonly" placeholder="@exercise.descriptions8"></textarea>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div id="exercises9" style="display:flex;">
+                                                                <div style="height:120px;">
+                                                                    <a data-toggle="lightbox" data-gallery="gallery" href="/Content/Admin/data/exercise/gifs/@exercise.content9">
+                                                                        <img src="/Content/Admin/data/exercise/gifs/@exercise.content9" id="im9" style="height:100px; float:left; width:100px;">
+                                                                    </a>
+                                                                    <div style="float:left; height:100px;">
+
+                                                                        <p style="color:#FF0000;">Egzersiz Açıklaması</p>
+                                                                        <textarea id="ds9" class="form-control" cols="40" readonly="readonly" placeholder="@exercise.descriptions9"></textarea>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div id="exercises10" style="display:flex;">
+                                                                <div style="height:120px;">
+                                                                    <a data-toggle="lightbox" data-gallery="gallery" href="/Content/Admin/data/exercise/gifs/@exercise.content10">
+                                                                        <img src="/Content/Admin/data/exercise/gifs/@exercise.content10" id="im10" style="height:100px; float:left; width:100px;">
+                                                                    </a>
+                                                                    <div style="float:left; height:100px;">
+
+                                                                        <p style="color:#FF0000;">Egzersiz Açıklaması</p>
+                                                                        <textarea id="ds10" class="form-control" cols="40" readonly="readonly" placeholder="@exercise.descriptions10"></textarea>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- /.modal-content -->
+                                                </div>
+                                                <!-- /.modal-dialog -->
+                                            </div>
+                                        </div>
+                                        <!-- /.modal -->
+                                    </td>
+                                    @if (User.IsInRole("Admin") || User.IsInRole("Yonetici"))
+                                    {
+                                        <td>
+                                            <button type="button" class="fa fa-pencil-square-o btn btn-outline-primary" data-toggle="modal" data-target="#guncelle_@exercise.exerciseid">Güncelle</button>
+                                            <div class="modal fade" id="guncelle_@exercise.exerciseid">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h4 class="modal-title">Egzersizi Güncelle</h4>
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <p>Egzersizi Güncellemek İstiyormusunuz?</p>
+                                                        </div>
+                                                        <div class="modal-footer justify-content-between">
+                                                            <button type="button" class="btn btn-default" data-dismiss="modal">Vazgeç</button>
+                                                            @Html.ActionLink("Güncelle", "exerciseguncelle", new { @exercise.exerciseid }, new { @class = "fa fa-pencil-square-o btn btn-outline-primary" })
+                                                        </div>
+                                                    </div>
+                                                    <!-- /.modal-content -->
+                                                </div>
+                                                <!-- /.modal-dialog -->
+                                            </div>
+                                            <!-- /.modal -->
+                                        </td>
+                                        <td>
+                                            <button type="button" class="fa fa-trash btn btn-outline-danger" data-toggle="modal" data-target="#sil_@exercise.exerciseid">Sil</button>
+                                            <div class="modal fade" id="sil_@exercise.exerciseid">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h4 class="modal-title">Egzersizi Sil</h4>
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <p>Egzersizi Silmek İstiyormusunuz?</p>
+                                                        </div>
+                                                        <div class="modal-footer justify-content-between">
+                                                            <button type="button" class="btn btn-default" data-dismiss="modal">Vazgeç</button>
+                                                            @Html.ActionLink("Sil", "exercisesil", new { @exercise.exerciseid }, new { @class = "fa fa-trash btn btn-outline-danger" })
+                                                        </div>
+                                                    </div>
+                                                    <!-- /.modal-content -->
+                                                </div>
+                                                <!-- /.modal-dialog -->
+                                            </div>
+                                            <!-- /.modal -->
+                                        </td>
+                                    }
+                                </tr>
+                            }
+
+                        </tbody>
+                        <tfoot>
+
+                        </tfoot>
+                    </table>
+                </div>
+                <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+        </div>
+        <!-- /.col -->
+        <!-- /.row -->
+    </section>
+    <!-- /.content -->
+
+</div>
+<script>
+    $(function () {
+        $(document).on('click', '[data-toggle="lightbox"]', function (event) {
+            event.preventDefault();
+            $(this).ekkoLightbox({
+                alwaysShowClose: true
+            });
+        });
+
+    })
+</script>
+
+
+
+
+
+
+
+
+
+
+<script>
+$(document).ready(function () {
+    for (i = 0; i < 100; i++) {
+        if ((document.getElementById("im" + i).src == "/Content/Admin/data/exercise/gifs/0") || (document.getElementById("ds" + i) == undefined) || document.getElementById("im" + i).src == null) {
+            document.getElementById("exercises" + i).style.display = "none";
+        }
+        else {
+            document.getElementById("exercises" + i).style.display = "flex";
+        }
+    }
+    });
+</script>
+
+
+
+<!--   BU KOD SORUNSUZ ÇALIŞIYOR !  PLEACEHOLDERLERİ 0 OKUYOR 10/10 SORUNSUZ AMA RESİMLERE GÖRE OLMALI Kİ BUGSIZ OLSUN.
+
+    BUG OLMA SEBEBİDE ADAM AÇIKLAMA OLARAK BAŞLIKLI SEKİLDE BIRAKIRSA AÇIKLAMA OLMİCAK AMA BAŞLIK OLUCAĞI İÇİN VALUE 0 OLMUYOR.
+
+   YANİ EGZERSİZ AÇIKLAMASIZ BİR ŞEKİLDE BOŞ OLARAK TA GÖRÜLEBİLİYOR AMA RESİM OLURSA RESİM YA EKLİYOR YA SİLİYOR MECBURİ
+<script>
+    $(document).ready(function () {
+        for (i = 0; i < 100; i++) {
+            if ((document.getElementById("ds" + i) == null) || (document.getElementById("ds" + i) == undefined)) {
+
+            }
+            else {
+                if (document.getElementById("ds" + i).placeholder == 0 || document.getElementById("ds" + i).placeholder == undefined || document.getElementById("ds" + i).placeholder == null) {
+                    document.getElementById("exercises" + i).style.display = "none";
+                }
+                else {
+                    document.getElementById("exercises" + i).style.display = "flex";
+                }
+            }
+        }
+    });
+</script>
+    -->

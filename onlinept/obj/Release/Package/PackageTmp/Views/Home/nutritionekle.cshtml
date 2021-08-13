@@ -1,0 +1,131 @@
+﻿@model onlinept.Models.Entity.nutrition
+
+@{
+    ViewBag.Title = "Beslenme Planı Ekle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.link = "nutritionekle";
+    ViewBag.menuactive = "Ayarlar2";
+}
+
+@if (TempData["nutritionHata"] != null)
+{
+
+    <script>
+        Swal.fire('Hata', 'İşlem gerçekleştirilemedi', 'error');
+
+    </script>
+}
+
+<div class="content-wrapper">
+    <div class="card-header">
+        <h3 class="card-title">Öğrernciye Özel Beslenme Planı Ekle</h3>
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body">
+        @using (Html.BeginForm("nutritionekle", "Home", FormMethod.Post, new { @enctype = "multipart/from-data" }))
+        {
+        <table id="example1" class="table table-bordered table-striped">
+            <tr>
+                <td>
+                    @Html.TextBoxFor(m => m.mylistget, new { @class = "form-control", @Value = "", id = "mylist2" })
+                    <p>Öğrenci Seç</p>
+                    @Html.TextBoxFor(m => m.usersget, new { id = "colordbs", @Value = "", @class = "form-control", @required = "required" })
+                <select id="colordb" class="form-control">
+                    <option value=""></option>
+                    @foreach (var user in ViewBag.UserList)
+                    {
+                        <option value="@user.userid">@user.name</option>
+                    }
+                </select>
+                </td>
+                <td>
+                    <p>Tarih</p>
+                    @Html.EditorFor(m => m.date, new { htmlAttributes = new { @class = "form-control", id = "tarih1", placeholder = "Lütfen Başlangıç Tarihi Giriniz.", @required = "required" } })
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Öğün </p>
+                    @Html.TextBoxFor(m => m.meal, new { @class = "form-control", oninput = "customtext(this.id);", @required = "required" })
+                </td>
+                <td>
+                    <p>Besin</p>
+                    @Html.TextBoxFor(m => m.nutrition1, new { @class = "form-control", oninput = "customtext(this.id);", @required = "required" })
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Açıklama </p>
+                    @Html.TextAreaFor(m => m.descriptions, new { @class = "form-control", oninput = "customtext(this.id);", @required = "required" })
+                </td>
+                <td>
+                    <p>Protein</p>
+                    @Html.TextBoxFor(m => m.protein, new { @class = "form-control", oninput = "Number(this.id);", @required = "required" })
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Karbonhidrat </p>
+                    @Html.TextBoxFor(m => m.carb, new { @class = "form-control", oninput = "Number(this.id);", @required = "required" })
+                </td>
+                <td>
+                    <p>Yağ</p>
+                    @Html.TextBoxFor(m => m.fat, new { @class = "form-control", oninput = "Number(this.id);", @required = "required" })
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Kalori </p>
+                    @Html.TextBoxFor(m => m.calori, new { @class = "form-control", oninput = "Number(this.id);", @required = "required" })
+                </td>
+                <td>
+                    <p>Miktar</p>
+                    @Html.TextBoxFor(m => m.quantity, new { @class = "form-control", oninput = "Number(this.id);", @required = "required" })
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Kolesterol</p>
+                    @Html.TextBoxFor(m => m.cholesterol, new { @class = "form-control", oninput = "Number(this.id);", @required = "required" })
+                </td>
+                <td>
+                    <p>Potasyum</p>
+                    @Html.TextBoxFor(m => m.potassium, new { @class = "form-control", oninput = "Number(this.id);", @required = "required" })
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Sodyum </p>
+                    @Html.TextBoxFor(m => m.sodium, new { @class = "form-control", oninput = "Number(this.id);", @required = "required" })
+                    @Html.TextBoxFor(m => m.nutritionid, new { oninput = "Number(this.id);", maxlength = "9", @id = "viewkey1", @class = "form-control", @Value = "", @readonly = "false" })
+
+                </td>
+            </tr>
+            <tr>
+                <td><button type="submit" class="fa fa-floppy-o btn btn-success" /> Kaydet</td>
+            </tr>
+        </table>
+
+        }
+    </div>
+    <!-- /.card-body -->
+</div>
+<!-- /.card -->
+<script src="~/Content/Admin/plugins/custom/jquery-ui.js"></script>
+<script src="~/Content/Admin/plugins/custom/oasiscustom.js"></script>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        oasisdatepicker();
+
+    });
+        document.getElementById("viewkey1").value = viewkey();
+</script>
+

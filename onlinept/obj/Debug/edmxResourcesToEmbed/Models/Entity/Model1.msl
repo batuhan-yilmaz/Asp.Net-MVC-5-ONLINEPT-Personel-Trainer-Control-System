@@ -1,0 +1,512 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="onlineptModelStoreContainer" CdmEntityContainer="onlineptEntities">
+    <EntitySetMapping Name="allexerciselist">
+      <EntityTypeMapping TypeName="onlineptModel.allexerciselist">
+        <MappingFragment StoreEntitySet="allexerciselist">
+          <ScalarProperty Name="allexerciseid" ColumnName="allexerciseid" />
+          <ScalarProperty Name="Area" ColumnName="Area" />
+          <ScalarProperty Name="Content1" ColumnName="Content1" />
+          <ScalarProperty Name="Descriptions" ColumnName="Descriptions" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="areaid" ColumnName="areaid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="events">
+      <EntityTypeMapping TypeName="onlineptModel.events">
+        <MappingFragment StoreEntitySet="events">
+          <ScalarProperty Name="EventID" ColumnName="EventID" />
+          <ScalarProperty Name="usersget" ColumnName="usersget" />
+          <ScalarProperty Name="mylistget" ColumnName="mylistget" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Start" ColumnName="Start" />
+          <ScalarProperty Name="End" ColumnName="End" />
+          <ScalarProperty Name="ThemeColor" ColumnName="ThemeColor" />
+          <ScalarProperty Name="IsFullDay" ColumnName="IsFullDay" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="exercise">
+      <EntityTypeMapping TypeName="onlineptModel.exercise">
+        <MappingFragment StoreEntitySet="exercise">
+          <ScalarProperty Name="exerciseid" ColumnName="exerciseid" />
+          <ScalarProperty Name="mylistget" ColumnName="mylistget" />
+          <ScalarProperty Name="usersget" ColumnName="usersget" />
+          <ScalarProperty Name="subject" ColumnName="subject" />
+          <ScalarProperty Name="descriptions" ColumnName="descriptions" />
+          <ScalarProperty Name="descriptions1" ColumnName="descriptions1" />
+          <ScalarProperty Name="descriptions2" ColumnName="descriptions2" />
+          <ScalarProperty Name="descriptions3" ColumnName="descriptions3" />
+          <ScalarProperty Name="descriptions4" ColumnName="descriptions4" />
+          <ScalarProperty Name="descriptions5" ColumnName="descriptions5" />
+          <ScalarProperty Name="descriptions6" ColumnName="descriptions6" />
+          <ScalarProperty Name="descriptions7" ColumnName="descriptions7" />
+          <ScalarProperty Name="descriptions8" ColumnName="descriptions8" />
+          <ScalarProperty Name="descriptions9" ColumnName="descriptions9" />
+          <ScalarProperty Name="descriptions10" ColumnName="descriptions10" />
+          <ScalarProperty Name="descriptions11" ColumnName="descriptions11" />
+          <ScalarProperty Name="descriptions12" ColumnName="descriptions12" />
+          <ScalarProperty Name="descriptions13" ColumnName="descriptions13" />
+          <ScalarProperty Name="descriptions14" ColumnName="descriptions14" />
+          <ScalarProperty Name="descriptions15" ColumnName="descriptions15" />
+          <ScalarProperty Name="descriptions16" ColumnName="descriptions16" />
+          <ScalarProperty Name="descriptions17" ColumnName="descriptions17" />
+          <ScalarProperty Name="descriptions18" ColumnName="descriptions18" />
+          <ScalarProperty Name="descriptions19" ColumnName="descriptions19" />
+          <ScalarProperty Name="descriptions20" ColumnName="descriptions20" />
+          <ScalarProperty Name="descriptions21" ColumnName="descriptions21" />
+          <ScalarProperty Name="descriptions22" ColumnName="descriptions22" />
+          <ScalarProperty Name="descriptions23" ColumnName="descriptions23" />
+          <ScalarProperty Name="descriptions24" ColumnName="descriptions24" />
+          <ScalarProperty Name="descriptions25" ColumnName="descriptions25" />
+          <ScalarProperty Name="descriptions26" ColumnName="descriptions26" />
+          <ScalarProperty Name="descriptions27" ColumnName="descriptions27" />
+          <ScalarProperty Name="descriptions28" ColumnName="descriptions28" />
+          <ScalarProperty Name="descriptions29" ColumnName="descriptions29" />
+          <ScalarProperty Name="descriptions30" ColumnName="descriptions30" />
+          <ScalarProperty Name="descriptions31" ColumnName="descriptions31" />
+          <ScalarProperty Name="descriptions32" ColumnName="descriptions32" />
+          <ScalarProperty Name="descriptions33" ColumnName="descriptions33" />
+          <ScalarProperty Name="descriptions34" ColumnName="descriptions34" />
+          <ScalarProperty Name="descriptions35" ColumnName="descriptions35" />
+          <ScalarProperty Name="descriptions36" ColumnName="descriptions36" />
+          <ScalarProperty Name="descriptions37" ColumnName="descriptions37" />
+          <ScalarProperty Name="descriptions38" ColumnName="descriptions38" />
+          <ScalarProperty Name="descriptions39" ColumnName="descriptions39" />
+          <ScalarProperty Name="descriptions40" ColumnName="descriptions40" />
+          <ScalarProperty Name="descriptions41" ColumnName="descriptions41" />
+          <ScalarProperty Name="descriptions42" ColumnName="descriptions42" />
+          <ScalarProperty Name="descriptions43" ColumnName="descriptions43" />
+          <ScalarProperty Name="descriptions44" ColumnName="descriptions44" />
+          <ScalarProperty Name="descriptions45" ColumnName="descriptions45" />
+          <ScalarProperty Name="descriptions46" ColumnName="descriptions46" />
+          <ScalarProperty Name="descriptions47" ColumnName="descriptions47" />
+          <ScalarProperty Name="descriptions48" ColumnName="descriptions48" />
+          <ScalarProperty Name="descriptions49" ColumnName="descriptions49" />
+          <ScalarProperty Name="descriptions50" ColumnName="descriptions50" />
+          <ScalarProperty Name="descriptions51" ColumnName="descriptions51" />
+          <ScalarProperty Name="descriptions52" ColumnName="descriptions52" />
+          <ScalarProperty Name="descriptions53" ColumnName="descriptions53" />
+          <ScalarProperty Name="descriptions54" ColumnName="descriptions54" />
+          <ScalarProperty Name="descriptions55" ColumnName="descriptions55" />
+          <ScalarProperty Name="descriptions56" ColumnName="descriptions56" />
+          <ScalarProperty Name="descriptions57" ColumnName="descriptions57" />
+          <ScalarProperty Name="descriptions58" ColumnName="descriptions58" />
+          <ScalarProperty Name="descriptions59" ColumnName="descriptions59" />
+          <ScalarProperty Name="descriptions60" ColumnName="descriptions60" />
+          <ScalarProperty Name="descriptions61" ColumnName="descriptions61" />
+          <ScalarProperty Name="descriptions62" ColumnName="descriptions62" />
+          <ScalarProperty Name="descriptions63" ColumnName="descriptions63" />
+          <ScalarProperty Name="descriptions64" ColumnName="descriptions64" />
+          <ScalarProperty Name="descriptions65" ColumnName="descriptions65" />
+          <ScalarProperty Name="descriptions66" ColumnName="descriptions66" />
+          <ScalarProperty Name="descriptions67" ColumnName="descriptions67" />
+          <ScalarProperty Name="descriptions68" ColumnName="descriptions68" />
+          <ScalarProperty Name="descriptions69" ColumnName="descriptions69" />
+          <ScalarProperty Name="descriptions70" ColumnName="descriptions70" />
+          <ScalarProperty Name="descriptions71" ColumnName="descriptions71" />
+          <ScalarProperty Name="descriptions72" ColumnName="descriptions72" />
+          <ScalarProperty Name="descriptions73" ColumnName="descriptions73" />
+          <ScalarProperty Name="descriptions74" ColumnName="descriptions74" />
+          <ScalarProperty Name="descriptions75" ColumnName="descriptions75" />
+          <ScalarProperty Name="descriptions76" ColumnName="descriptions76" />
+          <ScalarProperty Name="descriptions77" ColumnName="descriptions77" />
+          <ScalarProperty Name="descriptions78" ColumnName="descriptions78" />
+          <ScalarProperty Name="descriptions79" ColumnName="descriptions79" />
+          <ScalarProperty Name="descriptions80" ColumnName="descriptions80" />
+          <ScalarProperty Name="descriptions81" ColumnName="descriptions81" />
+          <ScalarProperty Name="descriptions82" ColumnName="descriptions82" />
+          <ScalarProperty Name="descriptions83" ColumnName="descriptions83" />
+          <ScalarProperty Name="descriptions84" ColumnName="descriptions84" />
+          <ScalarProperty Name="descriptions85" ColumnName="descriptions85" />
+          <ScalarProperty Name="descriptions86" ColumnName="descriptions86" />
+          <ScalarProperty Name="descriptions87" ColumnName="descriptions87" />
+          <ScalarProperty Name="descriptions88" ColumnName="descriptions88" />
+          <ScalarProperty Name="descriptions89" ColumnName="descriptions89" />
+          <ScalarProperty Name="descriptions90" ColumnName="descriptions90" />
+          <ScalarProperty Name="descriptions91" ColumnName="descriptions91" />
+          <ScalarProperty Name="descriptions92" ColumnName="descriptions92" />
+          <ScalarProperty Name="descriptions93" ColumnName="descriptions93" />
+          <ScalarProperty Name="descriptions94" ColumnName="descriptions94" />
+          <ScalarProperty Name="descriptions95" ColumnName="descriptions95" />
+          <ScalarProperty Name="descriptions96" ColumnName="descriptions96" />
+          <ScalarProperty Name="descriptions97" ColumnName="descriptions97" />
+          <ScalarProperty Name="descriptions98" ColumnName="descriptions98" />
+          <ScalarProperty Name="descriptions99" ColumnName="descriptions99" />
+          <ScalarProperty Name="descriptions100" ColumnName="descriptions100" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="content1" ColumnName="content1" />
+          <ScalarProperty Name="content2" ColumnName="content2" />
+          <ScalarProperty Name="content3" ColumnName="content3" />
+          <ScalarProperty Name="content4" ColumnName="content4" />
+          <ScalarProperty Name="content5" ColumnName="content5" />
+          <ScalarProperty Name="content6" ColumnName="content6" />
+          <ScalarProperty Name="content7" ColumnName="content7" />
+          <ScalarProperty Name="content8" ColumnName="content8" />
+          <ScalarProperty Name="content9" ColumnName="content9" />
+          <ScalarProperty Name="content10" ColumnName="content10" />
+          <ScalarProperty Name="content11" ColumnName="content11" />
+          <ScalarProperty Name="content12" ColumnName="content12" />
+          <ScalarProperty Name="content13" ColumnName="content13" />
+          <ScalarProperty Name="content14" ColumnName="content14" />
+          <ScalarProperty Name="content15" ColumnName="content15" />
+          <ScalarProperty Name="content16" ColumnName="content16" />
+          <ScalarProperty Name="content17" ColumnName="content17" />
+          <ScalarProperty Name="content18" ColumnName="content18" />
+          <ScalarProperty Name="content19" ColumnName="content19" />
+          <ScalarProperty Name="content20" ColumnName="content20" />
+          <ScalarProperty Name="content21" ColumnName="content21" />
+          <ScalarProperty Name="content22" ColumnName="content22" />
+          <ScalarProperty Name="content23" ColumnName="content23" />
+          <ScalarProperty Name="content24" ColumnName="content24" />
+          <ScalarProperty Name="content25" ColumnName="content25" />
+          <ScalarProperty Name="content26" ColumnName="content26" />
+          <ScalarProperty Name="content27" ColumnName="content27" />
+          <ScalarProperty Name="content28" ColumnName="content28" />
+          <ScalarProperty Name="content29" ColumnName="content29" />
+          <ScalarProperty Name="content30" ColumnName="content30" />
+          <ScalarProperty Name="content31" ColumnName="content31" />
+          <ScalarProperty Name="content32" ColumnName="content32" />
+          <ScalarProperty Name="content33" ColumnName="content33" />
+          <ScalarProperty Name="content34" ColumnName="content34" />
+          <ScalarProperty Name="content35" ColumnName="content35" />
+          <ScalarProperty Name="content36" ColumnName="content36" />
+          <ScalarProperty Name="content37" ColumnName="content37" />
+          <ScalarProperty Name="content38" ColumnName="content38" />
+          <ScalarProperty Name="content39" ColumnName="content39" />
+          <ScalarProperty Name="content40" ColumnName="content40" />
+          <ScalarProperty Name="content41" ColumnName="content41" />
+          <ScalarProperty Name="content42" ColumnName="content42" />
+          <ScalarProperty Name="content43" ColumnName="content43" />
+          <ScalarProperty Name="content44" ColumnName="content44" />
+          <ScalarProperty Name="content45" ColumnName="content45" />
+          <ScalarProperty Name="content46" ColumnName="content46" />
+          <ScalarProperty Name="content47" ColumnName="content47" />
+          <ScalarProperty Name="content48" ColumnName="content48" />
+          <ScalarProperty Name="content49" ColumnName="content49" />
+          <ScalarProperty Name="content50" ColumnName="content50" />
+          <ScalarProperty Name="content51" ColumnName="content51" />
+          <ScalarProperty Name="content52" ColumnName="content52" />
+          <ScalarProperty Name="content53" ColumnName="content53" />
+          <ScalarProperty Name="content54" ColumnName="content54" />
+          <ScalarProperty Name="content55" ColumnName="content55" />
+          <ScalarProperty Name="content56" ColumnName="content56" />
+          <ScalarProperty Name="content57" ColumnName="content57" />
+          <ScalarProperty Name="content58" ColumnName="content58" />
+          <ScalarProperty Name="content59" ColumnName="content59" />
+          <ScalarProperty Name="content60" ColumnName="content60" />
+          <ScalarProperty Name="content61" ColumnName="content61" />
+          <ScalarProperty Name="content62" ColumnName="content62" />
+          <ScalarProperty Name="content63" ColumnName="content63" />
+          <ScalarProperty Name="content64" ColumnName="content64" />
+          <ScalarProperty Name="content65" ColumnName="content65" />
+          <ScalarProperty Name="content66" ColumnName="content66" />
+          <ScalarProperty Name="content67" ColumnName="content67" />
+          <ScalarProperty Name="content68" ColumnName="content68" />
+          <ScalarProperty Name="content69" ColumnName="content69" />
+          <ScalarProperty Name="content70" ColumnName="content70" />
+          <ScalarProperty Name="content71" ColumnName="content71" />
+          <ScalarProperty Name="content72" ColumnName="content72" />
+          <ScalarProperty Name="content73" ColumnName="content73" />
+          <ScalarProperty Name="content74" ColumnName="content74" />
+          <ScalarProperty Name="content75" ColumnName="content75" />
+          <ScalarProperty Name="content76" ColumnName="content76" />
+          <ScalarProperty Name="content77" ColumnName="content77" />
+          <ScalarProperty Name="content78" ColumnName="content78" />
+          <ScalarProperty Name="content79" ColumnName="content79" />
+          <ScalarProperty Name="content80" ColumnName="content80" />
+          <ScalarProperty Name="content81" ColumnName="content81" />
+          <ScalarProperty Name="content82" ColumnName="content82" />
+          <ScalarProperty Name="content83" ColumnName="content83" />
+          <ScalarProperty Name="content84" ColumnName="content84" />
+          <ScalarProperty Name="content85" ColumnName="content85" />
+          <ScalarProperty Name="content86" ColumnName="content86" />
+          <ScalarProperty Name="content87" ColumnName="content87" />
+          <ScalarProperty Name="content88" ColumnName="content88" />
+          <ScalarProperty Name="content89" ColumnName="content89" />
+          <ScalarProperty Name="content90" ColumnName="content90" />
+          <ScalarProperty Name="content91" ColumnName="content91" />
+          <ScalarProperty Name="content92" ColumnName="content92" />
+          <ScalarProperty Name="content93" ColumnName="content93" />
+          <ScalarProperty Name="content94" ColumnName="content94" />
+          <ScalarProperty Name="content95" ColumnName="content95" />
+          <ScalarProperty Name="content96" ColumnName="content96" />
+          <ScalarProperty Name="content97" ColumnName="content97" />
+          <ScalarProperty Name="content98" ColumnName="content98" />
+          <ScalarProperty Name="content99" ColumnName="content99" />
+          <ScalarProperty Name="content100" ColumnName="content100" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="home">
+      <EntityTypeMapping TypeName="onlineptModel.home">
+        <MappingFragment StoreEntitySet="home">
+          <ScalarProperty Name="homeid" ColumnName="homeid" />
+          <ScalarProperty Name="mylistget" ColumnName="mylistget" />
+          <ScalarProperty Name="usersget" ColumnName="usersget" />
+          <ScalarProperty Name="subject" ColumnName="subject" />
+          <ScalarProperty Name="descriptions" ColumnName="descriptions" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="content1" ColumnName="content1" />
+          <ScalarProperty Name="content2" ColumnName="content2" />
+          <ScalarProperty Name="content3" ColumnName="content3" />
+          <ScalarProperty Name="content4" ColumnName="content4" />
+          <ScalarProperty Name="content5" ColumnName="content5" />
+          <ScalarProperty Name="content6" ColumnName="content6" />
+          <ScalarProperty Name="color" ColumnName="color" />
+          <ScalarProperty Name="protein" ColumnName="protein" />
+          <ScalarProperty Name="carb" ColumnName="carb" />
+          <ScalarProperty Name="fat" ColumnName="fat" />
+          <ScalarProperty Name="calori" ColumnName="calori" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="homework">
+      <EntityTypeMapping TypeName="onlineptModel.homework">
+        <MappingFragment StoreEntitySet="homework">
+          <ScalarProperty Name="homeworkid" ColumnName="homeworkid" />
+          <ScalarProperty Name="mylistget" ColumnName="mylistget" />
+          <ScalarProperty Name="usersget" ColumnName="usersget" />
+          <ScalarProperty Name="subject" ColumnName="subject" />
+          <ScalarProperty Name="descriptions" ColumnName="descriptions" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="exercise" ColumnName="exercise" />
+          <ScalarProperty Name="nutrition" ColumnName="nutrition" />
+          <ScalarProperty Name="hworktime" ColumnName="hworktime" />
+          <ScalarProperty Name="content1" ColumnName="content1" />
+          <ScalarProperty Name="content2" ColumnName="content2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="messagebox">
+      <EntityTypeMapping TypeName="onlineptModel.messagebox">
+        <MappingFragment StoreEntitySet="messagebox">
+          <ScalarProperty Name="messageid" ColumnName="messageid" />
+          <ScalarProperty Name="namesurname" ColumnName="namesurname" />
+          <ScalarProperty Name="youremail" ColumnName="youremail" />
+          <ScalarProperty Name="subject" ColumnName="subject" />
+          <ScalarProperty Name="message" ColumnName="message" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="color" ColumnName="color" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="myconnect">
+      <EntityTypeMapping TypeName="onlineptModel.myconnect">
+        <MappingFragment StoreEntitySet="myconnect">
+          <ScalarProperty Name="myconnectid" ColumnName="myconnectid" />
+          <ScalarProperty Name="usersget" ColumnName="usersget" />
+          <ScalarProperty Name="namesurname" ColumnName="namesurname" />
+          <ScalarProperty Name="adres" ColumnName="adres" />
+          <ScalarProperty Name="tel" ColumnName="tel" />
+          <ScalarProperty Name="youremail" ColumnName="youremail" />
+          <ScalarProperty Name="subject" ColumnName="subject" />
+          <ScalarProperty Name="descriptions" ColumnName="descriptions" />
+          <ScalarProperty Name="color" ColumnName="color" />
+          <ScalarProperty Name="date" ColumnName="date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mylist">
+      <EntityTypeMapping TypeName="onlineptModel.mylist">
+        <MappingFragment StoreEntitySet="mylist">
+          <ScalarProperty Name="mylistid" ColumnName="mylistid" />
+          <ScalarProperty Name="usersget" ColumnName="usersget" />
+          <ScalarProperty Name="listname" ColumnName="listname" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mymessage">
+      <EntityTypeMapping TypeName="onlineptModel.mymessage">
+        <MappingFragment StoreEntitySet="mymessage">
+          <ScalarProperty Name="mymessageid" ColumnName="mymessageid" />
+          <ScalarProperty Name="mylistget" ColumnName="mylistget" />
+          <ScalarProperty Name="usersget" ColumnName="usersget" />
+          <ScalarProperty Name="namesurname" ColumnName="namesurname" />
+          <ScalarProperty Name="youremail" ColumnName="youremail" />
+          <ScalarProperty Name="subject" ColumnName="subject" />
+          <ScalarProperty Name="message" ColumnName="message" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="color" ColumnName="color" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mynotification">
+      <EntityTypeMapping TypeName="onlineptModel.mynotification">
+        <MappingFragment StoreEntitySet="mynotification">
+          <ScalarProperty Name="mynotificationid" ColumnName="mynotificationid" />
+          <ScalarProperty Name="mylistget" ColumnName="mylistget" />
+          <ScalarProperty Name="usersget" ColumnName="usersget" />
+          <ScalarProperty Name="mynotification1" ColumnName="mynotification" />
+          <ScalarProperty Name="color" ColumnName="color" />
+          <ScalarProperty Name="date" ColumnName="date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="myquestions">
+      <EntityTypeMapping TypeName="onlineptModel.myquestions">
+        <MappingFragment StoreEntitySet="myquestions">
+          <ScalarProperty Name="myquestionsid" ColumnName="myquestionsid" />
+          <ScalarProperty Name="mylistget" ColumnName="mylistget" />
+          <ScalarProperty Name="usersget" ColumnName="usersget" />
+          <ScalarProperty Name="namesurname" ColumnName="namesurname" />
+          <ScalarProperty Name="youremail" ColumnName="youremail" />
+          <ScalarProperty Name="subject" ColumnName="subject" />
+          <ScalarProperty Name="message" ColumnName="message" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="color" ColumnName="color" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="nutrition">
+      <EntityTypeMapping TypeName="onlineptModel.nutrition">
+        <MappingFragment StoreEntitySet="nutrition">
+          <ScalarProperty Name="nutritionid" ColumnName="nutritionid" />
+          <ScalarProperty Name="mylistget" ColumnName="mylistget" />
+          <ScalarProperty Name="usersget" ColumnName="usersget" />
+          <ScalarProperty Name="meal" ColumnName="meal" />
+          <ScalarProperty Name="nutrition1" ColumnName="nutrition" />
+          <ScalarProperty Name="descriptions" ColumnName="descriptions" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="protein" ColumnName="protein" />
+          <ScalarProperty Name="carb" ColumnName="carb" />
+          <ScalarProperty Name="fat" ColumnName="fat" />
+          <ScalarProperty Name="calori" ColumnName="calori" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="cholesterol" ColumnName="cholesterol" />
+          <ScalarProperty Name="potassium" ColumnName="potassium" />
+          <ScalarProperty Name="sodium" ColumnName="sodium" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="onlinecourse">
+      <EntityTypeMapping TypeName="onlineptModel.onlinecourse">
+        <MappingFragment StoreEntitySet="onlinecourse">
+          <ScalarProperty Name="onlinecourse1" ColumnName="onlinecourse" />
+          <ScalarProperty Name="mylistget" ColumnName="mylistget" />
+          <ScalarProperty Name="usersget" ColumnName="usersget" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="subject" ColumnName="subject" />
+          <ScalarProperty Name="descriptions" ColumnName="descriptions" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="payment">
+      <EntityTypeMapping TypeName="onlineptModel.payment">
+        <MappingFragment StoreEntitySet="payment">
+          <ScalarProperty Name="paymentid" ColumnName="paymentid" />
+          <ScalarProperty Name="mylistget" ColumnName="mylistget" />
+          <ScalarProperty Name="usersget" ColumnName="usersget" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="pay1" ColumnName="pay1" />
+          <ScalarProperty Name="pay2" ColumnName="pay2" />
+          <ScalarProperty Name="pay3" ColumnName="pay3" />
+          <ScalarProperty Name="pay4" ColumnName="pay4" />
+          <ScalarProperty Name="pay5" ColumnName="pay5" />
+          <ScalarProperty Name="pay6" ColumnName="pay6" />
+          <ScalarProperty Name="pay7" ColumnName="pay7" />
+          <ScalarProperty Name="pay8" ColumnName="pay8" />
+          <ScalarProperty Name="pay9" ColumnName="pay9" />
+          <ScalarProperty Name="pay10" ColumnName="pay10" />
+          <ScalarProperty Name="pay11" ColumnName="pay11" />
+          <ScalarProperty Name="pay12" ColumnName="pay12" />
+          <ScalarProperty Name="total" ColumnName="total" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sendusersanalysis">
+      <EntityTypeMapping TypeName="onlineptModel.sendusersanalysis">
+        <MappingFragment StoreEntitySet="sendusersanalysis">
+          <ScalarProperty Name="sendusersanalysisid" ColumnName="sendusersanalysisid" />
+          <ScalarProperty Name="mylistget" ColumnName="mylistget" />
+          <ScalarProperty Name="usersget" ColumnName="usersget" />
+          <ScalarProperty Name="namesurname" ColumnName="namesurname" />
+          <ScalarProperty Name="youremail" ColumnName="youremail" />
+          <ScalarProperty Name="Content1" ColumnName="Content1" />
+          <ScalarProperty Name="Content2" ColumnName="Content2" />
+          <ScalarProperty Name="Content3" ColumnName="Content3" />
+          <ScalarProperty Name="color" ColumnName="color" />
+          <ScalarProperty Name="date" ColumnName="date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="student">
+      <EntityTypeMapping TypeName="onlineptModel.student">
+        <MappingFragment StoreEntitySet="student">
+          <ScalarProperty Name="studentid" ColumnName="studentid" />
+          <ScalarProperty Name="mylistget" ColumnName="mylistget" />
+          <ScalarProperty Name="usersget" ColumnName="usersget" />
+          <ScalarProperty Name="viewkey" ColumnName="viewkey" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="weight" ColumnName="weight" />
+          <ScalarProperty Name="height" ColumnName="height" />
+          <ScalarProperty Name="age" ColumnName="age" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="bodyfat" ColumnName="bodyfat" />
+          <ScalarProperty Name="bodymuscle" ColumnName="bodymuscle" />
+          <ScalarProperty Name="neck" ColumnName="neck" />
+          <ScalarProperty Name="shoulder" ColumnName="shoulder" />
+          <ScalarProperty Name="chest" ColumnName="chest" />
+          <ScalarProperty Name="larm" ColumnName="larm" />
+          <ScalarProperty Name="lfarm" ColumnName="lfarm" />
+          <ScalarProperty Name="rarm" ColumnName="rarm" />
+          <ScalarProperty Name="rfarm" ColumnName="rfarm" />
+          <ScalarProperty Name="waist" ColumnName="waist" />
+          <ScalarProperty Name="hip" ColumnName="hip" />
+          <ScalarProperty Name="lleg" ColumnName="lleg" />
+          <ScalarProperty Name="lcalves" ColumnName="lcalves" />
+          <ScalarProperty Name="rleg" ColumnName="rleg" />
+          <ScalarProperty Name="rcalves" ColumnName="rcalves" />
+          <ScalarProperty Name="calori" ColumnName="calori" />
+          <ScalarProperty Name="protein" ColumnName="protein" />
+          <ScalarProperty Name="carb" ColumnName="carb" />
+          <ScalarProperty Name="fat" ColumnName="fat" />
+          <ScalarProperty Name="caloriedeficit" ColumnName="caloriedeficit" />
+          <ScalarProperty Name="content1" ColumnName="content1" />
+          <ScalarProperty Name="content2" ColumnName="content2" />
+          <ScalarProperty Name="content3" ColumnName="content3" />
+          <ScalarProperty Name="inseam" ColumnName="inseam" />
+          <ScalarProperty Name="fatneck" ColumnName="fatneck" />
+          <ScalarProperty Name="fatlarm" ColumnName="fatlarm" />
+          <ScalarProperty Name="fatrarm" ColumnName="fatrarm" />
+          <ScalarProperty Name="fatbody" ColumnName="fatbody" />
+          <ScalarProperty Name="fatlleg" ColumnName="fatlleg" />
+          <ScalarProperty Name="fatrleg" ColumnName="fatrleg" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="onlineptModel.users">
+        <MappingFragment StoreEntitySet="users">
+          <ScalarProperty Name="userid" ColumnName="userid" />
+          <ScalarProperty Name="viewkey" ColumnName="viewkey" />
+          <ScalarProperty Name="roleid" ColumnName="roleid" />
+          <ScalarProperty Name="viewmylist" ColumnName="viewmylist" />
+          <ScalarProperty Name="active" ColumnName="active" />
+          <ScalarProperty Name="profilephoto" ColumnName="profilephoto" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="usrname" ColumnName="usrname" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="tc" ColumnName="tc" />
+          <ScalarProperty Name="tel" ColumnName="tel" />
+          <ScalarProperty Name="role" ColumnName="role" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="securitykey" ColumnName="securitykey" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="yuklenenbelgeler">
+      <EntityTypeMapping TypeName="onlineptModel.yuklenenbelgeler">
+        <MappingFragment StoreEntitySet="yuklenenbelgeler">
+          <ScalarProperty Name="belgeid" ColumnName="belgeid" />
+          <ScalarProperty Name="belge" ColumnName="belge" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,107 @@
+﻿@model List<onlinept.Models.Entity.mymessage>
+@{
+    ViewBag.Title = "Mesajlarım";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.link = "";
+    ViewBag.menuactive = "";
+}
+
+@if (TempData["MessageSend"] != null)
+{
+
+    <script>
+        Swal.fire('Başarılı', 'Mesajınız Başayırla Gönderildi', 'success');
+
+    </script>
+}
+
+@if (TempData["MessageGuncelle"] != null)
+{
+
+    <script>
+        Swal.fire('Başarılı', 'Mesajınız Başayırla Gönderildi', 'success');
+
+
+    </script>
+}
+@if (TempData["MessageSil"] != null)
+{
+
+    <script>
+        Swal.fire('Başarılı', 'Mesajınız Başayırla Gönderildi', 'success');
+
+
+
+    </script>
+}
+
+<div class="content-wrapper">
+    <section class="content">
+        <h4> Öğrencilerimden Gelen Mesajlar</h4>
+        <!-- /.card-header -->
+        <div class="card">
+            <div class="card-body">
+                <div class="card-header">
+                    <p style="float:right; color:#007bff"><i class="fas fa-info-circle text-danger"></i> İncelemede Olanlar <span class="badge bg-danger" id="messagedanger">0</span></p>
+                    <p style="float:right; color:#007bff"><i class="fas fa-paper-plane text-primary"></i> Gönderilen Mesajlar <span class="badge bg-primary" id="messagewarning">1</span> &nbsp; | &nbsp; </p>
+                    <p style="float:right; color:#007bff"><i class="fas fa-envelope text-warning"></i> Gelen Mesajlar <span class="badge bg-warning" id="messagechecked">1</span> &nbsp; | &nbsp; </p>
+                </div>
+                <br />
+                <table id="example" class="table table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Durum</th>
+                            <th>Gönderen</th>
+                            <th>Konu</th>
+                            <th>İçerik</th>
+                            <th>Tarih</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+
+                        @foreach (var mymessage in Model)
+                        {
+                            <tr>
+                                <td class="mailbox-star"><a href="#"><i class="@mymessage.color"></i></a></td>
+                                <td class="mailbox-name"><b><font color="orangered"> @mymessage.namesurname</font></b></td>
+                                <td class="mailbox-subject"><b>@mymessage.subject</b></td>
+                                <td>
+                                    <button type="button" class="fa fa-envelope-open btn btn-outline-primary" data-toggle="modal" data-target="#okumsg_@mymessage.mymessageid">  Mesaj İçeriğini Göster</button>
+                                    <div class="modal fade" id="okumsg_@mymessage.mymessageid">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h4 class="modal-title"><font color="orangered"><b>Konu:</b></font> @mymessage.subject</h4>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>
+                                                        <font color="orangered"><b>İçerik:</b></font>
+                                                        <br />
+                                                        @mymessage.message
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <!-- /.modal-content -->
+                                        </div>
+                                        <!-- /.modal-dialog -->
+                                    </div>
+                                </td>
+
+                                <td class="mailbox-date">@Html.DisplayFor(m => mymessage.date)</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+</div>
+
+
+
+
+

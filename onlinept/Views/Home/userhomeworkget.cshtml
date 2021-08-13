@@ -1,0 +1,184 @@
+﻿@using onlinept.Models.Entity
+@model List<homework>
+
+@{
+    ViewBag.Title = "Ödevleri";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.link = "mystudent";
+}
+
+@if (TempData["homeworkGuncelle"] != null)
+{
+
+    <script>
+        Swal.fire('Başarılı', 'İşlem gerçekleşti', 'success');
+    </script>
+}
+
+<!-- Content Wrapper. Contains page content -->
+
+<div class="content-wrapper">
+
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h1>Ödevler</h1>
+                </div>
+            </div>
+        </div>
+        <!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content d-flex">
+        <div class="row">
+            <div class="card">
+                <!-- /.card-header -->
+                <div class="card-body">
+                    <table id="example" class="table table-striped table-bordered" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>Öğrenci</th>
+                                <th>Oluşturulma Tarihi</th>
+                                <th>Detay</th>
+                                <th>Görsel 1</th>
+                                <th>Görsel 2</th>
+                                @if (User.IsInRole("Admin") || User.IsInRole("Yonetici"))
+                                {
+                                    <th>Güncelle</th>
+                                    <th>Sil</th>
+                                }
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var homework in Model)
+                            {
+                                <tr>
+                                    <td><font color="#007bff"><b>@homework.users.name</b></font></td>
+                                    <td><font color="red"><b> @Html.DisplayFor(m => homework.date)</b></font></td>
+                                    <td>
+                                        <button type="button" class="fa fa-trash btn btn-outline-success" data-toggle="modal" data-target="#icerik_@homework.homeworkid">Detay!</button>
+                                        <div class="modal fade" id="icerik_@homework.homeworkid">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title"><font color="orangered">@homework.subject</font></h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p>Ödev Zamanı:<font color="orangered">@Html.DisplayFor(m => homework.hworktime)</font></p>
+                                                        <p><b>Açıklama:</b>@homework.descriptions</p>
+                                                        <p><b>Egzersiz:</b>@homework.exercise</p>
+                                                        <p><b>Beslenme:</b>@homework.nutrition</p>
+                                                    </div>
+                                                </div>
+                                                <!-- /.modal-content -->
+                                            </div>
+                                            <!-- /.modal-dialog -->
+                                        </div>
+                                        <!-- /.modal -->
+                                    </td>
+                                    <td>
+                                        <div class="timeline-footer">
+                                            <a href="~/Content/Admin/data/homework/hwimg/@homework.content1" data-toggle="lightbox" data-gallery="gallery">
+                                                <img src="~/Content/Admin/data/homework/hwimg/@homework.content1" style="width:50px; height:50px;" class="img-fluid mb-2" />
+                                            </a>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="timeline-footer">
+                                            <a href="~/Content/Admin/data/homework/hwimg/@homework.content2" data-toggle="lightbox" data-gallery="gallery">
+                                                <img src="~/Content/Admin/data/homework/hwimg/@homework.content2" style="width:50px; height:50px;" class="img-fluid mb-2" />
+                                            </a>
+                                        </div>
+                                    </td>
+                                    @if (User.IsInRole("Admin") || User.IsInRole("Yonetici"))
+                                    {
+                                        <td>
+                                            <button type="button" class="fa fa-pencil-square-o btn btn-outline-primary" data-toggle="modal" data-target="#guncelle_@homework.homeworkid">Güncelle</button>
+                                            <div class="modal fade" id="guncelle_@homework.homeworkid">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h4 class="modal-title">Ödevi Güncelle</h4>
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <p>Ödevi Güncellemek İstiyormusunuz?</p>
+                                                        </div>
+                                                        <div class="modal-footer justify-content-between">
+                                                            <button type="button" class="btn btn-default" data-dismiss="modal">Vazgeç</button>
+                                                            @Html.ActionLink("Güncelle", "homeworkguncelle", new { @homework.homeworkid }, new { @class = "fa fa-pencil-square-o btn btn-outline-primary" })
+                                                        </div>
+                                                    </div>
+                                                    <!-- /.modal-content -->
+                                                </div>
+                                                <!-- /.modal-dialog -->
+                                            </div>
+                                            <!-- /.modal -->
+                                        </td>
+                                        <td>
+                                            <button type="button" class="fa fa-trash btn btn-outline-danger" data-toggle="modal" data-target="#sil_@homework.homeworkid">Sil</button>
+                                            <div class="modal fade" id="sil_@homework.homeworkid">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h4 class="modal-title">Ödevi Sil</h4>
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <p>Ödevi Silmek İstiyormusunuz?</p>
+                                                        </div>
+                                                        <div class="modal-footer justify-content-between">
+                                                            <button type="button" class="btn btn-default" data-dismiss="modal">Vazgeç</button>
+                                                            @Html.ActionLink("Sil", "exercisesil", new { @homework.homeworkid }, new { @class = "fa fa-trash btn btn-outline-danger" })
+                                                        </div>
+                                                    </div>
+                                                    <!-- /.modal-content -->
+                                                </div>
+                                                <!-- /.modal-dialog -->
+                                            </div>
+                                            <!-- /.modal -->
+                                        </td>
+                                    }
+                                </tr>
+                            }
+
+                        </tbody>
+                        <tfoot>
+
+                        </tfoot>
+                    </table>
+                </div>
+                <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+        </div>
+        <!-- /.col -->
+        <!-- /.row -->
+    </section>
+    <!-- /.content -->
+
+</div>
+<script>
+    $(function () {
+        $(document).on('click', '[data-toggle="lightbox"]', function (event) {
+            event.preventDefault();
+            $(this).ekkoLightbox({
+                alwaysShowClose: true
+            });
+        });
+
+    })
+</script>
+
+
+

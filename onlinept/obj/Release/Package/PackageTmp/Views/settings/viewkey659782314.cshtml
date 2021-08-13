@@ -1,0 +1,149 @@
+﻿@using onlinept.Models.Entity
+@model List<users>
+
+@{
+    ViewBag.Title = "Kullanicilar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.link = "kullanicilar";
+    ViewBag.menuactive = "Ayarlar";
+}
+}
+
+@if (TempData["kullaniciguncelle"] != null)
+{
+    <script>
+        Swal.fire('Başarılı', 'İşlem gerçekleşti', 'success');
+    </script>
+}
+
+
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h1>Kullanıcı Bilgileri</h1>
+                </div>
+
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content d-flex">
+        <div class="row">
+            <div class="row">
+                <!-- /.card -->
+
+                <div class="card">
+                    <div class="card-header">
+
+                        <h3 class="card-title"></h3>
+                        @Html.ActionLink("Yeni Eğitmen Ekle", "kullanicikayit479269081", null, new { @class = "fa fa-plus btn btn-primary" })
+
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                        <table id="example" class="table table-striped table-bordered" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>Aktiflik Durumu</th>
+                                    <th>Profil Fotoğrafı</th>
+                                    <th>İsim Soyisim</th>
+                                    <th><b>Kullanıcı Adı</b></th>
+                                    <th>E-Mail</th>
+                                    <th>Tc</th>
+                                    <th>Telefon</th>
+                                    <th>Yetki</th>
+                                    <th>Cinsiyet</th>
+                                    <th>Güncelle</th>
+                                    <th>Sil</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+
+
+                                @foreach (var kullanici in Model)
+                                {
+                                    <tr>
+                                        <td><font color="red"><b><i class="@kullanici.active"></i></b></font></td>
+                                        <td><img src="~/Content/Admin/data/user/uimg/@kullanici.profilephoto" width="100" height="100" /></td>
+                                        <td>@kullanici.name</td>
+                                        <td><b>@kullanici.usrname</b></td>
+                                        <td>@kullanici.email</td>
+                                        <td>@kullanici.tc</td>
+                                        <td>@kullanici.tel</td>
+                                        <td>@kullanici.role</td>
+                                        <td>@kullanici.gender</td>
+                                        <td>
+                                            <button type="button" class="fa fa-pencil-square-o btn btn-outline-primary" data-toggle="modal" data-target="#guncelle_@kullanici.userid">Güncelle</button>
+                                            <div class="modal fade" id="guncelle_@kullanici.userid">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h4 class="modal-title">Kullanıcıyı Güncelle</h4>
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <p>Kullanıcıyı Güncellemek İstiyormusunuz?</p>
+                                                        </div>
+                                                        <div class="modal-footer justify-content-between">
+                                                            <button type="button" class="btn btn-default" data-dismiss="modal">Vazgeç</button>
+                                                            @Html.ActionLink("Güncelle", "kullaniciguncelle", new { kullanici.userid }, new { @class = "fa fa-pencil-square-o btn btn-outline-primary" })
+                                                        </div>
+                                                    </div>
+                                                    <!-- /.modal-content -->
+                                                </div>
+                                                <!-- /.modal-dialog -->
+                                            </div>
+                                            <!-- /.modal -->
+                                        </td>
+                                        <td>
+                                            <button type="button" class="fa fa-trash btn btn-outline-danger" data-toggle="modal" data-target="#sil_@kullanici.userid">Sil</button>
+                                            <div class="modal fade" id="sil_@kullanici.userid">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h4 class="modal-title">Kullanıcıyı Sil</h4>
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <p>Kullanıcıyı Silmek İstiyormusunuz?</p>
+                                                        </div>
+                                                        <div class="modal-footer justify-content-between">
+                                                            <button type="button" class="btn btn-default" data-dismiss="modal">Vazgeç</button>
+                                                            @Html.ActionLink("Sil", "kullanicisil", new { kullanici.userid }, new { @class = "fa fa-trash btn btn-outline-danger" })
+                                                        </div>
+                                                    </div>
+                                                    <!-- /.modal-content -->
+                                                </div>
+                                                <!-- /.modal-dialog -->
+                                            </div>
+                                            <!-- /.modal -->
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                            <tfoot>
+                            </tfoot>
+                        </table>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </section>
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->

@@ -1,0 +1,55 @@
+﻿@{
+    ViewBag.Title = "Kullanicilar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.link = "kullanicilar";
+    ViewBag.menuactive = "Ayarlar";
+}
+}
+
+@if (TempData["kullaniciguncelle"] != null)
+{
+    <script>
+        Swal.fire('Başarılı', 'İşlem gerçekleşti', 'success');
+    </script>
+}
+
+
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h1>Kullanıcı Bilgileri</h1>
+                </div>
+
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content d-flex">
+        <div class="row">
+            <div class="row">
+                <!-- /.card -->
+
+                <div class="card">
+                    <div class="card-header">
+
+                        <h3 class="card-title"></h3>
+                        @Html.ActionLink("Admin Listesi", "viewkey832982058", new { roleid=832982058 }, new { @class = "fa fa-plus btn btn-primary" })
+                        @Html.ActionLink("Yonetici Listesi", "viewkey659782314", new { roleid=659782314 }, new { @class = "fa fa-plus btn btn-success" })
+                        @Html.ActionLink("Öğrenci Listesi", "viewkey152035424", new { roleid=152035424 }, new { @class = "fa fa-plus btn btn-warning" })
+                    </div>
+                </div>
+                <!-- /.card -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </section>
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->

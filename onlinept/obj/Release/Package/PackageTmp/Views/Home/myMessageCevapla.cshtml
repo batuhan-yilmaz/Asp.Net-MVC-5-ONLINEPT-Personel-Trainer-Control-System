@@ -1,0 +1,67 @@
+﻿@model  onlinept.Models.Entity.mymessage
+@{
+    ViewBag.Title = "Mesaj Oluştur";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.link = "";
+    ViewBag.menuactive = "";
+}
+
+<h2>Mesaj Oluştur</h2>
+@using (Html.BeginForm("mycoachMessageSend", "Home", FormMethod.Post, new { @enctype = "multipart/from-data" }))
+{
+    <div class="content-wrapper">
+        <section class="content">
+
+
+            <!-- /.col -->
+            <div class="card">
+                <div class="card card-primary card-outline">
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                        <div class="form-group">
+                            <b>Cevap Tarihi Seçiniz!</b>
+                            @Html.EditorFor(m => m.date, new { htmlAttributes = new { @class = "form-control", id = "tarih1", placeholder = "Lütfen Tarih Giriniz.", @required = "required" } })
+                        </div>
+                        <div class="form-group">
+                            <b>Cevap</b>
+                            @Html.TextAreaFor(m => m.message, new { oninput = "customtext(this.id);", @class = "form-control", @row = "5", @required = "required", placeholder = "Lütfen Mesajınızı Giriniz" })
+                            @Html.TextBoxFor(m => m.subject, new { oninput = "customtext(this.id);", @class = "form-control", @required = "required", placeholder = "Lütfen Konu Başlığını Giriniz", @readonly = "false" })
+                            @Html.TextBoxFor(m => m.usersget, new { @class = "form-control", @readonly = "false" })
+                            @Html.TextBoxFor(m => m.mylistget, new { @class = "form-control", @readonly = "false" })
+                            @Html.TextBoxFor(m => m.namesurname, new { @class = "form-control", id = "viewname1", @required = "required", @readonly = "false" })
+                            @Html.TextBoxFor(m => m.youremail, new { @class = "form-control", @required = "required", id = "vieemail1", @readonly = "false" })
+                            @Html.TextBoxFor(m => m.color, new { @class = "form-control", @Value = "fas fa-envelope text-warning", @readonly = "false", @required = "required" })
+                            @Html.TextBoxFor(m => m.mymessageid, new { oninput = "Number(this.id);", maxlength = "9", @id = "viewkey1", @class = "form-control", @Value = "", @readonly = "false" })
+                        </div>
+                    </div>
+                    <!-- /.card-body -->
+                    <div class="card-footer">
+                        <div class="float-right">
+                            <button type="submit" class="btn btn-outline-success"><i class="fa fa-check"></i> Kaydet</button>
+                        </div>
+                    </div>
+                    <!-- /.card-footer -->
+                </div>
+                <!-- /.card -->
+            </div>
+            <!-- /.col -->
+            <!-- /.row -->
+        </section>
+    </div>
+}
+
+
+
+<script src="~/Content/Admin/plugins/custom/jquery-ui.js"></script>
+<script src="~/Content/Admin/plugins/custom/oasiscustom.js"></script>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        oasisdatepicker();
+
+    });
+    document.getElementById("viewkey1").value = viewkey();
+</script>
+

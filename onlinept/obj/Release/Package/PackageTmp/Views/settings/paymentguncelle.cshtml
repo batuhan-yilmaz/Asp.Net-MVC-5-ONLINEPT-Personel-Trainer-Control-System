@@ -1,0 +1,113 @@
+﻿@model onlinept.Models.Entity.payment
+@{
+    ViewBag.Title = "Ödeme Planı Güncelleme";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.link = "payment";
+    ViewBag.menuactive = "Ayarlar";
+}
+
+
+<div class="content-wrapper">
+    <div class="card-header">
+        <h3 class="card-title">Ödeme Güncelle</h3>
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body">
+        @using (Html.BeginForm("payguncelle", "Settings", FormMethod.Post, new { @enctype = "multipart/from-data" }))
+        {
+        <table id="example1" class="table table-bordered table-striped">
+            <tr>
+                <td>
+                    <p>Tarih</p>
+                    @Html.EditorFor(m => m.date, new { htmlAttributes = new { @class = "form-control", id = "tarih1", placeholder = "Lütfen Başlangıç Tarihi Giriniz.", @required = "required" } })
+                </td>
+                <td>
+                    <p>Toplam</p>
+                    @Html.TextBoxFor(m => m.total, new { @class = "form-control", maxlength = "4", oninput = "Number(this.id);", @required = "required" })
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>1.Ödeme</p>
+                    @Html.TextBoxFor(m => m.pay1, new { @class = "form-control", maxlength = "4", oninput = "Number(this.id);", @required = "required" })
+                </td>
+                <td>
+                    <p>2.Ödeme</p>
+                    @Html.TextBoxFor(m => m.pay2, new { @class = "form-control", maxlength = "4", oninput = "Number(this.id);", @required = "required" })
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>3.Ödeme</p>
+                    @Html.TextBoxFor(m => m.pay3, new { @class = "form-control", maxlength = "4", oninput = "Number(this.id);", @required = "required" })
+                </td>
+                <td>
+                    <p>4.Ödeme</p>
+                    @Html.TextBoxFor(m => m.pay4, new { @class = "form-control", maxlength = "4", oninput = "Number(this.id);", @required = "required" })
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>5.Ödeme</p>
+                    @Html.TextBoxFor(m => m.pay5, new { @class = "form-control", maxlength = "4", oninput = "Number(this.id);", @required = "required" })
+                </td>
+                <td>
+                    <p>6.Ödeme</p>
+                    @Html.TextBoxFor(m => m.pay6, new { @class = "form-control", maxlength = "4", oninput = "Number(this.id);", @required = "required" })
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>7.Ödeme</p>
+                    @Html.TextBoxFor(m => m.pay7, new { @class = "form-control", maxlength = "4", oninput = "Number(this.id);", @required = "required" })
+                </td>
+                <td>
+                    <p>8.Ödeme</p>
+                    @Html.TextBoxFor(m => m.pay8, new { @class = "form-control", maxlength = "4", oninput = "Number(this.id);", @required = "required" })
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>9.Ödeme</p>
+                    @Html.TextBoxFor(m => m.pay9, new { @class = "form-control", maxlength = "4", oninput = "Number(this.id);", @required = "required" })
+                </td>
+                <td>
+                    <p>10.Ödeme</p>
+                    @Html.TextBoxFor(m => m.pay10, new { @class = "form-control", maxlength = "4", oninput = "Number(this.id);", @required = "required" })
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>11.Ödeme</p>
+                    @Html.TextBoxFor(m => m.pay11, new { @class = "form-control", maxlength = "4", oninput = "Number(this.id);", @required = "required" })
+                </td>
+                <td>
+                    <p>12.Ödeme</p>
+                    @Html.TextBoxFor(m => m.pay12, new { @class = "form-control", maxlength = "4", oninput = "Number(this.id);", @required = "required" })
+                    @Html.HiddenFor(m => m.paymentid)
+                </td>
+            </tr>
+            <tr>
+                <td><button type="submit" class="fa fa-floppy-o btn btn-success" /> Kaydet</td>
+            </tr>
+        </table>
+
+        }
+    </div>
+    <!-- /.card-body -->
+</div>
+<!-- /.card -->
+<script src="~/Content/Admin/plugins/custom/jquery-ui.js"></script>
+<script src="~/Content/Admin/plugins/custom/oasiscustom.js"></script>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        oasisdatepicker();
+
+    });
+</script>
+
+
+

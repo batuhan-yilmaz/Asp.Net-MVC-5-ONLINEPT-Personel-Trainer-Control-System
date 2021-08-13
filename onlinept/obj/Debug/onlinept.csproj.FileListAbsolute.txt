@@ -1,0 +1,214 @@
+C:\Users\OSX\Desktop\onlinept2\onlinept\onlinept\bin\onlinept.dll.config
+C:\Users\OSX\Desktop\onlinept2\onlinept\onlinept\bin\onlinept.dll
+C:\Users\OSX\Desktop\onlinept2\onlinept\onlinept\bin\onlinept.pdb
+C:\Users\OSX\Desktop\onlinept2\onlinept\onlinept\bin\roslyn\csc.exe
+C:\Users\OSX\Desktop\onlinept2\onlinept\onlinept\bin\roslyn\csc.exe.config
+C:\Users\OSX\Desktop\onlinept2\onlinept\onlinept\bin\roslyn\csc.rsp
+C:\Users\OSX\Desktop\onlinept2\onlinept\onlinept\bin\roslyn\csi.exe
+C:\Users\OSX\Desktop\onlinept2\onlinept\onlinept\bin\roslyn\csi.rsp
+C:\Users\OSX\Desktop\onlinept2\onlinept\onlinept\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\OSX\Desktop\onlinept2\onlinept\onlinept\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\OSX\Desktop\onlinept2\onlinept\onlinept\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\OSX\Desktop\onlinept2\onlinept\onlinept\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\OSX\Desktop\onlinept2\onlinept\onlinept\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\OSX\Desktop\onlinept2\onlinept\onlinept\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\OSX\Desktop\onlinept2\onlinept\onlinept\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\OSX\Desktop\onlinept2\onlinept\onlinept\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\OSX\Desktop\onlinept2\onlinept\onlinept\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\OSX\Desktop\onlinept2\onlinept\onlinept\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\OSX\Desktop\onlinept2\onlinept\onlinept\bin\roslyn\System.AppContext.dll
+C:\Users\OSX\Desktop\onlinept2\onlinept\onlinept\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\OSX\Desktop\onlinept2\onlinept\onlinept\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\OSX\Desktop\onlinept2\onlinept\onlinept\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\OSX\Desktop\onlinept2\onlinept\onlinept\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\OSX\Desktop\onlinept2\onlinept\onlinept\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\OSX\Desktop\onlinept2\onlinept\onlinept\bin\roslyn\vbc.exe
+C:\Users\OSX\Desktop\onlinept2\onlinept\onlinept\bin\roslyn\vbc.exe.config
+C:\Users\OSX\Desktop\onlinept2\onlinept\onlinept\bin\roslyn\vbc.rsp
+C:\Users\OSX\Desktop\onlinept2\onlinept\onlinept\bin\roslyn\VBCSCompiler.exe
+C:\Users\OSX\Desktop\onlinept2\onlinept\onlinept\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\OSX\Desktop\onlinept2\onlinept\onlinept\bin\EntityFramework.dll
+C:\Users\OSX\Desktop\onlinept2\onlinept\onlinept\bin\Google.Authenticator.dll
+C:\Users\OSX\Desktop\onlinept2\onlinept\onlinept\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\OSX\Desktop\onlinept2\onlinept\onlinept\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\OSX\Desktop\onlinept2\onlinept\onlinept\bin\System.Web.Helpers.dll
+C:\Users\OSX\Desktop\onlinept2\onlinept\onlinept\bin\System.Web.Mvc.dll
+C:\Users\OSX\Desktop\onlinept2\onlinept\onlinept\bin\System.Web.Razor.dll
+C:\Users\OSX\Desktop\onlinept2\onlinept\onlinept\bin\System.Web.Webpages.Deployment.dll
+C:\Users\OSX\Desktop\onlinept2\onlinept\onlinept\bin\System.Web.Webpages.dll
+C:\Users\OSX\Desktop\onlinept2\onlinept\onlinept\bin\System.Web.Webpages.Razor.dll
+C:\Users\OSX\Desktop\onlinept2\onlinept\onlinept\bin\EntityFramework.xml
+C:\Users\OSX\Desktop\onlinept2\onlinept\onlinept\bin\System.Web.Razor.xml
+C:\Users\OSX\Desktop\onlinept2\onlinept\onlinept\bin\System.Web.Webpages.xml
+C:\Users\OSX\Desktop\onlinept2\onlinept\onlinept\bin\System.Web.Webpages.Deployment.xml
+C:\Users\OSX\Desktop\onlinept2\onlinept\onlinept\bin\System.Web.Webpages.Razor.xml
+C:\Users\OSX\Desktop\onlinept2\onlinept\onlinept\bin\System.Web.Helpers.xml
+C:\Users\OSX\Desktop\onlinept2\onlinept\onlinept\bin\System.Web.Mvc.xml
+C:\Users\OSX\Desktop\onlinept2\onlinept\onlinept\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\OSX\Desktop\onlinept2\onlinept\onlinept\obj\Debug\onlinept.csproj.CoreCompileInputs.cache
+C:\Users\OSX\Desktop\onlinept2\onlinept\onlinept\obj\Debug\onlinept.csproj.CopyComplete
+C:\Users\OSX\Desktop\onlinept2\onlinept\onlinept\obj\Debug\onlinept.dll
+C:\Users\OSX\Desktop\onlinept2\onlinept\onlinept\obj\Debug\onlinept.pdb
+C:\Users\OSX\Desktop\onlinept2\onlinept\onlinept\obj\Debug\onlinept.csprojAssemblyReference.cache
+C:\Users\scary\OneDrive\Masaüstü\onlineptv2\onlinept\onlinept\bin\onlinept.dll.config
+C:\Users\scary\OneDrive\Masaüstü\onlineptv2\onlinept\onlinept\bin\onlinept.dll
+C:\Users\scary\OneDrive\Masaüstü\onlineptv2\onlinept\onlinept\bin\onlinept.pdb
+C:\Users\scary\OneDrive\Masaüstü\onlineptv2\onlinept\onlinept\bin\roslyn\csc.exe
+C:\Users\scary\OneDrive\Masaüstü\onlineptv2\onlinept\onlinept\bin\roslyn\csc.exe.config
+C:\Users\scary\OneDrive\Masaüstü\onlineptv2\onlinept\onlinept\bin\roslyn\csc.rsp
+C:\Users\scary\OneDrive\Masaüstü\onlineptv2\onlinept\onlinept\bin\roslyn\csi.exe
+C:\Users\scary\OneDrive\Masaüstü\onlineptv2\onlinept\onlinept\bin\roslyn\csi.rsp
+C:\Users\scary\OneDrive\Masaüstü\onlineptv2\onlinept\onlinept\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\scary\OneDrive\Masaüstü\onlineptv2\onlinept\onlinept\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\scary\OneDrive\Masaüstü\onlineptv2\onlinept\onlinept\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\scary\OneDrive\Masaüstü\onlineptv2\onlinept\onlinept\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\scary\OneDrive\Masaüstü\onlineptv2\onlinept\onlinept\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\scary\OneDrive\Masaüstü\onlineptv2\onlinept\onlinept\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\scary\OneDrive\Masaüstü\onlineptv2\onlinept\onlinept\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\scary\OneDrive\Masaüstü\onlineptv2\onlinept\onlinept\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\scary\OneDrive\Masaüstü\onlineptv2\onlinept\onlinept\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\scary\OneDrive\Masaüstü\onlineptv2\onlinept\onlinept\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\scary\OneDrive\Masaüstü\onlineptv2\onlinept\onlinept\bin\roslyn\System.AppContext.dll
+C:\Users\scary\OneDrive\Masaüstü\onlineptv2\onlinept\onlinept\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\scary\OneDrive\Masaüstü\onlineptv2\onlinept\onlinept\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\scary\OneDrive\Masaüstü\onlineptv2\onlinept\onlinept\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\scary\OneDrive\Masaüstü\onlineptv2\onlinept\onlinept\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\scary\OneDrive\Masaüstü\onlineptv2\onlinept\onlinept\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\scary\OneDrive\Masaüstü\onlineptv2\onlinept\onlinept\bin\roslyn\vbc.exe
+C:\Users\scary\OneDrive\Masaüstü\onlineptv2\onlinept\onlinept\bin\roslyn\vbc.exe.config
+C:\Users\scary\OneDrive\Masaüstü\onlineptv2\onlinept\onlinept\bin\roslyn\vbc.rsp
+C:\Users\scary\OneDrive\Masaüstü\onlineptv2\onlinept\onlinept\bin\roslyn\VBCSCompiler.exe
+C:\Users\scary\OneDrive\Masaüstü\onlineptv2\onlinept\onlinept\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\scary\OneDrive\Masaüstü\onlineptv2\onlinept\onlinept\bin\EntityFramework.dll
+C:\Users\scary\OneDrive\Masaüstü\onlineptv2\onlinept\onlinept\bin\Google.Authenticator.dll
+C:\Users\scary\OneDrive\Masaüstü\onlineptv2\onlinept\onlinept\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\scary\OneDrive\Masaüstü\onlineptv2\onlinept\onlinept\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\scary\OneDrive\Masaüstü\onlineptv2\onlinept\onlinept\bin\System.Web.Helpers.dll
+C:\Users\scary\OneDrive\Masaüstü\onlineptv2\onlinept\onlinept\bin\System.Web.Mvc.dll
+C:\Users\scary\OneDrive\Masaüstü\onlineptv2\onlinept\onlinept\bin\System.Web.Razor.dll
+C:\Users\scary\OneDrive\Masaüstü\onlineptv2\onlinept\onlinept\bin\System.Web.Webpages.Deployment.dll
+C:\Users\scary\OneDrive\Masaüstü\onlineptv2\onlinept\onlinept\bin\System.Web.Webpages.dll
+C:\Users\scary\OneDrive\Masaüstü\onlineptv2\onlinept\onlinept\bin\System.Web.Webpages.Razor.dll
+C:\Users\scary\OneDrive\Masaüstü\onlineptv2\onlinept\onlinept\bin\EntityFramework.xml
+C:\Users\scary\OneDrive\Masaüstü\onlineptv2\onlinept\onlinept\bin\System.Web.Razor.xml
+C:\Users\scary\OneDrive\Masaüstü\onlineptv2\onlinept\onlinept\bin\System.Web.Webpages.xml
+C:\Users\scary\OneDrive\Masaüstü\onlineptv2\onlinept\onlinept\bin\System.Web.Webpages.Deployment.xml
+C:\Users\scary\OneDrive\Masaüstü\onlineptv2\onlinept\onlinept\bin\System.Web.Webpages.Razor.xml
+C:\Users\scary\OneDrive\Masaüstü\onlineptv2\onlinept\onlinept\bin\System.Web.Helpers.xml
+C:\Users\scary\OneDrive\Masaüstü\onlineptv2\onlinept\onlinept\bin\System.Web.Mvc.xml
+C:\Users\scary\OneDrive\Masaüstü\onlineptv2\onlinept\onlinept\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\scary\OneDrive\Masaüstü\onlineptv2\onlinept\onlinept\obj\Debug\onlinept.csprojAssemblyReference.cache
+C:\Users\scary\OneDrive\Masaüstü\onlineptv2\onlinept\onlinept\obj\Debug\onlinept.csproj.CoreCompileInputs.cache
+C:\Users\scary\OneDrive\Masaüstü\onlineptv2\onlinept\onlinept\obj\Debug\onlinept.csproj.CopyComplete
+C:\Users\scary\OneDrive\Masaüstü\onlineptv2\onlinept\onlinept\obj\Debug\onlinept.dll
+C:\Users\scary\OneDrive\Masaüstü\onlineptv2\onlinept\onlinept\obj\Debug\onlinept.pdb
+C:\Users\OSX\Desktop\onlinept\onlinept\onlinept\obj\Debug\onlinept.csproj.CoreCompileInputs.cache
+C:\Users\OSX\Desktop\onlinept\onlinept\onlinept\bin\onlinept.dll.config
+C:\Users\OSX\Desktop\onlinept\onlinept\onlinept\bin\onlinept.dll
+C:\Users\OSX\Desktop\onlinept\onlinept\onlinept\bin\onlinept.pdb
+C:\Users\OSX\Desktop\onlinept\onlinept\onlinept\bin\roslyn\csc.exe
+C:\Users\OSX\Desktop\onlinept\onlinept\onlinept\bin\roslyn\csc.exe.config
+C:\Users\OSX\Desktop\onlinept\onlinept\onlinept\bin\roslyn\csc.rsp
+C:\Users\OSX\Desktop\onlinept\onlinept\onlinept\bin\roslyn\csi.exe
+C:\Users\OSX\Desktop\onlinept\onlinept\onlinept\bin\roslyn\csi.rsp
+C:\Users\OSX\Desktop\onlinept\onlinept\onlinept\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\OSX\Desktop\onlinept\onlinept\onlinept\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\OSX\Desktop\onlinept\onlinept\onlinept\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\OSX\Desktop\onlinept\onlinept\onlinept\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\OSX\Desktop\onlinept\onlinept\onlinept\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\OSX\Desktop\onlinept\onlinept\onlinept\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\OSX\Desktop\onlinept\onlinept\onlinept\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\OSX\Desktop\onlinept\onlinept\onlinept\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\OSX\Desktop\onlinept\onlinept\onlinept\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\OSX\Desktop\onlinept\onlinept\onlinept\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\OSX\Desktop\onlinept\onlinept\onlinept\bin\roslyn\System.AppContext.dll
+C:\Users\OSX\Desktop\onlinept\onlinept\onlinept\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\OSX\Desktop\onlinept\onlinept\onlinept\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\OSX\Desktop\onlinept\onlinept\onlinept\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\OSX\Desktop\onlinept\onlinept\onlinept\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\OSX\Desktop\onlinept\onlinept\onlinept\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\OSX\Desktop\onlinept\onlinept\onlinept\bin\roslyn\vbc.exe
+C:\Users\OSX\Desktop\onlinept\onlinept\onlinept\bin\roslyn\vbc.exe.config
+C:\Users\OSX\Desktop\onlinept\onlinept\onlinept\bin\roslyn\vbc.rsp
+C:\Users\OSX\Desktop\onlinept\onlinept\onlinept\bin\roslyn\VBCSCompiler.exe
+C:\Users\OSX\Desktop\onlinept\onlinept\onlinept\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\OSX\Desktop\onlinept\onlinept\onlinept\bin\EntityFramework.dll
+C:\Users\OSX\Desktop\onlinept\onlinept\onlinept\bin\Google.Authenticator.dll
+C:\Users\OSX\Desktop\onlinept\onlinept\onlinept\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\OSX\Desktop\onlinept\onlinept\onlinept\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\OSX\Desktop\onlinept\onlinept\onlinept\bin\System.Web.Helpers.dll
+C:\Users\OSX\Desktop\onlinept\onlinept\onlinept\bin\System.Web.Mvc.dll
+C:\Users\OSX\Desktop\onlinept\onlinept\onlinept\bin\System.Web.Razor.dll
+C:\Users\OSX\Desktop\onlinept\onlinept\onlinept\bin\System.Web.Webpages.Deployment.dll
+C:\Users\OSX\Desktop\onlinept\onlinept\onlinept\bin\System.Web.Webpages.dll
+C:\Users\OSX\Desktop\onlinept\onlinept\onlinept\bin\System.Web.Webpages.Razor.dll
+C:\Users\OSX\Desktop\onlinept\onlinept\onlinept\bin\EntityFramework.xml
+C:\Users\OSX\Desktop\onlinept\onlinept\onlinept\bin\System.Web.Razor.xml
+C:\Users\OSX\Desktop\onlinept\onlinept\onlinept\bin\System.Web.Webpages.xml
+C:\Users\OSX\Desktop\onlinept\onlinept\onlinept\bin\System.Web.Webpages.Deployment.xml
+C:\Users\OSX\Desktop\onlinept\onlinept\onlinept\bin\System.Web.Webpages.Razor.xml
+C:\Users\OSX\Desktop\onlinept\onlinept\onlinept\bin\System.Web.Helpers.xml
+C:\Users\OSX\Desktop\onlinept\onlinept\onlinept\bin\System.Web.Mvc.xml
+C:\Users\OSX\Desktop\onlinept\onlinept\onlinept\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\OSX\Desktop\onlinept\onlinept\onlinept\obj\Debug\onlinept.csproj.CopyComplete
+C:\Users\OSX\Desktop\onlinept\onlinept\onlinept\obj\Debug\onlinept.dll
+C:\Users\OSX\Desktop\onlinept\onlinept\onlinept\obj\Debug\onlinept.pdb
+C:\Users\OSX\Desktop\onlinept\onlinept\onlinept\obj\Debug\onlinept.csprojAssemblyReference.cache
+F:\Visual Studio 2019 Enterprise\PROJELER\AKTİF PROJELER\ONLINEPT\onlinept\onlinept\bin\onlinept.dll.config
+F:\Visual Studio 2019 Enterprise\PROJELER\AKTİF PROJELER\ONLINEPT\onlinept\onlinept\bin\onlinept.dll
+F:\Visual Studio 2019 Enterprise\PROJELER\AKTİF PROJELER\ONLINEPT\onlinept\onlinept\bin\onlinept.pdb
+F:\Visual Studio 2019 Enterprise\PROJELER\AKTİF PROJELER\ONLINEPT\onlinept\onlinept\bin\roslyn\csc.exe
+F:\Visual Studio 2019 Enterprise\PROJELER\AKTİF PROJELER\ONLINEPT\onlinept\onlinept\bin\roslyn\csc.exe.config
+F:\Visual Studio 2019 Enterprise\PROJELER\AKTİF PROJELER\ONLINEPT\onlinept\onlinept\bin\roslyn\csc.rsp
+F:\Visual Studio 2019 Enterprise\PROJELER\AKTİF PROJELER\ONLINEPT\onlinept\onlinept\bin\roslyn\csi.exe
+F:\Visual Studio 2019 Enterprise\PROJELER\AKTİF PROJELER\ONLINEPT\onlinept\onlinept\bin\roslyn\csi.rsp
+F:\Visual Studio 2019 Enterprise\PROJELER\AKTİF PROJELER\ONLINEPT\onlinept\onlinept\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\Visual Studio 2019 Enterprise\PROJELER\AKTİF PROJELER\ONLINEPT\onlinept\onlinept\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\Visual Studio 2019 Enterprise\PROJELER\AKTİF PROJELER\ONLINEPT\onlinept\onlinept\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+F:\Visual Studio 2019 Enterprise\PROJELER\AKTİF PROJELER\ONLINEPT\onlinept\onlinept\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\Visual Studio 2019 Enterprise\PROJELER\AKTİF PROJELER\ONLINEPT\onlinept\onlinept\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+F:\Visual Studio 2019 Enterprise\PROJELER\AKTİF PROJELER\ONLINEPT\onlinept\onlinept\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\Visual Studio 2019 Enterprise\PROJELER\AKTİF PROJELER\ONLINEPT\onlinept\onlinept\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\Visual Studio 2019 Enterprise\PROJELER\AKTİF PROJELER\ONLINEPT\onlinept\onlinept\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+F:\Visual Studio 2019 Enterprise\PROJELER\AKTİF PROJELER\ONLINEPT\onlinept\onlinept\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+F:\Visual Studio 2019 Enterprise\PROJELER\AKTİF PROJELER\ONLINEPT\onlinept\onlinept\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\Visual Studio 2019 Enterprise\PROJELER\AKTİF PROJELER\ONLINEPT\onlinept\onlinept\bin\roslyn\System.AppContext.dll
+F:\Visual Studio 2019 Enterprise\PROJELER\AKTİF PROJELER\ONLINEPT\onlinept\onlinept\bin\roslyn\System.Collections.Immutable.dll
+F:\Visual Studio 2019 Enterprise\PROJELER\AKTİF PROJELER\ONLINEPT\onlinept\onlinept\bin\roslyn\System.Diagnostics.StackTrace.dll
+F:\Visual Studio 2019 Enterprise\PROJELER\AKTİF PROJELER\ONLINEPT\onlinept\onlinept\bin\roslyn\System.IO.FileSystem.dll
+F:\Visual Studio 2019 Enterprise\PROJELER\AKTİF PROJELER\ONLINEPT\onlinept\onlinept\bin\roslyn\System.IO.FileSystem.Primitives.dll
+F:\Visual Studio 2019 Enterprise\PROJELER\AKTİF PROJELER\ONLINEPT\onlinept\onlinept\bin\roslyn\System.Reflection.Metadata.dll
+F:\Visual Studio 2019 Enterprise\PROJELER\AKTİF PROJELER\ONLINEPT\onlinept\onlinept\bin\roslyn\vbc.exe
+F:\Visual Studio 2019 Enterprise\PROJELER\AKTİF PROJELER\ONLINEPT\onlinept\onlinept\bin\roslyn\vbc.exe.config
+F:\Visual Studio 2019 Enterprise\PROJELER\AKTİF PROJELER\ONLINEPT\onlinept\onlinept\bin\roslyn\vbc.rsp
+F:\Visual Studio 2019 Enterprise\PROJELER\AKTİF PROJELER\ONLINEPT\onlinept\onlinept\bin\roslyn\VBCSCompiler.exe
+F:\Visual Studio 2019 Enterprise\PROJELER\AKTİF PROJELER\ONLINEPT\onlinept\onlinept\bin\roslyn\VBCSCompiler.exe.config
+F:\Visual Studio 2019 Enterprise\PROJELER\AKTİF PROJELER\ONLINEPT\onlinept\onlinept\bin\EntityFramework.dll
+F:\Visual Studio 2019 Enterprise\PROJELER\AKTİF PROJELER\ONLINEPT\onlinept\onlinept\bin\EntityFramework.SqlServer.dll
+F:\Visual Studio 2019 Enterprise\PROJELER\AKTİF PROJELER\ONLINEPT\onlinept\onlinept\bin\Google.Authenticator.dll
+F:\Visual Studio 2019 Enterprise\PROJELER\AKTİF PROJELER\ONLINEPT\onlinept\onlinept\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\Visual Studio 2019 Enterprise\PROJELER\AKTİF PROJELER\ONLINEPT\onlinept\onlinept\bin\Microsoft.Web.Infrastructure.dll
+F:\Visual Studio 2019 Enterprise\PROJELER\AKTİF PROJELER\ONLINEPT\onlinept\onlinept\bin\MySql.Data.dll
+F:\Visual Studio 2019 Enterprise\PROJELER\AKTİF PROJELER\ONLINEPT\onlinept\onlinept\bin\MySql.Data.Entity.EF6.dll
+F:\Visual Studio 2019 Enterprise\PROJELER\AKTİF PROJELER\ONLINEPT\onlinept\onlinept\bin\System.Web.Helpers.dll
+F:\Visual Studio 2019 Enterprise\PROJELER\AKTİF PROJELER\ONLINEPT\onlinept\onlinept\bin\System.Web.Mvc.dll
+F:\Visual Studio 2019 Enterprise\PROJELER\AKTİF PROJELER\ONLINEPT\onlinept\onlinept\bin\System.Web.Razor.dll
+F:\Visual Studio 2019 Enterprise\PROJELER\AKTİF PROJELER\ONLINEPT\onlinept\onlinept\bin\System.Web.Webpages.Deployment.dll
+F:\Visual Studio 2019 Enterprise\PROJELER\AKTİF PROJELER\ONLINEPT\onlinept\onlinept\bin\System.Web.Webpages.dll
+F:\Visual Studio 2019 Enterprise\PROJELER\AKTİF PROJELER\ONLINEPT\onlinept\onlinept\bin\System.Web.Webpages.Razor.dll
+F:\Visual Studio 2019 Enterprise\PROJELER\AKTİF PROJELER\ONLINEPT\onlinept\onlinept\bin\EntityFramework.xml
+F:\Visual Studio 2019 Enterprise\PROJELER\AKTİF PROJELER\ONLINEPT\onlinept\onlinept\bin\EntityFramework.SqlServer.xml
+F:\Visual Studio 2019 Enterprise\PROJELER\AKTİF PROJELER\ONLINEPT\onlinept\onlinept\bin\System.Web.Razor.xml
+F:\Visual Studio 2019 Enterprise\PROJELER\AKTİF PROJELER\ONLINEPT\onlinept\onlinept\bin\System.Web.Webpages.xml
+F:\Visual Studio 2019 Enterprise\PROJELER\AKTİF PROJELER\ONLINEPT\onlinept\onlinept\bin\System.Web.Webpages.Deployment.xml
+F:\Visual Studio 2019 Enterprise\PROJELER\AKTİF PROJELER\ONLINEPT\onlinept\onlinept\bin\System.Web.Webpages.Razor.xml
+F:\Visual Studio 2019 Enterprise\PROJELER\AKTİF PROJELER\ONLINEPT\onlinept\onlinept\bin\System.Web.Helpers.xml
+F:\Visual Studio 2019 Enterprise\PROJELER\AKTİF PROJELER\ONLINEPT\onlinept\onlinept\bin\System.Web.Mvc.xml
+F:\Visual Studio 2019 Enterprise\PROJELER\AKTİF PROJELER\ONLINEPT\onlinept\onlinept\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\Visual Studio 2019 Enterprise\PROJELER\AKTİF PROJELER\ONLINEPT\onlinept\onlinept\obj\Debug\onlinept.csproj.AssemblyReference.cache
+F:\Visual Studio 2019 Enterprise\PROJELER\AKTİF PROJELER\ONLINEPT\onlinept\onlinept\obj\Debug\onlinept.csproj.CoreCompileInputs.cache
+F:\Visual Studio 2019 Enterprise\PROJELER\AKTİF PROJELER\ONLINEPT\onlinept\onlinept\obj\Debug\onlinept.csproj.CopyComplete
+F:\Visual Studio 2019 Enterprise\PROJELER\AKTİF PROJELER\ONLINEPT\onlinept\onlinept\obj\Debug\onlinept.dll
+F:\Visual Studio 2019 Enterprise\PROJELER\AKTİF PROJELER\ONLINEPT\onlinept\onlinept\obj\Debug\onlinept.pdb
+F:\Visual Studio 2019 Enterprise\PROJELER\AKTİF PROJELER\ONLINEPT\onlinept\onlinept\bin\System.Data.SqlClient.dll
+F:\Visual Studio 2019 Enterprise\PROJELER\AKTİF PROJELER\ONLINEPT\onlinept\onlinept\bin\System.Data.SqlClient.xml

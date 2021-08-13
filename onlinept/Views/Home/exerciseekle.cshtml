@@ -1,0 +1,584 @@
+﻿@model onlinept.Models.Entity.exercise
+
+@{
+    ViewBag.Title = "Öğrernciye Özel Egzersiz Ekle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.link = "exerciseekle";
+    ViewBag.menuactive = "Ayarlar2";
+}
+
+@if (TempData["exerciseHata"] != null)
+{
+
+    <script>
+        Swal.fire('Hata', 'İşlem gerçekleştirilemedi', 'error');
+
+
+            /**/</script>
+}
+
+<div class="content-wrapper">
+    <div class="card-header">
+        <h3 class="card-title">Öğrernciye Özel Egzersiz Ekle</h3>
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body">
+        @using (Html.BeginForm("exerciseekle", "Home", FormMethod.Post, new { @enctype = "multipart/from-data" }))
+        {
+            <div class="form-group">
+                @Html.TextBoxFor(m => m.mylistget, new { @class = "form-control", @Value = "", id = "mylist2" })
+                <p>Öğrenci Seç</p>
+                @Html.TextBoxFor(m => m.usersget, new { id = "colordbs", @Value = "", @class = "form-control", @required = "required" })
+                <select id="colordb" class="form-control">
+                    <option value=""></option>
+                    @foreach (var user in ViewBag.UserList)
+                    {
+                        <option value="@user.userid">@user.name</option>
+                    }
+                </select>
+            </div>
+            <div class="form-group">
+                <p>Tarih</p>
+                @Html.EditorFor(m => m.date, new { htmlAttributes = new { @style = "width:600px", @class = "form-control", id = "tarih1", placeholder = "Lütfen Başlangıç Tarihi Giriniz.", @required = "required" } })
+            </div>
+            <div class="form-group">
+                <p>Başlık </p>
+                @Html.TextBoxFor(m => m.subject, new { @class = "form-control", oninput = "customtext(this.id);", @required = "required" })
+            </div>
+            <div class="form-group">
+                <p>İçerik</p>
+                @Html.TextAreaFor(m => m.descriptions, new { @class = "form-control", oninput = "customtext(this.id);", @required = "required" })
+                @Html.TextBoxFor(m => m.exerciseid, new { oninput = "Number(this.id);", maxlength = "9", @id = "viewkey1", @class = "form-control", @Value = "", @readonly = "false" })
+            </div>
+
+            <div class="form-group">
+                <div class="card card-primary">
+                    <div class="card-header">
+                        <h3 class="card-title"><i class="fas fa-dumbbell" aria-hidden="true"></i>  Egzersiz Ekle!</h3>
+                        <div class="card-tools">
+                            <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i></button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+
+                        <div id="exercises">
+                        </div>
+                        @Html.HiddenFor(m => m.content1, new { id = "exercisedbs1", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content2, new { id = "exercisedbs2", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content3, new { id = "exercisedbs3", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content4, new { id = "exercisedbs4", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content5, new { id = "exercisedbs5", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content6, new { id = "exercisedbs6", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content7, new { id = "exercisedbs7", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content8, new { id = "exercisedbs8", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content9, new { id = "exercisedbs9", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content10, new { id = "exercisedbs10", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content11, new { id = "exercisedbs11", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content12, new { id = "exercisedbs12", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content13, new { id = "exercisedbs13", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content14, new { id = "exercisedbs14", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content15, new { id = "exercisedbs15", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content16, new { id = "exercisedbs16", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content17, new { id = "exercisedbs17", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content18, new { id = "exercisedbs18", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content19, new { id = "exercisedbs19", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content20, new { id = "exercisedbs20", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content21, new { id = "exercisedbs21", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content22, new { id = "exercisedbs22", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content23, new { id = "exercisedbs23", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content24, new { id = "exercisedbs24", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content25, new { id = "exercisedbs25", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content26, new { id = "exercisedbs26", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content27, new { id = "exercisedbs27", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content28, new { id = "exercisedbs28", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content29, new { id = "exercisedbs29", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content30, new { id = "exercisedbs30", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content31, new { id = "exercisedbs31", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content32, new { id = "exercisedbs32", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content33, new { id = "exercisedbs33", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content34, new { id = "exercisedbs34", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content35, new { id = "exercisedbs35", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content36, new { id = "exercisedbs36", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content37, new { id = "exercisedbs37", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content38, new { id = "exercisedbs38", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content39, new { id = "exercisedbs39", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content40, new { id = "exercisedbs40", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content41, new { id = "exercisedbs41", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content42, new { id = "exercisedbs42", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content43, new { id = "exercisedbs43", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content44, new { id = "exercisedbs44", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content45, new { id = "exercisedbs45", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content46, new { id = "exercisedbs46", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content47, new { id = "exercisedbs47", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content48, new { id = "exercisedbs48", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content49, new { id = "exercisedbs49", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content50, new { id = "exercisedbs50", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content51, new { id = "exercisedbs51", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content52, new { id = "exercisedbs52", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content53, new { id = "exercisedbs53", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content54, new { id = "exercisedbs54", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content55, new { id = "exercisedbs55", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content56, new { id = "exercisedbs56", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content57, new { id = "exercisedbs57", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content58, new { id = "exercisedbs58", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content59, new { id = "exercisedbs59", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content60, new { id = "exercisedbs60", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content61, new { id = "exercisedbs61", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content62, new { id = "exercisedbs62", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content63, new { id = "exercisedbs63", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content64, new { id = "exercisedbs64", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content65, new { id = "exercisedbs65", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content66, new { id = "exercisedbs66", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content67, new { id = "exercisedbs67", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content68, new { id = "exercisedbs68", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content69, new { id = "exercisedbs69", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content70, new { id = "exercisedbs70", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content71, new { id = "exercisedbs71", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content72, new { id = "exercisedbs72", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content73, new { id = "exercisedbs73", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content74, new { id = "exercisedbs74", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content75, new { id = "exercisedbs75", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content76, new { id = "exercisedbs76", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content77, new { id = "exercisedbs77", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content78, new { id = "exercisedbs78", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content79, new { id = "exercisedbs79", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content80, new { id = "exercisedbs80", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content81, new { id = "exercisedbs81", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content82, new { id = "exercisedbs82", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content83, new { id = "exercisedbs83", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content84, new { id = "exercisedbs84", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content85, new { id = "exercisedbs85", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content86, new { id = "exercisedbs86", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content87, new { id = "exercisedbs87", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content88, new { id = "exercisedbs88", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content89, new { id = "exercisedbs89", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content90, new { id = "exercisedbs90", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content91, new { id = "exercisedbs91", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content92, new { id = "exercisedbs92", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content93, new { id = "exercisedbs93", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content94, new { id = "exercisedbs94", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content95, new { id = "exercisedbs95", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content96, new { id = "exercisedbs96", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content97, new { id = "exercisedbs97", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content98, new { id = "exercisedbs98", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content99, new { id = "exercisedbs99", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.content100, new { id = "exercisedbs100", @Value = "0", @required = "required", @readonly = "false" })
+
+                        @Html.HiddenFor(m => m.descriptions1, new { id = "exdescdbs1", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions2, new { id = "exdescdbs2", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions3, new { id = "exdescdbs3", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions4, new { id = "exdescdbs4", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions5, new { id = "exdescdbs5", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions6, new { id = "exdescdbs6", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions7, new { id = "exdescdbs7", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions8, new { id = "exdescdbs8", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions9, new { id = "exdescdbs9", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions10, new { id = "exdescdbs10", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions11, new { id = "exdescdbs11", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions12, new { id = "exdescdbs12", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions13, new { id = "exdescdbs13", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions14, new { id = "exdescdbs14", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions15, new { id = "exdescdbs15", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions16, new { id = "exdescdbs16", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions17, new { id = "exdescdbs17", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions18, new { id = "exdescdbs18", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions19, new { id = "exdescdbs19", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions20, new { id = "exdescdbs20", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions21, new { id = "exdescdbs21", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions22, new { id = "exdescdbs22", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions23, new { id = "exdescdbs23", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions24, new { id = "exdescdbs24", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions25, new { id = "exdescdbs25", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions26, new { id = "exdescdbs26", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions27, new { id = "exdescdbs27", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions28, new { id = "exdescdbs28", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions29, new { id = "exdescdbs29", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions30, new { id = "exdescdbs30", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions31, new { id = "exdescdbs31", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions32, new { id = "exdescdbs32", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions33, new { id = "exdescdbs33", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions34, new { id = "exdescdbs34", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions35, new { id = "exdescdbs35", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions36, new { id = "exdescdbs36", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions37, new { id = "exdescdbs37", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions38, new { id = "exdescdbs38", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions39, new { id = "exdescdbs39", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions40, new { id = "exdescdbs40", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions41, new { id = "exdescdbs41", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions42, new { id = "exdescdbs42", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions43, new { id = "exdescdbs43", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions44, new { id = "exdescdbs44", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions45, new { id = "exdescdbs45", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions46, new { id = "exdescdbs46", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions47, new { id = "exdescdbs47", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions48, new { id = "exdescdbs48", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions49, new { id = "exdescdbs49", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions50, new { id = "exdescdbs50", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions51, new { id = "exdescdbs51", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions52, new { id = "exdescdbs52", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions53, new { id = "exdescdbs53", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions54, new { id = "exdescdbs54", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions55, new { id = "exdescdbs55", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions56, new { id = "exdescdbs56", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions57, new { id = "exdescdbs57", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions58, new { id = "exdescdbs58", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions59, new { id = "exdescdbs59", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions60, new { id = "exdescdbs60", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions61, new { id = "exdescdbs61", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions62, new { id = "exdescdbs62", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions63, new { id = "exdescdbs63", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions64, new { id = "exdescdbs64", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions65, new { id = "exdescdbs65", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions66, new { id = "exdescdbs66", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions67, new { id = "exdescdbs67", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions68, new { id = "exdescdbs68", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions69, new { id = "exdescdbs69", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions70, new { id = "exdescdbs70", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions71, new { id = "exdescdbs71", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions72, new { id = "exdescdbs72", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions73, new { id = "exdescdbs73", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions74, new { id = "exdescdbs74", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions75, new { id = "exdescdbs75", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions76, new { id = "exdescdbs76", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions77, new { id = "exdescdbs77", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions78, new { id = "exdescdbs78", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions79, new { id = "exdescdbs79", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions80, new { id = "exdescdbs80", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions81, new { id = "exdescdbs81", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions82, new { id = "exdescdbs82", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions83, new { id = "exdescdbs83", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions84, new { id = "exdescdbs84", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions85, new { id = "exdescdbs85", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions86, new { id = "exdescdbs86", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions87, new { id = "exdescdbs87", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions88, new { id = "exdescdbs88", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions89, new { id = "exdescdbs89", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions90, new { id = "exdescdbs90", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions91, new { id = "exdescdbs91", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions92, new { id = "exdescdbs92", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions93, new { id = "exdescdbs93", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions94, new { id = "exdescdbs94", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions95, new { id = "exdescdbs95", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions96, new { id = "exdescdbs96", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions97, new { id = "exdescdbs97", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions98, new { id = "exdescdbs98", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions99, new { id = "exdescdbs99", @Value = "0", @required = "required", @readonly = "false" })
+                        @Html.HiddenFor(m => m.descriptions100, new { id = "exdescdbs100", @Value = "0", @required = "required", @readonly = "false" })
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <select id="Title" class="form-control" onchange="showHideEle(this, 'mobility_strechdb', 'abs_coredb', 'leg_glutdb', 'backdb', 'biceps_forearmsdb', 'chestdb', 'tricepsdb', 'shoulderdb', 'neckdb', 'Mobility_Strech', 'Abs_Core', 'Legs_Glut', 'Back', 'Biceps_Forerarms', 'Chest', 'Triceps', 'Shoulder', 'Neck')">
+                    <option value="1">Bölge Seç</option>
+                    <option value="Mobility_Strech">Mobility-Strech</option>
+                    <option value="Abs_Core">Abs-Core</option>
+                    <option value="Legs_Glut">Bacak-Kalça</option>
+                    <option value="Back">Sırt</option>
+                    <option value="Biceps_Forerarms">Biceps-Forerarms</option>
+                    <option value="Chest">Göğüs</option>
+                    <option value="Triceps">Triceps</option>
+                    <option value="Shoulder">Omuz</option>
+                    <option value="Neck">Boyun</option>
+                </select>
+                <br />
+                &nbsp;
+                <select id="mobility_strechdb" class="form-control" style="display:none;">
+                    <option value="0">Egzersiz seçin</option>
+                    @foreach (var exercise1 in ViewBag.AllExerciseList1)
+                    {
+                        <option value="@exercise1.Content1">@exercise1.name</option>
+                    }
+                </select>
+                <select id="abs_coredb" class="form-control" style="display:none;">
+                    <option value="0">Egzersiz seçin</option>
+                    @foreach (var exercise in ViewBag.AllExerciseList)
+                    {
+                        <option value="@exercise.Content1">@exercise.name</option>
+                    }
+                </select>
+                <select id="leg_glutdb" class="form-control" style="display:none;">
+                    <option value="0">Egzersiz saçin</option>
+                    @foreach (var exercise5 in ViewBag.AllExerciseList5)
+                    {
+                        <option value="@exercise5.Content1">@exercise5.name</option>
+                    }
+                </select>
+
+                <select id="backdb" class="form-control" style="display:none;">
+                    <option value="0">Egzersiz saçin</option>
+                    @foreach (var exercise2 in ViewBag.AllExerciseList2)
+                    {
+                        <option value="@exercise2.Content1">@exercise2.name</option>
+                    }
+                </select>
+
+                <select id="biceps_forearmsdb" class="form-control" style="display:none;">
+                    <option value="0">Egzersiz saçin</option>
+                    @foreach (var exercise3 in ViewBag.AllExerciseList3)
+                    {
+                        <option value="@exercise3.Content1">@exercise3.name</option>
+                    }
+                </select>
+                <select id="chestdb" class="form-control" style="display:none;">
+                    <option value="0">Egzersiz saçin</option>
+                    @foreach (var exercise4 in ViewBag.AllExerciseList4)
+                    {
+                        <option value="@exercise4.Content1">@exercise4.name</option>
+                    }
+                </select>
+                <select id="tricepsdb" class="form-control" style="display:none;">
+                    <option value="0">Egzersiz saçin</option>
+                    @foreach (var exercise8 in ViewBag.AllExerciseList8)
+                    {
+                        <option value="@exercise8.Content1">@exercise8.name</option>
+                    }
+                </select>
+                <select id="shoulderdb" class="form-control" style="display:none;">
+                    <option value="0">Egzersiz saçin</option>
+                    @foreach (var exercise7 in ViewBag.AllExerciseList7)
+                    {
+                        <option value="@exercise7.Content1">@exercise7.name</option>
+                    }
+                </select>
+
+                <select id="neckdb" class="form-control" sm" style="display:none;">
+                    <option value="0">Egzersiz saçin</option>
+                    @foreach (var exercise6 in ViewBag.AllExerciseList6)
+                    {
+                        <option value="@exercise6.Content1">@exercise6.name</option>
+                    }
+                </select>
+            </div>
+            <br />
+            <div class="form-group">
+                <button type="submit" onclick="Uploadimage(); Uploadimage2(); Uploadimage3()" class="fa fa-floppy-o btn btn-success">Kaydet</button>
+            </div>
+
+
+        }
+    </div>
+    <!-- /.card-body -->
+</div>
+<!-- /.card -->
+<script src="~/Content/Admin/plugins/custom/jquery-ui.js"></script>
+<script src="~/Content/Admin/plugins/custom/oasiscustom.js"></script>
+<script>
+    function showHideEle(selectSrc, targetEleId1, targetEleId, targetEleId2, targetEleId3, targetEleId4, targetEleId5, targetEleId6, targetEleId7, targetEleId8, triggerValue1, triggerValue, triggerValue2, triggerValue3, triggerValue4, triggerValue5, triggerValue6, triggerValue7, triggerValue8) {
+        if (selectSrc.value == 1) {
+            document.getElementById(targetEleId1).style.display = "none";
+            document.getElementById(targetEleId).style.display = "none";
+            document.getElementById(targetEleId2).style.display = "none";
+            document.getElementById(targetEleId3).style.display = "none";
+            document.getElementById(targetEleId4).style.display = "none";
+            document.getElementById(targetEleId5).style.display = "none";
+            document.getElementById(targetEleId6).style.display = "none";
+            document.getElementById(targetEleId7).style.display = "none";
+            document.getElementById(targetEleId8).style.display = "none";
+        }
+        if (selectSrc.value == triggerValue1) {
+            document.getElementById(targetEleId1).style.display = "flex";
+            document.getElementById(targetEleId).style.display = "none";
+            document.getElementById(targetEleId2).style.display = "none";
+            document.getElementById(targetEleId3).style.display = "none";
+            document.getElementById(targetEleId4).style.display = "none";
+            document.getElementById(targetEleId5).style.display = "none";
+            document.getElementById(targetEleId6).style.display = "none";
+            document.getElementById(targetEleId7).style.display = "none";
+            document.getElementById(targetEleId8).style.display = "none";
+        }
+        if (selectSrc.value == triggerValue) {
+            document.getElementById(targetEleId1).style.display = "none";
+            document.getElementById(targetEleId).style.display = "flex";
+            document.getElementById(targetEleId2).style.display = "none";
+            document.getElementById(targetEleId3).style.display = "none";
+            document.getElementById(targetEleId4).style.display = "none";
+            document.getElementById(targetEleId5).style.display = "none";
+            document.getElementById(targetEleId6).style.display = "none";
+            document.getElementById(targetEleId7).style.display = "none";
+            document.getElementById(targetEleId8).style.display = "none";
+        }
+        else if (selectSrc.value == triggerValue2) {
+            document.getElementById(targetEleId1).style.display = "none";
+            document.getElementById(targetEleId).style.display = "none";
+            document.getElementById(targetEleId2).style.display = "flex";
+            document.getElementById(targetEleId3).style.display = "none";
+            document.getElementById(targetEleId4).style.display = "none";
+            document.getElementById(targetEleId5).style.display = "none";
+            document.getElementById(targetEleId6).style.display = "none";
+            document.getElementById(targetEleId7).style.display = "none";
+            document.getElementById(targetEleId8).style.display = "none";
+        }
+        else if (selectSrc.value == triggerValue3) {
+            document.getElementById(targetEleId1).style.display = "none";
+            document.getElementById(targetEleId).style.display = "none";
+            document.getElementById(targetEleId2).style.display = "none";
+            document.getElementById(targetEleId3).style.display = "flex";
+            document.getElementById(targetEleId4).style.display = "none";
+            document.getElementById(targetEleId5).style.display = "none";
+            document.getElementById(targetEleId6).style.display = "none";
+            document.getElementById(targetEleId7).style.display = "none";
+            document.getElementById(targetEleId8).style.display = "none";
+        }
+        else if (selectSrc.value == triggerValue4) {
+            document.getElementById(targetEleId1).style.display = "none";
+            document.getElementById(targetEleId).style.display = "none";
+            document.getElementById(targetEleId2).style.display = "none";
+            document.getElementById(targetEleId3).style.display = "none";
+            document.getElementById(targetEleId4).style.display = "flex";
+            document.getElementById(targetEleId5).style.display = "none";
+            document.getElementById(targetEleId6).style.display = "none";
+            document.getElementById(targetEleId7).style.display = "none";
+            document.getElementById(targetEleId8).style.display = "none";
+        }
+        else if (selectSrc.value == triggerValue5) {
+            document.getElementById(targetEleId1).style.display = "none";
+            document.getElementById(targetEleId).style.display = "none";
+            document.getElementById(targetEleId2).style.display = "none";
+            document.getElementById(targetEleId3).style.display = "none";
+            document.getElementById(targetEleId4).style.display = "none";
+            document.getElementById(targetEleId5).style.display = "flex";
+            document.getElementById(targetEleId6).style.display = "none";
+            document.getElementById(targetEleId7).style.display = "none";
+            document.getElementById(targetEleId8).style.display = "none";
+        }
+        else if (selectSrc.value == triggerValue6) {
+            document.getElementById(targetEleId1).style.display = "none";
+            document.getElementById(targetEleId).style.display = "none";
+            document.getElementById(targetEleId2).style.display = "none";
+            document.getElementById(targetEleId3).style.display = "none";
+            document.getElementById(targetEleId4).style.display = "none";
+            document.getElementById(targetEleId5).style.display = "none";
+            document.getElementById(targetEleId6).style.display = "flex";
+            document.getElementById(targetEleId7).style.display = "none";
+            document.getElementById(targetEleId8).style.display = "none";
+        }
+        else if (selectSrc.value == triggerValue7) {
+            document.getElementById(targetEleId1).style.display = "none";
+            document.getElementById(targetEleId).style.display = "none";
+            document.getElementById(targetEleId2).style.display = "none";
+            document.getElementById(targetEleId3).style.display = "none";
+            document.getElementById(targetEleId4).style.display = "none";
+            document.getElementById(targetEleId5).style.display = "none";
+            document.getElementById(targetEleId6).style.display = "none";
+            document.getElementById(targetEleId7).style.display = "flex";
+            document.getElementById(targetEleId8).style.display = "none";
+        }
+        else if (selectSrc.value == triggerValue8) {
+            document.getElementById(targetEleId1).style.display = "none";
+            document.getElementById(targetEleId).style.display = "none";
+            document.getElementById(targetEleId2).style.display = "none";
+            document.getElementById(targetEleId3).style.display = "none";
+            document.getElementById(targetEleId4).style.display = "none";
+            document.getElementById(targetEleId5).style.display = "none";
+            document.getElementById(targetEleId6).style.display = "none";
+            document.getElementById(targetEleId7).style.display = "none";
+            document.getElementById(targetEleId8).style.display = "flex";
+        }
+    }
+</script>
+<script>
+    $("#mobility_strechdb").add("#abs_coredb").add("#backdb").add("#biceps_forearmsdb").add("#chestdb").add("#leg_glutdb").add("#neckdb").add("#shoulderdb").add("#tricepsdb").change(function () {
+        if ($('select#mobility_strechdb option:selected', this) || $('select#abs_coredb option:selected', this) || $('select#backdb option:selected', this) || $('select#biceps_forearmsdb option:selected', this) || $('select#chestdb option:selected', this) || $('select#leg_glutdb option:selected', this) || $('select#neckdb option:selected', this) || $('select#shoulderdb option:selected', this) || $('select#tricepsdb option:selected', this)) {
+
+            if ($('#mobility_strechdb').is(':visible') || $('#abs_coredb').is(':visible') || $('#backdb').is(':visible') || $('#biceps_forearmsdb').is(':visible') || $('#chestdb').is(':visible') || $('#leg_glutdb').is(':visible') || $('#neckdb').is(':visible') || $('#shoulderdb').is(':visible') || $('#abs_coredb').is(':visible') || $('#tricepsdb').is(':visible')) {
+                hardcore(this.value, "/Content/Admin/data/exercise/gifs/", this.options[this.selectedIndex].text);
+                console.log(this.value);
+
+            }
+        }
+
+    });
+    var counterx = 1;
+    function hardcore(val, loc, name) {
+        if ((val != null) && (val != undefined) && (val != 0) && (counterx < 101)) {
+            var img = document.createElement('img'),
+                a = document.createElement('a'),
+                div = document.createElement('div'),
+                refdiv = document.getElementById('exercises'),
+                button = document.createElement('button'),
+                p = document.createElement('p'),
+                description = document.createElement('textarea'),
+                div2 = document.createElement('div');
+            if ((document.getElementById("exercisedbs" + counterx).value == undefined || document.getElementById("exercisedbs" + counterx).value == 0)) {
+                console.log(("exercisedbs" + counterx));
+                $("#exercisedbs" + counterx).val(val);
+            }
+            else {
+                for (i = 1; i < 101; i++) {
+                    if (document.getElementById("exercisedbs" + i).value == "") {
+                        $("#exercisedbs" + i).val(val);
+                        counterx = i;
+                        break;
+                    }
+                }
+            }
+            div2.setAttribute("style", "float:left; height:100px;");
+            div.setAttribute("style", "height:120px;");
+            a.setAttribute("data-toggle", "lightbox");
+            a.setAttribute("data-gallery", "gallery");
+            div.id = ("exgif" + counterx);
+            p.innerHTML = (name);
+            p.setAttribute("style", "color:#FF0000;");
+            description.rows = "2";
+            description.cols = "60";
+            description.required = "required";
+            a.href = (loc + val);
+            img.src = (loc + val);
+            img.setAttribute("style", "height:100px; float:left; width:100px;");
+            description.type = "text";
+            description.size = "60";
+            description.id = (counterx);
+            description.placeholder = "Eklediğiniz hareketle ilgili açıklama.. (Set,tekrar,yapılış biçimi vs..)";
+            button.value = (counterx);
+            button.setAttribute("style", "float:right");
+            button.setAttribute("class", "fa fa-trash btn btn-danger");
+            button.onclick = function () {
+                $("#exercisedbs" + this.value).text(0);
+                $("#exercisedbs" + this.value).val(0);
+                $('#exdescdbs' + this.value).val(0);
+                var style = document.getElementById("exgif" + this.value);
+                style.parentNode.removeChild(style);
+                console.log("Counterx:" + counterx);
+                counterx = this.value;
+            };
+            refdiv.appendChild(div);
+            div.appendChild(a);
+            a.appendChild(img);
+            div.appendChild(div2);
+            div2.appendChild(button);
+            div2.appendChild(p);
+            div2.appendChild(description);
+            $('textarea').on('keyup', function () {
+                var x = document.getElementById("exdescdbs" + this.id);
+                $(x).val(name + ":" + $(this).val());
+            });
+            counterx++;
+        }
+        else {
+            alert("Daha fazla egzersiz ekleyemezsiniz.");
+        }
+
+    }
+
+</script>
+<script>
+    $(function () {
+        $(document).on('click', '[data-toggle="lightbox"]', function (event) {
+            event.preventDefault();
+            $(this).ekkoLightbox({
+                alwaysShowClose: true
+            });
+        });
+
+    })
+</script>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        oasisdatepicker();
+
+    });
+    document.getElementById("viewkey1").value = viewkey();
+</script>

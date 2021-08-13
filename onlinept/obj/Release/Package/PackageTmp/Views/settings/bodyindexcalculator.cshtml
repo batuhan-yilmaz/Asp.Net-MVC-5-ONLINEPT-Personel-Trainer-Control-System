@@ -1,0 +1,200 @@
+﻿
+@{
+    ViewBag.Title = "Vücut Kitle İndex Hesaplayıcı";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.link = "bodyindex";
+    ViewBag.menuactive = "Hesapla";
+}
+
+<link href="~/Content/Admin/plugins/custom/bf/bf.css" rel="stylesheet" />
+
+<div class="content-wrapper">
+
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h1>BODY INDEX HESAPLA</h1>
+                </div>
+            </div>
+        </div>
+        <!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="row">
+            <div class="card">
+
+                <!-- /.card-header -->
+                <div class="card-body">
+                    <div class="callout callout-danger">
+                        <h5><i class="fas fa-info"></i> Vücut Yağ Oranı:</h5>
+                        This page has been enhanced for printing. Click the print button at the bottom of the invoice to test.
+                    </div>
+                    <div class="callout callout-warning">
+                        <h5><i class="fas fa-info"></i> Günlük Ne Kadar Kalori Almalıyım?:</h5>
+                        This page has been enhanced for printing. Click the print button at the bottom of the invoice to test.
+                    </div>
+                    <div class="callout callout-info">
+                        <h5><i class="fas fa-info"></i> Bazal Metabolizma Hızı:</h5>
+                        This page has been enhanced for printing. Click the print button at the bottom of the invoice to test.
+                    </div>
+                    <table id="hesapla" class="table table-striped table-bordered" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="calorie_calculator_container">
+                                        <div class="calorie_calculator_nav" id="calorie_calculator_nav">
+                                            <a class="css-1tpdbgp content-link active" id="show_metric">Vücut Yağ Oranı Hesaplama Formu <small style="font-weight:normal;">(Body Fat Calculator)</small></a>
+                                        </div>
+                                        <div class="calorie_calculator">
+                                            <div id="metric_form_containerg" class="hide" style="display: block!important;">
+                                                <form name="metric" id="vucut_yag_orani_form">
+                                                    <div class="row">
+                                                        <div class="fi_sel" style="width:100%;">
+                                                            <label>Cinsiyetiniz</label>
+                                                            <select id="gender_mg">
+                                                                <option value="m">Erkek</option>
+                                                                <option value="f">Kadın</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="fi_txt"> <label>Kilonuz (kg)</label> <input type="number" step="0.1" min="0" id="kilo" placeholder="Kg..."> </div>
+                                                        <div class="fi_txt"> <label>Boyunuz (cm)</label> <input type="number" step="0.1" min="0" id="boy" placeholder="Cm..."> </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="fi_txt"> <label>Yaşınız</label> <input type="number" step="0.1" min="0" id="yas" placeholder=""> </div>
+                                                        <div class="fi_txt"> <label>Boyun Çevreniz (cm)</label> <input type="number" step="0.1" min="0" id="boyun" placeholder="Cm..."> </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="fi_txt"> <label>Bel Çevreniz(cm)</label> <input type="number" step="0.1" min="0" id="bel" placeholder="Cm..."> </div>
+                                                        <div class="fi_txt"> <label>Kalça (cm)</label> <input type="number" step="0.1" min="0" id="kalca" placeholder="Cm..."> </div>
+                                                    </div>
+                                                    <div class="fi_btn"><input id="vucut_yag_orani_btn" type="button" value="Hesapla"></div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div id="resultsg" class="hidden"></div>
+                                    </div>
+                                </td>
+
+                                <td>
+
+                                    <div class="calorie_calculator_container">
+                                        <div class="calorie_calculator_nav" id="calorie_calculator_nav">
+                                            <a class="css-1tpdbgp content-link active" id="show_metric">Günlük Ne Kadar Kalori Almalıyım?</a>
+                                        </div>
+                                        <div class="calorie_calculator">
+                                            <div id="metric_form_container" class="hide" style="display: block!important;">
+                                                <form name="metric" id="dailycal_form">
+                                                    <div class="row">
+                                                        <div class="fi_sel">
+                                                            <label>Cinsiyetiniz</label>
+                                                            <select id="gender_m">
+                                                                <option value="m">Erkek</option>
+                                                                <option value="f">Kadın</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="fi_txt"> <label>Yaş</label> <input type="number" step="1" min="0" id="age_m" placeholder="Yaşınız..."> </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="fi_txt"> <label>Boyunuz</label> <input type="number" step="0.1" min="0" id="height_m" placeholder="Cm..."> </div>
+                                                        <div class="fi_txt"> <label>Kilonuz</label> <input type="number" step="0.1" min="0" id="weight_m" placeholder="Kilogram..."> </div>
+                                                    </div>
+                                                    <div class="fi_sel">
+                                                        <label>Aktivite</label>
+                                                        <select id="lifestyle_m">
+                                                            <option value="sedentary"> Hareketsiz yaşam tarzı </option>
+                                                            <option value="slightly_active"> Biraz aktif </option>
+                                                            <option value="moderately_active"> Orta derecede aktif </option>
+                                                            <option value="active">
+                                                                Aktif yaşam tarzı <!-- option-->
+                                                            </option>
+                                                            <option value="very_active"> Çok aktif yaşam tarzı </option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="fi_btn"><input type="button" value="Hesapla" onclick="dailycalori()"></div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div id="results" class="hidden"></div>
+                                    </div>
+                                </td>
+
+                                <td>
+                                    <div class="calorie_calculator_container">
+                                        <div class="calorie_calculator_nav" id="calorie_calculator_nav">
+                                            <a class="css-1tpdbgp content-link active" h id="show_metric">
+                                                Bazal Metabolizma Hızı Hesaplama
+                                            </a>
+                                        </div>
+                                        <div class="calorie_calculator">
+                                            <div id="metric_form_container" class="hide" style="display: block!important;">
+                                                <form name="metric" id="calculatorbmz" method="post">
+                                                    <div class="row">
+                                                        <div class="fi_sel">
+                                                            <label>Cinsiyetiniz</label>
+                                                            <select id="metabolizma_cinsiyet">
+                                                                <option value="erkek"> Erkek </option>
+                                                                <option value="kadin"> Kadın </option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="fi_txt">
+                                                            <label>Yaş</label>
+                                                            <input id="metabolizma_yas" size="4" maxlength="6" type="text" placeholder="Yaşınız...">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="fi_txt">
+                                                            <label>Boy Uzunluğu (cm)</label>
+                                                            <input id="metabolizma_boy" step="0.1" min="0" type="number" placeholder="Cm...">
+                                                        </div>
+                                                        <div class="fi_txt">
+                                                            <label>Vücut Ağırlığı (kg)</label>
+                                                            <input type="number" step="0.1" min="0" id="metabolizma_agirlik" placeholder="Kilogram...">
+                                                        </div>
+                                                    </div>
+                                                    <div class="fi_btn">
+                                                        <input onclick="metabolizmaHiziHesapla();" class="btn btn-success" value="Hesapla" type="button">
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div id="resultsbmr" class="hidden"></div>
+                                    </div>
+                                </td>
+
+                            </tr>
+                        </tbody>
+
+                    </table>
+
+
+
+
+
+                </div>
+
+                <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+        </div>
+        <!-- /.col -->
+        <!-- /.row -->
+    </section>
+    <!-- /.content -->
+
+</div>
+
+<script src="~/Content/Admin/plugins/custom/bf/calc.js"></script>
+
